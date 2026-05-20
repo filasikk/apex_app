@@ -1,4 +1,8 @@
-#otevření stránky
-do pole "Uživatel" zadej datprx
-do pole "Heslo" zadej datprx_012026
-Klikni na tlačítko "Přihlásit se"
+*** Settings ***
+Resource    ../resources/prihlaseni_klicova_slova.resource
+Test Setup    Otevři prohlížeč a aplikaci
+
+*** Test Cases ***
+Uživatel se úspěšně přihlásí
+    Když se přihlásím jako "admin"
+    Pak vidím, že jsem přihlášen

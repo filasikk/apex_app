@@ -673,7 +673,7 @@ Výstupy:
 - `menu.robot`,
 - `apex_klicova_slova.resource`,
 - `how_to_write_tests.md`,
-- části `typical_workflow.md` popisující přidání nového testu.
+- části `typical_workflow.md` popipující přidání nového testu.
 
 ---
 

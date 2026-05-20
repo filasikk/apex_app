@@ -1,0 +1,5 @@
+UZIVATELE:
+  admin:
+    jmeno: "FILIPLUKES"
+    heslo: "heslo"
+    workspace: "test_ws"
