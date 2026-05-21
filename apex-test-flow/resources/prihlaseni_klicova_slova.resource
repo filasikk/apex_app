@@ -5,13 +5,12 @@ Variables    ../variables/uzivatele.example.yaml
 *** Keywords ***
 se přihlásím jako "${role}"
     ${uzivatel}=    Set Variable    ${UZIVATELE['${role}']}
-    Fill Text       id=F4550_P1_COMPANY    ${uzivatel['workspace']}
-    Fill Text       id=F4550_P1_USERNAME    ${uzivatel['jmeno']}
-    Fill Text       id=F4550_P1_PASSWORD    ${uzivatel['heslo']}
-    Click           id=B232005500580944564
+    Fill Text       id=username    ${uzivatel['jmeno']}
+    Fill Text       id=password   ${uzivatel['heslo']}
+    Click           [name="_eventId_proceed"]
 
 vidím, že jsem přihlášen
-    Wait For Elements State    id=R390755402636297329    visible    timeout=5s
+    Wait For Elements State    id=t_PageBody    visible    timeout=5s
 
 Když se přihlásím jako "${role}"
     se přihlásím jako "${role}"

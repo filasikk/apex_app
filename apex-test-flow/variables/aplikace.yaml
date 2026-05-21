@@ -1,3 +1,3 @@
-URL_APLIKACE: "https://apex-test.civ.zcu.cz/ords/r/apex/workspace-sign-in/oracle-apex-sign-in"
+URL_APLIKACE: "https://apex-test.civ.zcu.cz/ords/f?p=100000:1"
 PROHLIZEC: "firefox"
 HEADLESS: false

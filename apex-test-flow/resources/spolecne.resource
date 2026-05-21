@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Browser
+Library      Browser
 Variables    ../variables/aplikace.yaml
 Variables    ../variables/stranky.yaml
 
@@ -9,20 +9,22 @@ Otevři prohlížeč a aplikaci
     New Context    viewport={'width': 1920, 'height': 1080}
     New Page       url=${URL_APLIKACE}
 
-otevřu stránku "${stranka}"
-    ${id_stranky}=    Set Variable    ${${stranka}}
-    Go To    ${URL_APLIKACE}&p=${id_stranky}
+Když kliknu na Menu
+    Click    id=t_Button_navControl
 
-vidím text "${text}"
-    Wait For Elements State    text="${text}"    visible    timeout=5s
+A zároveň kliknu na Menu
+    Když kliknu na Menu
 
-Když otevřu stránku "${stranka}"
-    otevřu stránku "${stranka}"
+Když kliknu na položku v menu "${nazev_polozky}"
+    Click    text="${nazev_polozky}"
 
-Pak vidím text "${text}"
-    vidím text "${text}"
-Když kliknu na App Builder
-    Click    id=a_Header_menu_0i
+A zároveň kliknu na položku v menu "${nazev_polozky}"
+    Když kliknu na položku v menu "${nazev_polozky}"
 
-A zároveň kliknu na App Builder
-    Když kliknu na App Builder
+Pak URL adresa obsahuje "${text}"
+    ${url}=    Get Url
+    Should Contain    ${url}    ${text}
+
+Pak vidím hlavní nadpis "${text}"
+    Wait For Elements State    .t-Region-header:has-text("${text}")    visible
+    Get Text    h1    ==    ${text}
