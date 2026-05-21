@@ -28,3 +28,16 @@ Pak URL adresa obsahuje "${text}"
 Pak vidím hlavní nadpis "${text}"
     Wait For Elements State    .t-Region-header:has-text("${text}")    visible
     Get Text    h1    ==    ${text}
+
+Klikni na media list title
+    [Arguments]    ${jmeno}
+    ${selector}=    Set Variable    css=.t-MediaList-title:has-text("${jmeno}")
+    Click    ${selector}
+
+Když kliknu na media list title
+    [Arguments]    ${jmeno}
+    Klikni na media list title    ${jmeno}
+
+A zároveň kliknu na media list title
+    [Arguments]    ${jmeno}
+    Klikni na media list title    ${jmeno}
