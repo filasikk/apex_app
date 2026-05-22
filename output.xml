@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-22T08:54:45.852676" rpa="false" schemaversion="5">
+<<<<<<< HEAD
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-22T09:44:07.540969" rpa="false" schemaversion="5">
 <suite id="s1" name="Interactive Grid" source="D:\USERS\iotkurz1\Documents\apex_app\apex-test-flow\tests\interactive_grid.robot">
 <test id="s1-t1" name="Uživatel ověří sloupce v Interactive Gridu &quot;Seznam zaměstnanců s emailem&quot;" line="8">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-22T08:54:46.154335" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\323c6cc5-2485-440e-92cc-15d1ef226e9a"}</msg>
-<msg time="2026-05-22T08:54:46.192351" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57999</msg>
-<msg time="2026-05-22T08:54:47.216423" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\323c6cc5-2485-440e-92cc-15d1ef226e9a"}</msg>
+<msg time="2026-05-22T09:44:07.850836" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\f1b678fb-abaa-4618-bc65-40be3d110c89"}</msg>
+<msg time="2026-05-22T09:44:07.882700" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58711</msg>
+<msg time="2026-05-22T09:44:08.942665" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\f1b678fb-abaa-4618-bc65-40be3d110c89"}</msg>
+=======
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-22T09:42:34.635550" rpa="false" schemaversion="5">
+<suite id="s1" name="Interactive Grid" source="C:\Users\malej\OneDrive\Desktop\apex_app\apex-test-flow\tests\interactive_grid.robot">
+<test id="s1-t1" name="Uživatel ověří sloupce v Interactive Gridu &quot;Seznam zaměstnanců s emailem&quot;" line="8">
+<kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-22T09:42:36.485250" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\malej\\OneDrive\\Desktop\\apex_app\\browser\\traces\\temp\\54ab6886-f72e-4a3d-8c49-edc9c83f9565"}</msg>
+<msg time="2026-05-22T09:42:36.504642" level="INFO">Starting GRPC process C:\Users\malej\AppData\Local\Programs\Python\Python311\Lib\site-packages\BrowserBatteries\bin\grpc_server.exe using at 127.0.0.1:55865</msg>
+<msg time="2026-05-22T09:42:40.583495" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\malej\\OneDrive\\Desktop\\apex_app\\browser\\traces\\temp\\54ab6886-f72e-4a3d-8c49-edc9c83f9565"}</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="1.062088"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:07.850836" elapsed="1.091829"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-22T08:54:47.232146" level="INFO">{
+<msg time="2026-05-22T09:44:08.945696" level="INFO">{
+=======
+<status status="PASS" start="2026-05-22T09:42:36.483230" elapsed="4.100265"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-22T09:42:40.587519" level="INFO">{
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -29,168 +47,1423 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-22T08:54:47.374549" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-22T08:54:47.374549" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<<<<<<< HEAD
+<msg time="2026-05-22T09:44:09.106173" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T09:44:09.106173" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+=======
+<msg time="2026-05-22T09:42:40.698392" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T09:42:40.698392" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-22T08:54:47.216423" elapsed="0.158126"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:08.942665" elapsed="0.163508"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-22T08:54:49.107765" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-22T09:44:10.791606" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+=======
+<status status="PASS" start="2026-05-22T09:42:40.583495" elapsed="0.114897"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-22T09:42:44.913371" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-22T08:54:47.374549" elapsed="1.733216"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:09.106173" elapsed="1.685433"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="2.953430"/>
+<status status="PASS" start="2026-05-22T09:44:07.850836" elapsed="2.940770"/>
+=======
+<status status="PASS" start="2026-05-22T09:42:40.698392" elapsed="4.214979"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:36.483230" elapsed="8.431149"/>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-22T08:54:49.111507" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<<<<<<< HEAD
+<msg time="2026-05-22T09:44:10.801158" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.111507" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-22T09:44:10.801158" elapsed="0.000000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-22T08:54:49.111507" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-22T09:44:10.804455" level="INFO">Fills the text 'datprx' in the given field.</msg>
+=======
+<msg time="2026-05-22T09:42:44.921301" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<var>${uzivatel}</var>
+<arg>${UZIVATELE['${role}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:42:44.918199" elapsed="0.003102"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:42:44.925811" level="INFO">Fills the text 'datprx' in the given field.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.111507" elapsed="0.095038"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:10.804455" elapsed="0.062869"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-22T08:54:49.206545" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-22T09:44:10.870724" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+=======
+<status status="PASS" start="2026-05-22T09:42:44.922305" elapsed="0.094649"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:42:45.020471" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.206545" elapsed="0.038108"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:10.867324" elapsed="0.059684"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-22T08:54:49.244653" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-22T09:44:10.927008" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+=======
+<status status="PASS" start="2026-05-22T09:42:45.018463" elapsed="0.053947"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-22T09:42:45.074416" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.244653" elapsed="0.510579"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:10.927008" elapsed="0.545147"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.107765" elapsed="0.647467"/>
+<status status="PASS" start="2026-05-22T09:44:10.801158" elapsed="0.673629"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.107765" elapsed="0.647467"/>
+<status status="PASS" start="2026-05-22T09:44:10.801158" elapsed="0.673629"/>
+=======
+<status status="PASS" start="2026-05-22T09:42:45.073417" elapsed="0.602398"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:44.916763" elapsed="0.760058"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:44.915387" elapsed="0.761434"/>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 </kw>
 <kw name="A zároveň kliknu na Menu" owner="spolecne">
 <kw name="Když kliknu na Menu" owner="spolecne">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-22T08:54:49.755232" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+<<<<<<< HEAD
+<msg time="2026-05-22T09:44:11.477009" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+=======
+<msg time="2026-05-22T09:42:45.682052" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>id=t_Button_navControl</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:11.474787" elapsed="0.178365"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
+<status status="PASS" start="2026-05-22T09:44:11.474787" elapsed="0.178365"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
+<status status="PASS" start="2026-05-22T09:44:11.474787" elapsed="0.178365"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T09:44:12.654447" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T09:44:11.654152" elapsed="1.000295"/>
+=======
+<status status="PASS" start="2026-05-22T09:42:45.681061" elapsed="0.165081"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:45.679033" elapsed="0.168118"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:45.677811" elapsed="0.169340"/>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 </kw>
 <kw name="A zároveň kliknu na položku v menu &quot;Personalistika přehled&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-22T08:54:49.958372" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
+<<<<<<< HEAD
+<msg time="2026-05-22T09:44:12.655966" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
 <var>${selector}</var>
 <arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.958372" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-22T09:44:12.655966" elapsed="0.000000"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-22T08:54:49.970479" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+<msg time="2026-05-22T09:44:12.666969" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+=======
+<msg time="2026-05-22T09:42:45.851230" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:42:45.850231" elapsed="0.000999"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:42:45.894222" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>${selector}</arg>
 <arg>attached</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.958372" elapsed="0.012107"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:12.655966" elapsed="0.011003"/>
 </kw>
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-05-22T08:54:50.011011" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-22T09:44:12.705530" level="INFO">JavaScript executed successfully.</msg>
+=======
+<status status="PASS" start="2026-05-22T09:42:45.852230" elapsed="0.042991"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:42:45.967992" level="INFO">JavaScript executed successfully.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>${selector}</arg>
 <arg>(elem) =&gt; elem.click()</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-05-22T08:54:49.970479" elapsed="0.040532"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:12.666969" elapsed="0.038561"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.957373" elapsed="0.053638"/>
+<status status="PASS" start="2026-05-22T09:44:12.654958" elapsed="0.050572"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:49.956378" elapsed="0.055633"/>
+<status status="PASS" start="2026-05-22T09:44:12.654958" elapsed="0.050572"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-22T08:54:51.012206" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-22T09:44:13.706996" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-22T08:54:50.012011" elapsed="1.000195"/>
+<status status="PASS" start="2026-05-22T09:44:12.705530" elapsed="1.001466"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T09:44:14.708170" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T09:44:13.706996" elapsed="1.001174"/>
+=======
+<status status="PASS" start="2026-05-22T09:42:45.895221" elapsed="0.073774"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:45.849144" elapsed="0.119851"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:45.848142" elapsed="0.120853"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T09:42:46.972526" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T09:42:45.969994" elapsed="1.002532"/>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 </kw>
 <kw name="A zároveň kliknu na položku v menu &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-22T08:54:51.013544" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<<<<<<< HEAD
+<msg time="2026-05-22T09:44:14.712302" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${selector}</var>
 <arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-22T08:54:51.013544" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-22T09:44:14.711300" elapsed="0.001002"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-22T08:54:51.042635" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+<msg time="2026-05-22T09:44:14.758472" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+=======
+<msg time="2026-05-22T09:42:46.981946" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:42:46.978546" elapsed="0.003400"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:42:47.041533" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>${selector}</arg>
 <arg>attached</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-22T08:54:51.013544" elapsed="0.029091"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:14.712302" elapsed="0.046170"/>
 </kw>
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-05-22T08:54:51.079035" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-22T09:44:14.795437" level="INFO">JavaScript executed successfully.</msg>
+=======
+<status status="PASS" start="2026-05-22T09:42:46.983133" elapsed="0.059399"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:42:47.114621" level="INFO">JavaScript executed successfully.</msg>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 <arg>${selector}</arg>
 <arg>(elem) =&gt; elem.click()</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-05-22T08:54:51.042635" elapsed="0.036400"/>
+<<<<<<< HEAD
+<status status="PASS" start="2026-05-22T09:44:14.758472" elapsed="0.036965"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:51.012206" elapsed="0.066829"/>
+<status status="PASS" start="2026-05-22T09:44:14.710300" elapsed="0.085137"/>
 </kw>
-<status status="PASS" start="2026-05-22T08:54:51.012206" elapsed="0.066829"/>
+<status status="PASS" start="2026-05-22T09:44:14.709245" elapsed="0.086192"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-22T08:54:52.080623" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-22T09:44:15.796948" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-22T08:54:51.079035" elapsed="1.001588"/>
+<status status="PASS" start="2026-05-22T09:44:14.795437" elapsed="1.001511"/>
 </kw>
-<msg time="2026-05-22T08:54:52.121846" level="INFO">Switching context to context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816 in CURRENT</msg>
-<msg time="2026-05-22T08:54:52.127846" level="INFO">Successfully changed active context: context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816</msg>
-<msg time="2026-05-22T08:54:52.152334" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="5.927314"/>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.858798" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state visible</msg>
+<arg>text="Osobní číslo" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.797961" elapsed="0.060837"/>
+</kw>
+<kw name="Pak mřížka by měla obsahovat sloupce" owner="grid_klicova_slova">
+<for flavor="IN">
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.866302" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Osobní číslo")] | //span[contains(normalize-space(.), "Osobní číslo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.859798" elapsed="0.006504"/>
+</kw>
+<var name="${sloupec}">Osobní číslo</var>
+<status status="PASS" start="2026-05-22T09:44:15.859798" elapsed="0.006504"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.873308" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Jméno")] | //span[contains(normalize-space(.), "Jméno")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.867308" elapsed="0.006000"/>
+</kw>
+<var name="${sloupec}">Jméno</var>
+<status status="PASS" start="2026-05-22T09:44:15.866302" elapsed="0.007006"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.879546" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Příjmení")] | //span[contains(normalize-space(.), "Příjmení")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.873308" elapsed="0.006238"/>
+</kw>
+<var name="${sloupec}">Příjmení</var>
+<status status="PASS" start="2026-05-22T09:44:15.873308" elapsed="0.006238"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.885584" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Titul před")] | //span[contains(normalize-space(.), "Titul před")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.880547" elapsed="0.006036"/>
+</kw>
+<var name="${sloupec}">Titul před</var>
+<status status="PASS" start="2026-05-22T09:44:15.879546" elapsed="0.007037"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.892583" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Titul za")] | //span[contains(normalize-space(.), "Titul za")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.886583" elapsed="0.006000"/>
+</kw>
+<var name="${sloupec}">Titul za</var>
+<status status="PASS" start="2026-05-22T09:44:15.886583" elapsed="0.006000"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.897425" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné číslo")] | //span[contains(normalize-space(.), "Rodné číslo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.892583" elapsed="0.006246"/>
+</kw>
+<var name="${sloupec}">Rodné číslo</var>
+<status status="PASS" start="2026-05-22T09:44:15.892583" elapsed="0.006246"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.904829" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Státní příslušnost")] | //span[contains(normalize-space(.), "Státní příslušnost")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.898829" elapsed="0.006000"/>
+</kw>
+<var name="${sloupec}">Státní příslušnost</var>
+<status status="PASS" start="2026-05-22T09:44:15.898829" elapsed="0.006000"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.911253" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Místo narození")] | //span[contains(normalize-space(.), "Místo narození")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.905830" elapsed="0.005423"/>
+</kw>
+<var name="${sloupec}">Místo narození</var>
+<status status="PASS" start="2026-05-22T09:44:15.904829" elapsed="0.006424"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.918063" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Stát narození")] | //span[contains(normalize-space(.), "Stát narození")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.912284" elapsed="0.005779"/>
+</kw>
+<var name="${sloupec}">Stát narození</var>
+<status status="PASS" start="2026-05-22T09:44:15.911253" elapsed="0.006810"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.924061" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné příjmení")] | //span[contains(normalize-space(.), "Rodné příjmení")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.918063" elapsed="0.005998"/>
+</kw>
+<var name="${sloupec}">Rodné příjmení</var>
+<status status="PASS" start="2026-05-22T09:44:15.918063" elapsed="0.005998"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.930062" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Pracovní e-mail")] | //span[contains(normalize-space(.), "Pracovní e-mail")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.924061" elapsed="0.006001"/>
+</kw>
+<var name="${sloupec}">Pracovní e-mail</var>
+<status status="PASS" start="2026-05-22T09:44:15.924061" elapsed="0.006001"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.936061" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Nastup")] | //span[contains(normalize-space(.), "Nastup")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.930062" elapsed="0.005999"/>
+</kw>
+<var name="${sloupec}">Nastup</var>
+<status status="PASS" start="2026-05-22T09:44:15.930062" elapsed="0.005999"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.941800" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Pojistny Pomer Od")] | //span[contains(normalize-space(.), "Pojistny Pomer Od")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.937061" elapsed="0.005740"/>
+</kw>
+<var name="${sloupec}">Pojistny Pomer Od</var>
+<status status="PASS" start="2026-05-22T09:44:15.936061" elapsed="0.006740"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.947545" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Konec doby určité")] | //span[contains(normalize-space(.), "Konec doby určité")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.942801" elapsed="0.004744"/>
+</kw>
+<var name="${sloupec}">Konec doby určité</var>
+<status status="PASS" start="2026-05-22T09:44:15.942801" elapsed="0.005752"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.953583" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Ulice")] | //span[contains(normalize-space(.), "Adr Ulice")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.948553" elapsed="0.005030"/>
+</kw>
+<var name="${sloupec}">Adr Ulice</var>
+<status status="PASS" start="2026-05-22T09:44:15.948553" elapsed="0.006055"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.960582" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Cislo")] | //span[contains(normalize-space(.), "Adr Cislo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.954608" elapsed="0.005974"/>
+</kw>
+<var name="${sloupec}">Adr Cislo</var>
+<status status="PASS" start="2026-05-22T09:44:15.954608" elapsed="0.005974"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.966586" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Obec")] | //span[contains(normalize-space(.), "Adr Obec")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.960582" elapsed="0.006004"/>
+</kw>
+<var name="${sloupec}">Adr Obec</var>
+<status status="PASS" start="2026-05-22T09:44:15.960582" elapsed="0.006004"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:15.971807" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Psc")] | //span[contains(normalize-space(.), "Adr Psc")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:15.966586" elapsed="0.006228"/>
+</kw>
+<var name="${sloupec}">Adr Psc</var>
+<status status="PASS" start="2026-05-22T09:44:15.966586" elapsed="0.006228"/>
+</iter>
+<var>${sloupec}</var>
+<value>@{ocekavane_sloupce}</value>
+<status status="PASS" start="2026-05-22T09:44:15.859798" elapsed="0.113016"/>
+</for>
+<arg>Osobní číslo</arg>
+<arg>Jméno</arg>
+<arg>Příjmení</arg>
+<arg>Titul před</arg>
+<arg>Titul za</arg>
+<arg>Rodné číslo</arg>
+<arg>Státní příslušnost</arg>
+<arg>Místo narození</arg>
+<arg>Stát narození</arg>
+<arg>Rodné příjmení</arg>
+<arg>Pracovní e-mail</arg>
+<arg>Nastup</arg>
+<arg>Pojistny Pomer Od</arg>
+<arg>Konec doby určité</arg>
+<arg>Adr Ulice</arg>
+<arg>Adr Cislo</arg>
+<arg>Adr Obec</arg>
+<arg>Adr Psc</arg>
+<status status="PASS" start="2026-05-22T09:44:15.858798" elapsed="0.114016"/>
+</kw>
+<msg time="2026-05-22T09:44:15.982838" level="INFO">Switching context to context=c3cf99f5-c282-4cec-a9f1-4616d5b6c7bc in CURRENT</msg>
+<msg time="2026-05-22T09:44:15.985840" level="INFO">Successfully changed active context: context=c3cf99f5-c282-4cec-a9f1-4616d5b6c7bc</msg>
+<msg time="2026-05-22T09:44:16.008821" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-22T09:44:07.850836" elapsed="8.121978"/>
 </test>
-<status status="PASS" start="2026-05-22T08:54:45.852676" elapsed="6.300656"/>
+<test id="s1-t2" name="Uživatel ověří navigaci a sloupce v aplikaci" line="38">
+<kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-22T09:44:16.014335" level="INFO">Switching browser to browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:16.016334" level="INFO">Successfully changed active browser: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:16.017337" level="INFO">Reusing existing browser with id: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<arg>browser=${PROHLIZEC}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.014335" elapsed="0.003002"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-22T09:44:16.019340" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2026-05-22T09:44:16.039339" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T09:44:16.040343" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.017337" elapsed="0.023006"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-22T09:44:16.538740" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<arg>url=${URL_APLIKACE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.040343" elapsed="0.498397"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:16.013335" elapsed="0.525405"/>
+</kw>
+<kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
+<kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:16.541733" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<var>${uzivatel}</var>
+<arg>${UZIVATELE['${role}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.540733" elapsed="0.001000"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:44:16.541733" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<arg>id=username</arg>
+<arg>${uzivatel['jmeno']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.541733" elapsed="0.037368"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:44:16.580100" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<arg>id=password</arg>
+<arg>${uzivatel['heslo']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.579101" elapsed="0.020007"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-22T09:44:16.600109" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<arg>[name="_eventId_proceed"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:16.599108" elapsed="0.439484"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:16.539733" elapsed="0.498859"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:16.539733" elapsed="0.498859"/>
+</kw>
+<kw name="A zároveň kliknu na Menu" owner="spolecne">
+<kw name="Když kliknu na Menu" owner="spolecne">
+<kw name="Click" owner="Browser">
+<msg time="2026-05-22T09:44:17.042975" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+<arg>id=t_Button_navControl</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.042975" elapsed="0.203627"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.038592" elapsed="0.208010"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.038592" elapsed="0.208010"/>
+</kw>
+<kw name="Pak boční menu by mělo obsahovat položky" owner="spolecne">
+<for flavor="IN">
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.263056" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" &gt;&gt; nth=0 at state visible</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.246602" elapsed="0.016454"/>
+</kw>
+<var name="${polozka}">Personalistika přehled</var>
+<status status="PASS" start="2026-05-22T09:44:17.246602" elapsed="0.016454"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.290763" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state visible</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.263056" elapsed="0.027707"/>
+</kw>
+<var name="${polozka}">Seznam zaměstnanců s emailem</var>
+<status status="PASS" start="2026-05-22T09:44:17.263056" elapsed="0.027707"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.297163" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Dostupné formuláře" &gt;&gt; nth=0 at state visible</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.290763" elapsed="0.008149"/>
+</kw>
+<var name="${polozka}">Dostupné formuláře</var>
+<status status="PASS" start="2026-05-22T09:44:17.290763" elapsed="0.008149"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.303409" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Home" &gt;&gt; nth=0 at state visible</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.298912" elapsed="0.004497"/>
+</kw>
+<var name="${polozka}">Home</var>
+<status status="PASS" start="2026-05-22T09:44:17.298912" elapsed="0.004497"/>
+</iter>
+<var>${polozka}</var>
+<value>@{ocekavane_polozky}</value>
+<status status="PASS" start="2026-05-22T09:44:17.246602" elapsed="0.056807"/>
+</for>
+<arg>Personalistika přehled</arg>
+<arg>Seznam zaměstnanců s emailem</arg>
+<arg>Dostupné formuláře</arg>
+<arg>Home</arg>
+<status status="PASS" start="2026-05-22T09:44:17.246602" elapsed="0.056807"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Personalistika přehled&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:17.307529" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.307529" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.316202" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+<arg>${selector}</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.307529" elapsed="0.008673"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:44:17.349193" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.316202" elapsed="0.032991"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.307529" elapsed="0.041664"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.307529" elapsed="0.041664"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:17.353641" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.353641" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:17.448557" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+<arg>${selector}</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.353641" elapsed="0.094916"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:44:17.490550" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.448557" elapsed="0.041993"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.349193" elapsed="0.145564"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.349193" elapsed="0.145564"/>
+</kw>
+<msg time="2026-05-22T09:44:17.511543" level="INFO">Switching context to context=92ba35d6-f42e-444e-88a9-9f7dd574e8f8 in CURRENT</msg>
+<msg time="2026-05-22T09:44:17.515753" level="INFO">Successfully changed active context: context=92ba35d6-f42e-444e-88a9-9f7dd574e8f8</msg>
+<msg time="2026-05-22T09:44:17.533834" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-22T09:44:16.009821" elapsed="1.484936"/>
+</test>
+<test id="s1-t3" name="Role vedoucí by měla vidět všechny sloupce včetně Rodného čísla" line="54">
+<kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-22T09:44:17.544940" level="INFO">Switching browser to browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:17.546947" level="INFO">Successfully changed active browser: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:17.546947" level="INFO">Reusing existing browser with id: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<arg>browser=${PROHLIZEC}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.544940" elapsed="0.002007"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-22T09:44:17.550962" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2026-05-22T09:44:17.565673" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T09:44:17.565673" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.546947" elapsed="0.018726"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-22T09:44:18.118999" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<arg>url=${URL_APLIKACE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-22T09:44:17.565673" elapsed="0.553326"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:17.544940" elapsed="0.574059"/>
+</kw>
+<kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
+<kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:18.118999" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<var>${uzivatel}</var>
+<arg>${UZIVATELE['${role}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.118999" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:44:18.118999" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<arg>id=username</arg>
+<arg>${uzivatel['jmeno']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.118999" elapsed="0.034157"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-22T09:44:18.153156" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<arg>id=password</arg>
+<arg>${uzivatel['heslo']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.153156" elapsed="0.021192"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-22T09:44:18.174348" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<arg>[name="_eventId_proceed"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.174348" elapsed="0.435257"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.118999" elapsed="0.490606"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.118999" elapsed="0.490606"/>
+</kw>
+<kw name="A zároveň kliknu na Menu" owner="spolecne">
+<kw name="Když kliknu na Menu" owner="spolecne">
+<kw name="Click" owner="Browser">
+<msg time="2026-05-22T09:44:18.613432" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+<arg>id=t_Button_navControl</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.609605" elapsed="0.170503"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.609605" elapsed="0.170503"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.609605" elapsed="0.170503"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Personalistika přehled&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:18.782118" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.782118" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:18.795926" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+<arg>${selector}</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.782118" elapsed="0.013808"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:44:18.835720" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.795926" elapsed="0.039794"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.780108" elapsed="0.055612"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.780108" elapsed="0.055612"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:18.835720" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.835720" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:18.927368" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+<arg>${selector}</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.835720" elapsed="0.091648"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T09:44:18.971973" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.927368" elapsed="0.044605"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.835720" elapsed="0.136253"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:18.835720" elapsed="0.136253"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.246123" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state visible</msg>
+<arg>text="Osobní číslo" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:18.971973" elapsed="0.274150"/>
+</kw>
+<kw name="Pak mřížka by měla obsahovat sloupce" owner="grid_klicova_slova">
+<for flavor="IN">
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.254150" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Osobní číslo")] | //span[contains(normalize-space(.), "Osobní číslo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.248129" elapsed="0.006021"/>
+</kw>
+<var name="${sloupec}">Osobní číslo</var>
+<status status="PASS" start="2026-05-22T09:44:19.248129" elapsed="0.006021"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.262194" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Jméno")] | //span[contains(normalize-space(.), "Jméno")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.256157" elapsed="0.006037"/>
+</kw>
+<var name="${sloupec}">Jméno</var>
+<status status="PASS" start="2026-05-22T09:44:19.256157" elapsed="0.006037"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.268216" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Příjmení")] | //span[contains(normalize-space(.), "Příjmení")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.262194" elapsed="0.006022"/>
+</kw>
+<var name="${sloupec}">Příjmení</var>
+<status status="PASS" start="2026-05-22T09:44:19.262194" elapsed="0.006022"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.281854" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Titul před")] | //span[contains(normalize-space(.), "Titul před")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.270224" elapsed="0.011630"/>
+</kw>
+<var name="${sloupec}">Titul před</var>
+<status status="PASS" start="2026-05-22T09:44:19.268216" elapsed="0.013638"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.350160" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Titul za")] | //span[contains(normalize-space(.), "Titul za")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.282866" elapsed="0.071438"/>
+</kw>
+<var name="${sloupec}">Titul za</var>
+<status status="PASS" start="2026-05-22T09:44:19.282866" elapsed="0.071438"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.366554" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné číslo")] | //span[contains(normalize-space(.), "Rodné číslo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.354304" elapsed="0.012250"/>
+</kw>
+<var name="${sloupec}">Rodné číslo</var>
+<status status="PASS" start="2026-05-22T09:44:19.354304" elapsed="0.012250"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.377277" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Státní příslušnost")] | //span[contains(normalize-space(.), "Státní příslušnost")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.366554" elapsed="0.010723"/>
+</kw>
+<var name="${sloupec}">Státní příslušnost</var>
+<status status="PASS" start="2026-05-22T09:44:19.366554" elapsed="0.010723"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.383997" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Místo narození")] | //span[contains(normalize-space(.), "Místo narození")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.377277" elapsed="0.006720"/>
+</kw>
+<var name="${sloupec}">Místo narození</var>
+<status status="PASS" start="2026-05-22T09:44:19.377277" elapsed="0.006720"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.391527" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Stát narození")] | //span[contains(normalize-space(.), "Stát narození")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.383997" elapsed="0.007530"/>
+</kw>
+<var name="${sloupec}">Stát narození</var>
+<status status="PASS" start="2026-05-22T09:44:19.383997" elapsed="0.007530"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.399851" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné příjmení")] | //span[contains(normalize-space(.), "Rodné příjmení")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.395601" elapsed="0.004250"/>
+</kw>
+<var name="${sloupec}">Rodné příjmení</var>
+<status status="PASS" start="2026-05-22T09:44:19.391527" elapsed="0.008324"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.408256" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Pracovní e-mail")] | //span[contains(normalize-space(.), "Pracovní e-mail")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.399851" elapsed="0.008405"/>
+</kw>
+<var name="${sloupec}">Pracovní e-mail</var>
+<status status="PASS" start="2026-05-22T09:44:19.399851" elapsed="0.008405"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.416758" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Nastup")] | //span[contains(normalize-space(.), "Nastup")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.408256" elapsed="0.008502"/>
+</kw>
+<var name="${sloupec}">Nastup</var>
+<status status="PASS" start="2026-05-22T09:44:19.408256" elapsed="0.008502"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.424682" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Pojistny Pomer Od")] | //span[contains(normalize-space(.), "Pojistny Pomer Od")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.416758" elapsed="0.007924"/>
+</kw>
+<var name="${sloupec}">Pojistny Pomer Od</var>
+<status status="PASS" start="2026-05-22T09:44:19.416758" elapsed="0.007924"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.432925" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Konec doby určité")] | //span[contains(normalize-space(.), "Konec doby určité")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.424682" elapsed="0.008243"/>
+</kw>
+<var name="${sloupec}">Konec doby určité</var>
+<status status="PASS" start="2026-05-22T09:44:19.424682" elapsed="0.008243"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.442880" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Ulice")] | //span[contains(normalize-space(.), "Adr Ulice")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.432925" elapsed="0.009955"/>
+</kw>
+<var name="${sloupec}">Adr Ulice</var>
+<status status="PASS" start="2026-05-22T09:44:19.432925" elapsed="0.009955"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.450108" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Cislo")] | //span[contains(normalize-space(.), "Adr Cislo")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.442880" elapsed="0.007228"/>
+</kw>
+<var name="${sloupec}">Adr Cislo</var>
+<status status="PASS" start="2026-05-22T09:44:19.442880" elapsed="0.007228"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.458445" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Obec")] | //span[contains(normalize-space(.), "Adr Obec")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.450108" elapsed="0.008337"/>
+</kw>
+<var name="${sloupec}">Adr Obec</var>
+<status status="PASS" start="2026-05-22T09:44:19.450108" elapsed="0.008337"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T09:44:19.464766" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Adr Psc")] | //span[contains(normalize-space(.), "Adr Psc")])[1] at state visible</msg>
+<arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.458445" elapsed="0.006321"/>
+</kw>
+<var name="${sloupec}">Adr Psc</var>
+<status status="PASS" start="2026-05-22T09:44:19.458445" elapsed="0.006321"/>
+</iter>
+<var>${sloupec}</var>
+<value>@{ocekavane_sloupce}</value>
+<status status="PASS" start="2026-05-22T09:44:19.248129" elapsed="0.216637"/>
+</for>
+<arg>Osobní číslo</arg>
+<arg>Jméno</arg>
+<arg>Příjmení</arg>
+<arg>Titul před</arg>
+<arg>Titul za</arg>
+<arg>Rodné číslo</arg>
+<arg>Státní příslušnost</arg>
+<arg>Místo narození</arg>
+<arg>Stát narození</arg>
+<arg>Rodné příjmení</arg>
+<arg>Pracovní e-mail</arg>
+<arg>Nastup</arg>
+<arg>Pojistny Pomer Od</arg>
+<arg>Konec doby určité</arg>
+<arg>Adr Ulice</arg>
+<arg>Adr Cislo</arg>
+<arg>Adr Obec</arg>
+<arg>Adr Psc</arg>
+<status status="PASS" start="2026-05-22T09:44:19.246123" elapsed="0.218643"/>
+</kw>
+<msg time="2026-05-22T09:44:19.475563" level="INFO">Switching context to context=d01601a5-4b3b-48ab-bb4a-0d22b4158a26 in CURRENT</msg>
+<msg time="2026-05-22T09:44:19.479830" level="INFO">Successfully changed active context: context=d01601a5-4b3b-48ab-bb4a-0d22b4158a26</msg>
+<msg time="2026-05-22T09:44:19.499699" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-22T09:44:17.536917" elapsed="1.930002"/>
+</test>
+<test id="s1-t4" name="Role nevedoucí by NEMĚLA vidět Rodné číslo" line="83">
+<kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-22T09:44:19.506590" level="INFO">Switching browser to browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:19.508321" level="INFO">Successfully changed active browser: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<msg time="2026-05-22T09:44:19.508321" level="INFO">Reusing existing browser with id: browser=55b3cc2a-408c-4716-9ec1-837662449dcf</msg>
+<arg>browser=${PROHLIZEC}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.506590" elapsed="0.001731"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-22T09:44:19.512369" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2026-05-22T09:44:19.530143" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T09:44:19.530143" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.508321" elapsed="0.021822"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-22T09:44:20.167402" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<arg>url=${URL_APLIKACE}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-22T09:44:19.530143" elapsed="0.637259"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:44:19.506590" elapsed="0.660812"/>
+</kw>
+<kw name="Když se přihlásím jako &quot;nevedouci&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
+<kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T09:44:20.172488" level="FAIL">Resolving variable '${UZIVATELE['nevedouci']}' failed: KeyError: 'nevedouci'</msg>
+<var>${uzivatel}</var>
+<arg>${UZIVATELE['${role}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="FAIL" start="2026-05-22T09:44:20.172488" elapsed="0.000000">Resolving variable '${UZIVATELE['nevedouci']}' failed: KeyError: 'nevedouci'</status>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<arg>id=username</arg>
+<arg>${uzivatel['jmeno']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<arg>id=password</arg>
+<arg>${uzivatel['heslo']}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>[name="_eventId_proceed"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-05-22T09:44:20.172488" elapsed="0.000000">Resolving variable '${UZIVATELE['nevedouci']}' failed: KeyError: 'nevedouci'</status>
+</kw>
+<status status="FAIL" start="2026-05-22T09:44:20.171966" elapsed="0.000522">Resolving variable '${UZIVATELE['nevedouci']}' failed: KeyError: 'nevedouci'</status>
+</kw>
+<kw name="A zároveň kliknu na Menu" owner="spolecne">
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Personalistika přehled&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<status status="NOT RUN" start="2026-05-22T09:44:20.172488" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>text="Osobní číslo" &gt;&gt; nth=0</arg>
+<arg>visible</arg>
+<arg>timeout=15s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2026-05-22T09:44:20.176426" elapsed="0.000000"/>
+</kw>
+<kw name="Pak mřížka by měla obsahovat sloupce" owner="grid_klicova_slova">
+<arg>Osobní číslo</arg>
+<arg>Jméno</arg>
+<arg>Příjmení</arg>
+<arg>Titul před</arg>
+<arg>Titul za</arg>
+<arg>Státní příslušnost</arg>
+<arg>Místo narození</arg>
+<arg>Stát narození</arg>
+<arg>Rodné příjmení</arg>
+<arg>Pracovní e-mail</arg>
+<arg>Nastup</arg>
+<arg>Pojistny Pomer Od</arg>
+<arg>Konec doby určité</arg>
+<arg>Adr Ulice</arg>
+<arg>Adr Cislo</arg>
+<arg>Adr Obec</arg>
+<arg>Adr Psc</arg>
+<status status="NOT RUN" start="2026-05-22T09:44:20.176426" elapsed="0.000000"/>
+</kw>
+<kw name="A zároveň mřížka by NEMĚLA obsahovat sloupec">
+<arg>Rodné číslo</arg>
+<status status="NOT RUN" start="2026-05-22T09:44:20.176426" elapsed="0.000000"/>
+</kw>
+<msg time="2026-05-22T09:44:20.181460" level="INFO">Switching context to context=2169a937-d63b-45de-a587-0bdf0e837278 in CURRENT</msg>
+<msg time="2026-05-22T09:44:20.192118" level="INFO">Successfully changed active context: context=2169a937-d63b-45de-a587-0bdf0e837278</msg>
+<msg time="2026-05-22T09:44:20.208259" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2026-05-22T09:44:19.499699" elapsed="0.676727">Resolving variable '${UZIVATELE['nevedouci']}' failed: KeyError: 'nevedouci'</status>
+</test>
+<status status="FAIL" start="2026-05-22T09:44:07.540969" elapsed="12.670515"/>
+=======
+<status status="PASS" start="2026-05-22T09:42:47.042532" elapsed="0.072089"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:46.975552" elapsed="0.140083"/>
+</kw>
+<status status="PASS" start="2026-05-22T09:42:46.973550" elapsed="0.142085"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T09:42:48.118249" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T09:42:47.115635" elapsed="1.003123"/>
+</kw>
+<msg time="2026-05-22T09:42:48.162991" level="INFO">Switching context to context=99942839-5983-432c-a6f5-a10d1e7517e9 in CURRENT</msg>
+<msg time="2026-05-22T09:42:48.173477" level="INFO">Successfully changed active context: context=99942839-5983-432c-a6f5-a10d1e7517e9</msg>
+<msg time="2026-05-22T09:42:48.237160" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-22T09:42:36.474099" elapsed="11.645832"/>
+</test>
+<status status="PASS" start="2026-05-22T09:42:34.640877" elapsed="13.597297"/>
+>>>>>>> bb1a848b7b9aa7099215039deba489034aa4ee90
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Interactive Grid" id="s1" pass="1" fail="0" skip="0">Interactive Grid</stat>
+<stat name="Interactive Grid" id="s1" pass="3" fail="1" skip="0">Interactive Grid</stat>
 </suite>
 </statistics>
 <errors>

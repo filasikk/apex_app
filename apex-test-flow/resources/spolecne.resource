@@ -50,3 +50,10 @@ Když kliknu na media list title
 A zároveň kliknu na media list title
     [Arguments]    ${jmeno}
     Klikni na media list title    ${jmeno}
+
+Pak boční menu by mělo obsahovat položky
+    [Arguments]    @{ocekavane_polozky}
+    FOR    ${polozka}    IN    @{ocekavane_polozky}
+        # Hledáme text přímo uvnitř navigačního stromu a bereme hned první výskyt, co najdemeee!
+        Wait For Elements State    css=#t_TreeNav >> text="${polozka}" >> nth=0    visible    timeout=5s
+    END
