@@ -3,11 +3,16 @@ Library    Browser
 Library    Collections
 
 *** Keywords ***
-Mřížka by měla obsahovat sloupce
+Pak mřížka by měla obsahovat sloupce
     [Arguments]    @{ocekavane_sloupce}
     FOR    ${sloupec}    IN    @{ocekavane_sloupce}
-        Wait For Elements State    .a-GV-headerLabel:has-text("${sloupec}")    visible
+        # Rovnou použijeme tvůj neprůstřelný XPath! Žádné zbytečné čekání na neexistující elementy.
+        Wait For Elements State    xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]    visible    timeout=5s
     END
+
+A zároveň mřížka by měla obsahovat sloupce
+    [Arguments]    @{ocekavane_sloupce}
+    Pak mřížka by měla obsahovat sloupce    @{ocekavane_sloupce}
 
 Mřížka by měla mít přesně tyto sloupce
     [Arguments]    @{ocekavane_sloupce}
@@ -16,7 +21,14 @@ Mřížka by měla mít přesně tyto sloupce
     FOR    ${el}    IN    @{aktualni_sloupce}
         ${t}=    Get Text    ${el}
         IF    "${t}" != ""
-            Append To List    ${texty}    ${t}
+            # Odstraníme zalomení řádků pro porovnání
+            ${t_clean}=    Evaluate    " ".join("${t}".split())
+            Append To List    ${texty}    ${t_clean}
         END
     END
     Lists Should Be Equal    ${texty}    ${ocekavane_sloupce}
+
+Pak mřížka by NEMĚLA obsahovat sloupec
+    [Arguments]    ${sloupec}
+    # Použijeme stejný selektor, ale místo 'visible' čekáme na stav 'hidden' nebo 'detached' (že v HTML vůbec není)
+    Wait For Elements State    xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]    hidden    timeout=3s
