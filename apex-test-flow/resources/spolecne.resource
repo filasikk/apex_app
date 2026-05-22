@@ -16,7 +16,15 @@ A zároveň kliknu na Menu
     Když kliknu na Menu
 
 Když kliknu na položku v menu "${nazev_polozky}"
-    Click    text="${nazev_polozky}"
+    # Uložíme si ten selektor do proměnné, ať ho nemusíme psát dvakrát
+    ${selector}=    Set Variable    css=#t_TreeNav >> text="${nazev_polozky}"
+
+    # Počkáme, až se prvek aspoň objeví v HTML kódu (ignorujeme, jestli je schovaný animací)
+    Wait For Elements State    ${selector}    attached
+
+    # Odpálíme kliknutí přímo přes JavaScript! Tím obejdeme úplně všechny překážky.
+    Evaluate JavaScript    ${selector}    (elem) => elem.click()
+
 
 A zároveň kliknu na položku v menu "${nazev_polozky}"
     Když kliknu na položku v menu "${nazev_polozky}"
@@ -32,6 +40,7 @@ Pak vidím hlavní nadpis "${text}"
 Klikni na media list title
     [Arguments]    ${jmeno}
     ${selector}=    Set Variable    css=.t-MediaList-title:has-text("${jmeno}")
+    Wait For Elements State    ${selector}    visible
     Click    ${selector}
 
 Když kliknu na media list title

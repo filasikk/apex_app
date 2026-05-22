@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-21T13:28:16.671406" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-22T08:54:45.852676" rpa="false" schemaversion="5">
 <suite id="s1" name="Interactive Grid" source="D:\USERS\iotkurz1\Documents\apex_app\apex-test-flow\tests\interactive_grid.robot">
-<test id="s1-t1" name="Uživatel přejde na stránku Rozcestník" line="6">
+<test id="s1-t1" name="Uživatel ověří sloupce v Interactive Gridu &quot;Seznam zaměstnanců s emailem&quot;" line="8">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-21T13:28:16.995409" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\0567e38e-1f2f-474c-818d-643f8f48d0f7"}</msg>
-<msg time="2026-05-21T13:28:17.020915" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62011</msg>
-<msg time="2026-05-21T13:28:18.101845" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\0567e38e-1f2f-474c-818d-643f8f48d0f7"}</msg>
+<msg time="2026-05-22T08:54:46.154335" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\323c6cc5-2485-440e-92cc-15d1ef226e9a"}</msg>
+<msg time="2026-05-22T08:54:46.192351" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57999</msg>
+<msg time="2026-05-22T08:54:47.216423" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\browser\\traces\\temp\\323c6cc5-2485-440e-92cc-15d1ef226e9a"}</msg>
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-21T13:28:16.995409" elapsed="1.106436"/>
+<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="1.062088"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-21T13:28:18.117492" level="INFO">{
+<msg time="2026-05-22T08:54:47.232146" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -29,129 +29,159 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-21T13:28:18.259698" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-21T13:28:18.259698" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2026-05-22T08:54:47.374549" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-22T08:54:47.374549" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-21T13:28:18.101845" elapsed="0.157853"/>
+<status status="PASS" start="2026-05-22T08:54:47.216423" elapsed="0.158126"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-21T13:28:20.009867" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-22T08:54:49.107765" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-21T13:28:18.259698" elapsed="1.750169"/>
+<status status="PASS" start="2026-05-22T08:54:47.374549" elapsed="1.733216"/>
 </kw>
-<status status="PASS" start="2026-05-21T13:28:16.993402" elapsed="3.016465"/>
+<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="2.953430"/>
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-21T13:28:20.020857" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<msg time="2026-05-22T08:54:49.111507" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.009867" elapsed="0.010990"/>
+<status status="PASS" start="2026-05-22T08:54:49.111507" elapsed="0.000000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-21T13:28:20.022865" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-22T08:54:49.111507" level="INFO">Fills the text 'datprx' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.020857" elapsed="0.083041"/>
+<status status="PASS" start="2026-05-22T08:54:49.111507" elapsed="0.095038"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-21T13:28:20.108408" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-22T08:54:49.206545" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.103898" elapsed="0.015906"/>
+<status status="PASS" start="2026-05-22T08:54:49.206545" elapsed="0.038108"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-21T13:28:20.119804" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-22T08:54:49.244653" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.119804" elapsed="0.526424"/>
+<status status="PASS" start="2026-05-22T08:54:49.244653" elapsed="0.510579"/>
 </kw>
-<status status="PASS" start="2026-05-21T13:28:20.009867" elapsed="0.636361"/>
+<status status="PASS" start="2026-05-22T08:54:49.107765" elapsed="0.647467"/>
 </kw>
-<status status="PASS" start="2026-05-21T13:28:20.009867" elapsed="0.636361"/>
+<status status="PASS" start="2026-05-22T08:54:49.107765" elapsed="0.647467"/>
 </kw>
 <kw name="A zároveň kliknu na Menu" owner="spolecne">
 <kw name="Když kliknu na Menu" owner="spolecne">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-21T13:28:20.648238" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+<msg time="2026-05-22T08:54:49.755232" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
 <arg>id=t_Button_navControl</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.648238" elapsed="0.198059"/>
+<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
 </kw>
-<status status="PASS" start="2026-05-21T13:28:20.648238" elapsed="0.198059"/>
+<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
 </kw>
-<status status="PASS" start="2026-05-21T13:28:20.648238" elapsed="0.198059"/>
+<status status="PASS" start="2026-05-22T08:54:49.755232" elapsed="0.201146"/>
 </kw>
 <kw name="A zároveň kliknu na položku v menu &quot;Personalistika přehled&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<kw name="Click" owner="Browser">
-<msg time="2026-05-21T13:28:20.849302" level="INFO">Clicks the element 'text="Personalistika přehled"'.</msg>
-<arg>text="${nazev_polozky}"</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:20.848298" elapsed="0.186257"/>
-</kw>
-<status status="PASS" start="2026-05-21T13:28:20.848298" elapsed="0.186257"/>
-</kw>
-<status status="PASS" start="2026-05-21T13:28:20.847298" elapsed="0.187257"/>
-</kw>
-<kw name="A zároveň kliknu na media list title" owner="spolecne">
-<kw name="Klikni na media list title" owner="spolecne">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-21T13:28:21.036550" level="INFO">${selector} = css=.t-MediaList-title:has-text("Seznam zaměstnanců s emailem")</msg>
+<msg time="2026-05-22T08:54:49.958372" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Personalistika přehled"</msg>
 <var>${selector}</var>
-<arg>css=.t-MediaList-title:has-text("${jmeno}")</arg>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-21T13:28:21.035554" elapsed="0.000996"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2026-05-21T13:28:21.037556" level="INFO">Clicks the element 'css=.t-MediaList-title:has-text("Seznam zaměstnanců s emailem")'.</msg>
-<arg>${selector}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-21T13:28:21.036550" elapsed="0.331191"/>
-</kw>
-<arg>${jmeno}</arg>
-<status status="PASS" start="2026-05-21T13:28:21.035554" elapsed="0.332187"/>
-</kw>
-<arg>Seznam zaměstnanců s emailem</arg>
-<status status="PASS" start="2026-05-21T13:28:21.034555" elapsed="0.333186"/>
+<status status="PASS" start="2026-05-22T08:54:49.958372" elapsed="0.000000"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-21T13:28:21.423333" level="INFO">Waited for Element with selector h2.u-VisuallyHidden:has-text("Seznam zaměstnanců s emailem") at state attached</msg>
-<arg>h2.u-VisuallyHidden:has-text("Seznam zaměstnanců s emailem")</arg>
+<msg time="2026-05-22T08:54:49.970479" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" at state attached</msg>
+<arg>${selector}</arg>
 <arg>attached</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-21T13:28:21.368742" elapsed="0.054591"/>
+<status status="PASS" start="2026-05-22T08:54:49.958372" elapsed="0.012107"/>
 </kw>
-<msg time="2026-05-21T13:28:21.439024" level="INFO">Switching context to context=3b116cab-0127-4f23-a314-6ef655ae2d1f in CURRENT</msg>
-<msg time="2026-05-21T13:28:21.444025" level="INFO">Successfully changed active context: context=3b116cab-0127-4f23-a314-6ef655ae2d1f</msg>
-<msg time="2026-05-21T13:28:21.472183" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-21T13:28:16.993402" elapsed="4.430930"/>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T08:54:50.011011" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T08:54:49.970479" elapsed="0.040532"/>
+</kw>
+<status status="PASS" start="2026-05-22T08:54:49.957373" elapsed="0.053638"/>
+</kw>
+<status status="PASS" start="2026-05-22T08:54:49.956378" elapsed="0.055633"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T08:54:51.012206" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T08:54:50.012011" elapsed="1.000195"/>
+</kw>
+<kw name="A zároveň kliknu na položku v menu &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="A zároveň kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T08:54:51.013544" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<var>${selector}</var>
+<arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T08:54:51.013544" elapsed="0.000000"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-22T08:54:51.042635" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+<arg>${selector}</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-22T08:54:51.013544" elapsed="0.029091"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-22T08:54:51.079035" level="INFO">JavaScript executed successfully.</msg>
+<arg>${selector}</arg>
+<arg>(elem) =&gt; elem.click()</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-22T08:54:51.042635" elapsed="0.036400"/>
+</kw>
+<status status="PASS" start="2026-05-22T08:54:51.012206" elapsed="0.066829"/>
+</kw>
+<status status="PASS" start="2026-05-22T08:54:51.012206" elapsed="0.066829"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T08:54:52.080623" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T08:54:51.079035" elapsed="1.001588"/>
+</kw>
+<msg time="2026-05-22T08:54:52.121846" level="INFO">Switching context to context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816 in CURRENT</msg>
+<msg time="2026-05-22T08:54:52.127846" level="INFO">Successfully changed active context: context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816</msg>
+<msg time="2026-05-22T08:54:52.152334" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-22T08:54:46.154335" elapsed="5.927314"/>
 </test>
-<status status="PASS" start="2026-05-21T13:28:16.687056" elapsed="4.787129"/>
+<status status="PASS" start="2026-05-22T08:54:45.852676" elapsed="6.300656"/>
 </suite>
 <statistics>
 <total>

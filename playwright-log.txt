@@ -1,56 +1,59 @@
-{"level":"info","time":"2026-05-21T11:28:17.550Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:62011"}
-{"level":"info","time":"2026-05-21T11:28:17.574Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:18.113Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: firefox, version: 150.0.2"}
-{"level":"info","time":"2026-05-21T11:28:18.114Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
-{"level":"info","time":"2026-05-21T11:28:18.114Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:18.119Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newContext","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:18.119Z","seq":7,"component":"browser-library","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
-{"level":"info","time":"2026-05-21T11:28:18.119Z","seq":8,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@1414f8fb7db74e1330e71d41449411e8\"},\"name\":\"firefox\",\"id\":\"browser=0b51a63a-8e1c-4aa2-8f28-740bdab56a8f\",\"headless\":false}"}
-{"level":"info","time":"2026-05-21T11:28:18.119Z","seq":9,"component":"browser-library","msg":"Trace file: "}
-{"level":"info","time":"2026-05-21T11:28:18.273Z","seq":10,"component":"browser-library","msg":"Setting default timeout for context context=3b116cab-0127-4f23-a314-6ef655ae2d1f to 10000"}
-{"level":"info","time":"2026-05-21T11:28:18.273Z","seq":11,"component":"browser-library","msg":"Changed active context: context=3b116cab-0127-4f23-a314-6ef655ae2d1f"}
-{"level":"info","time":"2026-05-21T11:28:18.273Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newContext","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:18.278Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:18.278Z","seq":14,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[{\"id\":\"context=3b116cab-0127-4f23-a314-6ef655ae2d1f\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@239347e64028ee7c6f1e374454231cdb\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@1414f8fb7db74e1330e71d41449411e8\"},\"name\":\"firefox\",\"id\":\"browser=0b51a63a-8e1c-4aa2-8f28-740bdab56a8f\",\"headless\":false}"}
-{"level":"info","time":"2026-05-21T11:28:19.452Z","seq":15,"component":"browser-library","msg":"Video path: undefined"}
-{"level":"info","time":"2026-05-21T11:28:19.452Z","seq":16,"component":"browser-library","msg":"Changed active page"}
-{"level":"info","time":"2026-05-21T11:28:20.017Z","seq":17,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:20.026Z","seq":18,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:20.027Z","seq":19,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=username in page."}
-{"level":"info","time":"2026-05-21T11:28:20.105Z","seq":20,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:20.111Z","seq":21,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:20.111Z","seq":22,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
-{"level":"info","time":"2026-05-21T11:28:20.130Z","seq":23,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:20.134Z","seq":24,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:20.134Z","seq":25,"component":"browser-library","msg":"Strict mode is enabled, find Locator with [name=\"_eventId_proceed\"] in page."}
-{"level":"info","time":"2026-05-21T11:28:20.647Z","seq":26,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:20.652Z","seq":27,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:20.652Z","seq":28,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=t_Button_navControl in page."}
-{"level":"info","time":"2026-05-21T11:28:20.845Z","seq":29,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:20.850Z","seq":30,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:20.850Z","seq":31,"component":"browser-library","msg":"Strict mode is enabled, find Locator with text=\"Personalistika přehled\" in page."}
-{"level":"info","time":"2026-05-21T11:28:21.033Z","seq":32,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.040Z","seq":33,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.040Z","seq":34,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=.t-MediaList-title:has-text(\"Seznam zaměstnanců s emailem\") in page."}
-{"level":"info","time":"2026-05-21T11:28:21.367Z","seq":35,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.371Z","seq":36,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.372Z","seq":37,"component":"browser-library","msg":"Strict mode is enabled, find Locator with h2.u-VisuallyHidden:has-text(\"Seznam zaměstnanců s emailem\") in page."}
-{"level":"info","time":"2026-05-21T11:28:21.423Z","seq":38,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.431Z","seq":39,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.433Z","seq":40,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.435Z","seq":41,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.435Z","seq":42,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.437Z","seq":43,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.438Z","seq":44,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.440Z","seq":45,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.440Z","seq":46,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.442Z","seq":47,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changed active context: context=3b116cab-0127-4f23-a314-6ef655ae2d1f"}
-{"level":"info","time":"2026-05-21T11:28:21.442Z","seq":48,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changing current active page: page=2b9797d9-4aeb-4c62-b372-7a9eef3f025d"}
-{"level":"info","time":"2026-05-21T11:28:21.442Z","seq":49,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changed active page"}
-{"level":"info","time":"2026-05-21T11:28:21.445Z","seq":50,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.454Z","seq":51,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Removed page=79a1e4e4-2374-4856-93e4-7941bac91158 from context=3b116cab-0127-4f23-a314-6ef655ae2d1f page stack"}
-{"level":"info","time":"2026-05-21T11:28:21.471Z","seq":52,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.482Z","seq":53,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:21.482Z","seq":54,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
-{"level":"info","time":"2026-05-21T11:28:21.533Z","seq":55,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"started"}
-{"level":"info","time":"2026-05-21T11:28:22.373Z","seq":56,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:46.699Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:57999"}
+{"level":"info","time":"2026-05-22T06:54:46.726Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:47.215Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: firefox, version: 150.0.2"}
+{"level":"info","time":"2026-05-22T06:54:47.215Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
+{"level":"info","time":"2026-05-22T06:54:47.215Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:47.220Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newContext","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:47.220Z","seq":7,"component":"browser-library","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
+{"level":"info","time":"2026-05-22T06:54:47.220Z","seq":8,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@71a1798f73d7512d04f36e837011b29e\"},\"name\":\"firefox\",\"id\":\"browser=4cd2719c-770b-4758-8b84-482b5d553d3b\",\"headless\":false}"}
+{"level":"info","time":"2026-05-22T06:54:47.220Z","seq":9,"component":"browser-library","msg":"Trace file: "}
+{"level":"info","time":"2026-05-22T06:54:47.373Z","seq":10,"component":"browser-library","msg":"Setting default timeout for context context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816 to 10000"}
+{"level":"info","time":"2026-05-22T06:54:47.373Z","seq":11,"component":"browser-library","msg":"Changed active context: context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816"}
+{"level":"info","time":"2026-05-22T06:54:47.373Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newContext","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:47.376Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:47.377Z","seq":14,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[{\"id\":\"context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@1b2f77e5eba9a9525c7b07dcfc20ff9c\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@71a1798f73d7512d04f36e837011b29e\"},\"name\":\"firefox\",\"id\":\"browser=4cd2719c-770b-4758-8b84-482b5d553d3b\",\"headless\":false}"}
+{"level":"info","time":"2026-05-22T06:54:48.601Z","seq":15,"component":"browser-library","msg":"Video path: undefined"}
+{"level":"info","time":"2026-05-22T06:54:48.601Z","seq":16,"component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-05-22T06:54:49.093Z","seq":17,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.101Z","seq":18,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.101Z","seq":19,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=username in page."}
+{"level":"info","time":"2026-05-22T06:54:49.193Z","seq":20,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.197Z","seq":21,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.198Z","seq":22,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-05-22T06:54:49.231Z","seq":23,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.234Z","seq":24,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.234Z","seq":25,"component":"browser-library","msg":"Strict mode is enabled, find Locator with [name=\"_eventId_proceed\"] in page."}
+{"level":"info","time":"2026-05-22T06:54:49.743Z","seq":26,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.748Z","seq":27,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.748Z","seq":28,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=t_Button_navControl in page."}
+{"level":"info","time":"2026-05-22T06:54:49.941Z","seq":29,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.946Z","seq":30,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.946Z","seq":31,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=#t_TreeNav >> text=\"Personalistika přehled\" in page."}
+{"level":"info","time":"2026-05-22T06:54:49.955Z","seq":32,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:49.958Z","seq":33,"component":"browser-library","event_kind":"grpc","action":"evaluateJavascript","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:49.958Z","seq":34,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=#t_TreeNav >> text=\"Personalistika přehled\" in page."}
+{"level":"info","time":"2026-05-22T06:54:49.995Z","seq":35,"component":"browser-library","event_kind":"grpc","action":"evaluateJavascript","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:51.001Z","seq":36,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:51.001Z","seq":37,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=#t_TreeNav >> text=\"Seznam zaměstnanců s emailem\" in page."}
+{"level":"info","time":"2026-05-22T06:54:51.027Z","seq":38,"component":"browser-library","event_kind":"grpc","action":"waitForElementState","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:51.029Z","seq":39,"component":"browser-library","event_kind":"grpc","action":"evaluateJavascript","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:51.030Z","seq":40,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=#t_TreeNav >> text=\"Seznam zaměstnanců s emailem\" in page."}
+{"level":"info","time":"2026-05-22T06:54:51.063Z","seq":41,"component":"browser-library","event_kind":"grpc","action":"evaluateJavascript","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.085Z","seq":42,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.099Z","seq":43,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.102Z","seq":44,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.103Z","seq":45,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.105Z","seq":46,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.105Z","seq":47,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.108Z","seq":48,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.108Z","seq":49,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.111Z","seq":50,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changed active context: context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816"}
+{"level":"info","time":"2026-05-22T06:54:52.111Z","seq":51,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changing current active page: page=6c6cfcf6-f990-40cf-ab9b-0d8a0ab14d97"}
+{"level":"info","time":"2026-05-22T06:54:52.111Z","seq":52,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-05-22T06:54:52.114Z","seq":53,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.122Z","seq":54,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","msg":"Removed page=588a18b8-4577-4398-9388-d4c6b759bca7 from context=b5c0b1bf-0f4a-4c72-9abe-bb1c82cf8816 page stack"}
+{"level":"info","time":"2026-05-22T06:54:52.137Z","seq":55,"suite_id":"s1","suite_name":"Interactive Grid","component":"browser-library","event_kind":"grpc","action":"closeContext","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.144Z","seq":56,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.145Z","seq":57,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"info","time":"2026-05-22T06:54:52.189Z","seq":58,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"started"}
+{"level":"info","time":"2026-05-22T06:54:52.591Z","seq":59,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"succeeded"}
