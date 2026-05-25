@@ -10,20 +10,27 @@ Otevři prohlížeč a aplikaci
     New Page       url=${URL_APLIKACE}
 
 Když kliknu na Menu
-    Click    id=t_Button_navControl
+    # Zjistíme, jestli je menu schované
+    ${is_collapsed}=    Get Element Count    css=body.t-PageBody--hideLeft
+    IF    ${is_collapsed} > 0
+        # Klikneme na tlačítko pro otevření
+        Click    id=t_Button_navControl
+        # Počkáme chvíli na animaci
+        Sleep    0.5s
+    END
+    # Pro jistotu počkáme, až bude strom navigace viditelný
+    Wait For Elements State    id=t_TreeNav    visible    timeout=5s
 
 A zároveň kliknu na Menu
     Když kliknu na Menu
 
 Když kliknu na položku v menu "${nazev_polozky}"
-    # Uložíme si ten selektor do proměnné, ať ho nemusíme psát dvakrát
-    ${selector}=    Set Variable    css=#t_TreeNav >> text="${nazev_polozky}"
+    # Nejdřív zajistíme, že je menu vůbec vidět
+    Když kliknu na Menu
 
-    # Počkáme, až se prvek aspoň objeví v HTML kódu (ignorujeme, jestli je schovaný animací)
-    Wait For Elements State    ${selector}    attached
-
-    # Odpálíme kliknutí přímo přes JavaScript! Tím obejdeme úplně všechny překážky.
-    Evaluate JavaScript    ${selector}    (elem) => elem.click()
+    ${selector}=    Set Variable    xpath=//*[@id="t_TreeNav"]//*[contains(text(), "${nazev_polozky}")]
+    Wait For Elements State    ${selector}    visible    timeout=10s
+    Click    ${selector}
 
 
 A zároveň kliknu na položku v menu "${nazev_polozky}"
@@ -32,6 +39,11 @@ A zároveň kliknu na položku v menu "${nazev_polozky}"
 Pak URL adresa obsahuje "${text}"
     ${url}=    Get Url
     Should Contain    ${url}    ${text}
+
+Pak vidím text
+    [Arguments]    ${text}
+    # Počkáme, až se text kdekoliv na stránce objeví a bude viditelný
+    Wait For Elements State    text="${text}"    visible    timeout=5s
 
 Pak vidím hlavní nadpis "${text}"
     Wait For Elements State    .t-Region-header:has-text("${text}")    visible
