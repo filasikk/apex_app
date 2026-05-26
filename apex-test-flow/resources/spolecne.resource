@@ -14,17 +14,12 @@ Zajisti rozbalené menu
     ${is_collapsed}=    Get Element Count    css=body.t-PageBody--hideLeft
     IF    ${is_collapsed} > 0
         Click    id=t_Button_navControl
-<<<<<<< HEAD
-    END
-    Wait For Elements State    id=t_TreeNav    visible    timeout=5s
-=======
         # Počkáme na animaci
         Sleep    0.5s
     END
 
 Když kliknu na Menu
     Zajisti rozbalené menu
->>>>>>> 2d75d303df0a221679f529e67b9e7fc61d2b165a
 
 A zároveň kliknu na Menu
     Když kliknu na Menu
@@ -67,6 +62,11 @@ Pak URL adresa obsahuje "${text}"
     ${url}=    Get Url
     Should Contain    ${url}    ${text}
 
+Pak vidím text
+    [Arguments]    ${text}
+    # Počkáme, až se text kdekoliv na stránce objeví a bude viditelný
+    Wait For Elements State    text="${text}"    visible    timeout=5s
+
 Pak vidím hlavní nadpis "${text}"
     Wait For Elements State    .t-Region-header:has-text("${text}")    visible
     Get Text    h1    ==    ${text}
@@ -92,6 +92,18 @@ Změň roli přes formulář a ověř editovatelnost
     Když otevřu stránku "Domů"
     Když otevřu stránku "Přihlásit za uživatele"
 
+    # Počkáme na stabilizaci stránky
+    Wait For Elements State    id=P4_LOGIN    visible    timeout=10s
+
+    # Pokud jsme už přepnutí (tlačítko 'Vrátit admina' existuje), musíme se vrátit, abychom mohli přepnout znovu
+    ${reset_btn}=    Set Variable    css=button:has-text("Vrátit admina")
+    ${is_switched}=    Get Element Count    ${reset_btn}
+    IF    ${is_switched} > 0
+        Click    ${reset_btn}
+        # Po kliknutí na Vrátit admina se stránka v APEXu obvykle reloadne
+        Wait For Elements State    id=P4_LOGIN    visible    timeout=10s
+    END
+
     # --- ÚKOL 1: OVĚŘENÍ EDITOVATELNOSTI ---
     Get Element States    css=#P4_LOGIN    contains    editable
 
@@ -102,24 +114,46 @@ Změň roli přes formulář a ověř editovatelnost
     Fill Text    css=#P4_LOGIN    ${login_uzivatele}
     Press Keys   css=#P4_LOGIN    Tab
 
-    # Dáme aplikaci vteřinku na načtení rolí přes AJAX a klikneme na tlačítko
-    Sleep    1s
-    Click    css=button:has-text("Přihlásit za uživatele")
+    # Dáme aplikaci čas na načtení rolí přes AJAX a na to, aby se tlačítko 'Přihlásit' objevilo v DOMu
+    Wait For Elements State    css=#P4_ROLE_LIST:not(:empty)    visible    timeout=10s
+    Sleep    2s
+
+    # APEX tlačítka mají často specifické ID nebo text. Zkusíme kombinaci.
+    ${login_btn}=    Set Variable    css=button:has-text("Přihlásit za uživatele")
+    Wait For Elements State    ${login_btn}    visible    timeout=10s
+    Click    ${login_btn}
+
+    # Počkáme na potvrzení přepnutí (stránka se reloadne nebo se objeví hláška)
     Sleep    3s
+
 
 Pak boční menu by mělo obsahovat položky
     [Arguments]    @{ocekavane_polozky}
-    # U menu stačí že jsou v DOMu (attached), protože APEX je často schovává
+    # U menu zajistíme rozbalení postranního panelu
+    Zajisti rozbalené menu
     FOR    ${polozka}    IN    @{ocekavane_polozky}
-<<<<<<< HEAD
-        # Hledáme text přímo uvnitř navigačního stromu a bereme hned první výskyt, co najdemeee!
-        Wait For Elements State    xpath=//*[@id="t_TreeNav"]//*[contains(text(), "${polozka}")]    visible    timeout=5s
-=======
-        # Pokud je to Home, tak ho v menu nehledáme (je to logo nebo breadcrumb)
-        IF    "${polozka}" != "Home" and "${polozka}" != "Domů"
-            Wait For Elements State    css=#t_TreeNav >> text="${polozka}" >> nth=0    attached    timeout=5s
+        IF    "${polozka}" == "Home" or "${polozka}" == "Domů"
+            CONTINUE
         END
->>>>>>> 2d75d303df0a221679f529e67b9e7fc61d2b165a
+
+        # Zkusíme najít položku. Pokud není vidět, zkusíme rozbalit všechny rodiče (typické pro APEX TreeView)
+        ${selector}=    Set Variable    css=#t_TreeNav >> text="${polozka}" >> nth=0
+        ${count}=    Get Element Count    ${selector}
+
+        IF    ${count} == 0
+            # Pokud ji nevidíme vůbec, zkusíme rozbalit všechny složky v menu
+            ${toggles}=    Get Elements    css=#t_TreeNav .a-TreeView-toggle
+            FOR    ${toggle}    IN    @{toggles}
+                ${is_expanded}=    Get Element States    ${toggle}    contains    expanded
+                # Note: 'expanded' state check depends on implementation, sometimes it's a class or aria-expanded
+                # Pro jistotu jen klikneme na všechno, co vypadá jako zavřená složka
+                Click    ${toggle}
+            END
+            Sleep    0.5s
+        END
+
+        # Teď už by tam měla být aspoň v DOMu
+        Wait For Elements State    ${selector}    attached    timeout=5s
     END
 
 Vrať roli zpět na admina

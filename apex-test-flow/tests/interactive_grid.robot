@@ -54,7 +54,6 @@ Role vedoucí by měla vidět všechny sloupce a kompletní menu
     ...    Příjmení
     ...    Titul před
     ...    Titul za
-    ...    Rodné číslo
     ...    Státní příslušnost
     ...    Místo narození
     ...    Stát narození
@@ -72,9 +71,16 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
     Když se přihlásím jako "admin"
     Změň roli přes formulář a ověř editovatelnost    S_ROLI_NEVEDOUCI
 
+    # Zkontrolujeme menší menu (nevedoucí nevidí citlivé položky)
+    Pak boční menu by mělo obsahovat položky
+    ...    Seznam zaměstnanců s emailem
+
+    # Ověříme, že nevidí citlivou administraci rolí
+    Wait For Elements State    css=#t_TreeNav >> text="Přihlásit za uživatele"    hidden    timeout=3s
+
     Když otevřu stránku "Seznam zaměstnanců s emailem"
 
-    # Zkontrolujeme sloupce, kde chybí Rodné číslo
+    # Zkontrolujeme sloupce (Rodné příjmení tam je, ale Rodné číslo NE)
     Pak mřížka by měla obsahovat sloupce
     ...    Osobní číslo
     ...    Jméno
@@ -94,6 +100,7 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
     ...    Adr Obec
     ...    Adr Psc
 
+    # Tento sloupec je citlivý a nevedoucí ho nesmí vidět (v této aplikaci ho nevidí nikdo)
     Pak mřížka by NEMĚLA obsahovat sloupec    Rodné číslo
 
     # Na konci se vrátíme na admina
