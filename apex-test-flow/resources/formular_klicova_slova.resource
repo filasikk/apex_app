@@ -18,7 +18,6 @@ A zároveň vytvořím nový kurz
 
 A zároveň Přihlásím se do kurzu
     [Arguments]    ${kurz}
-    # Počkáme na label výběru kurzu, abychom věděli, že jsme na správné stránce
     Wait For Elements State    text="Chci se přihlásit na kurz"    visible    timeout=5s
 
     Select Options By    xpath=//select[preceding::label[contains(text(), "Chci se přihlásit na kurz")]]    text    ${kurz}

@@ -13,12 +13,8 @@ Když kliknu na Menu
     # Zjistíme, jestli je menu schované
     ${is_collapsed}=    Get Element Count    css=body.t-PageBody--hideLeft
     IF    ${is_collapsed} > 0
-        # Klikneme na tlačítko pro otevření
         Click    id=t_Button_navControl
-        # Počkáme chvíli na animaci
-        Sleep    0.5s
     END
-    # Pro jistotu počkáme, až bude strom navigace viditelný
     Wait For Elements State    id=t_TreeNav    visible    timeout=5s
 
 A zároveň kliknu na Menu
@@ -67,5 +63,5 @@ Pak boční menu by mělo obsahovat položky
     [Arguments]    @{ocekavane_polozky}
     FOR    ${polozka}    IN    @{ocekavane_polozky}
         # Hledáme text přímo uvnitř navigačního stromu a bereme hned první výskyt, co najdemeee!
-        Wait For Elements State    css=#t_TreeNav >> text="${polozka}" >> nth=0    visible    timeout=5s
+        Wait For Elements State    xpath=//*[@id="t_TreeNav"]//*[contains(text(), "${polozka}")]    visible    timeout=5s
     END
