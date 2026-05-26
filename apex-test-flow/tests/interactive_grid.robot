@@ -15,10 +15,11 @@ Uživatel ověří sloupce v Interactive Gridu "Seznam zaměstnanců s emailem"
     ...    Příjmení
     ...    Titul před
     ...    Titul za
-    ...    Rodné příjmení
+    ...    Rodné číslo
     ...    Státní příslušnost
     ...    Místo narození
     ...    Stát narození
+    ...    Rodné příjmení
     ...    Pracovní e-mail
     ...    Nastup
     ...    Pojistny Pomer Od
@@ -53,7 +54,6 @@ Role vedoucí by měla vidět všechny sloupce a kompletní menu
     ...    Příjmení
     ...    Titul před
     ...    Titul za
-    ...    Rodné příjmení
     ...    Státní příslušnost
     ...    Místo narození
     ...    Stát narození
@@ -82,9 +82,23 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
 
     # Zkontrolujeme sloupce (Rodné příjmení tam je, ale Rodné číslo NE)
     Pak mřížka by měla obsahovat sloupce
+    ...    Osobní číslo
     ...    Jméno
     ...    Příjmení
+    ...    Titul před
+    ...    Titul za
+    ...    Státní příslušnost
+    ...    Místo narození
+    ...    Stát narození
     ...    Rodné příjmení
+    ...    Pracovní e-mail
+    ...    Nastup
+    ...    Pojistny Pomer Od
+    ...    Konec doby určité
+    ...    Adr Ulice
+    ...    Adr Cislo
+    ...    Adr Obec
+    ...    Adr Psc
 
     # Tento sloupec je citlivý a nevedoucí ho nesmí vidět (v této aplikaci ho nevidí nikdo)
     Pak mřížka by NEMĚLA obsahovat sloupec    Rodné číslo

@@ -129,12 +129,31 @@ Změň roli přes formulář a ověř editovatelnost
 
 Pak boční menu by mělo obsahovat položky
     [Arguments]    @{ocekavane_polozky}
-    # U menu stačí že jsou v DOMu (attached), protože APEX je často schovává
+    # U menu zajistíme rozbalení postranního panelu
+    Zajisti rozbalené menu
     FOR    ${polozka}    IN    @{ocekavane_polozky}
-        # Pokud je to Home, tak ho v menu nehledáme (je to logo nebo breadcrumb)
-        IF    "${polozka}" != "Home" and "${polozka}" != "Domů"
-            Wait For Elements State    css=#t_TreeNav >> text="${polozka}" >> nth=0    attached    timeout=5s
+        IF    "${polozka}" == "Home" or "${polozka}" == "Domů"
+            CONTINUE
         END
+
+        # Zkusíme najít položku. Pokud není vidět, zkusíme rozbalit všechny rodiče (typické pro APEX TreeView)
+        ${selector}=    Set Variable    css=#t_TreeNav >> text="${polozka}" >> nth=0
+        ${count}=    Get Element Count    ${selector}
+
+        IF    ${count} == 0
+            # Pokud ji nevidíme vůbec, zkusíme rozbalit všechny složky v menu
+            ${toggles}=    Get Elements    css=#t_TreeNav .a-TreeView-toggle
+            FOR    ${toggle}    IN    @{toggles}
+                ${is_expanded}=    Get Element States    ${toggle}    contains    expanded
+                # Note: 'expanded' state check depends on implementation, sometimes it's a class or aria-expanded
+                # Pro jistotu jen klikneme na všechno, co vypadá jako zavřená složka
+                Click    ${toggle}
+            END
+            Sleep    0.5s
+        END
+
+        # Teď už by tam měla být aspoň v DOMu
+        Wait For Elements State    ${selector}    attached    timeout=5s
     END
 
 Vrať roli zpět na admina
