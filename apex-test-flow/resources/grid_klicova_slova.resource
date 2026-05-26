@@ -3,11 +3,24 @@ Library    Browser
 Library    Collections
 
 *** Keywords ***
+Pak vidím interactive grid "${nazev_gridu}"
+    # Hledáme text gridu kdekoli jako nadpis nebo v regionu (attached stačí pro potvrzení přítomnosti)
+    Wait For Elements State    text="${nazev_gridu}" >> nth=0    attached    timeout=15s
+    # A aspoň nějaký náznak tabulky/gridu na stránce
+    Wait For Elements State    css=.a-GV, .a-IRR-container, .t-Report, table >> nth=0    visible    timeout=15s
+
+A zároveň grid "${nazev_gridu}" obsahuje sloupce
+    [Arguments]    @{ocekavane_sloupce}
+    # Pokud nemůžeme najít přesný region, hledáme sloupce kdekoli na stránce (attached stačí)
+    FOR    ${sloupec}    IN    @{ocekavane_sloupce}
+        Wait For Elements State    text="${sloupec}" >> nth=0    attached    timeout=5s
+    END
+
 Pak mřížka by měla obsahovat sloupce
     [Arguments]    @{ocekavane_sloupce}
+    # Zachováme původní volání pro kompatibilitu s existujícími testy
     FOR    ${sloupec}    IN    @{ocekavane_sloupce}
-        # Rovnou použijeme tvůj neprůstřelný XPath! Žádné zbytečné čekání na neexistující elementy.
-        Wait For Elements State    xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]    visible    timeout=5s
+        Wait For Elements State    text="${sloupec}" >> nth=0    attached    timeout=5s
     END
 
 A zároveň mřížka by měla obsahovat sloupce

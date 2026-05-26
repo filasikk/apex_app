@@ -1,193 +1,193 @@
-# Zadání praxe: Testovací framework pro Oracle APEX aplikace
-
-## Kontext
-
-Cílem praxe je navrhnout a vytvořit **proof of concept testovacího frameworku pro automatizované testování Oracle APEX aplikací**.
-
-APEX aplikace jsou webové aplikace, které obsahují stránky, formuláře, interactive gridy, menu, statický obsah a různé úrovně oprávnění podle přihlášeného uživatele. Ruční kontrola těchto prvků je opakovaná, pracná a náchylná k chybám. Vaším úkolem je připravit technické řešení, které umožní tyto kontroly zapisovat čitelně, spouštět automatizovaně a výsledky přehledně zobrazovat.
-
-Testy mají být psané ve stylu **Gherkin / BDD**, tedy tak, aby testovací scénáře byly srozumitelné i člověku, který není autorem automatizačního kódu.
-
-Příklad zamýšlené čitelnosti:
-
-```gherkin
-Scénář: Student vidí přehled přihlášek
-  Pokud jsem přihlášen jako "student_a"
-  Když otevřu stránku "Přihlášky"
-  Pak vidím interactive grid "Přehled přihlášek"
-  A zároveň grid obsahuje sloupce "Jméno", "Příjmení", "Stav"
-  A zároveň nemohu upravovat záznamy
-```
-
----
-
-## Hlavní cíl
-
-Navrhněte a vytvořte **testovací flow pro Oracle APEX aplikace**, které umožní:
-
-1. zapisovat testy v čitelném českém Gherkin / BDD stylu,
-2. testovat přihlášení za různé uživatele,
-3. ověřovat dostupnost konkrétních APEX stránek,
-4. kontrolovat obsah interactive gridů,
-5. kontrolovat oprávnění k editaci záznamů,
-6. kontrolovat statický obsah stránky,
-7. kontrolovat položky v bočním menu,
-8. testovat vyplnění formuláře a následné ověření uložených hodnot v interactive gridu,
-9. připravovat a uklízet testovací data v databázi v izolovaném testovacím prostředí,
-10. ukládat výsledky testů tak, aby byly monitorovatelné,
-11. zobrazovat výsledky ideálně v samostatné APEX stránce / dashboardu,
-12. průběžně dokumentovat odvedenou práci, technická rozhodnutí a typický pracovní flow.
-
----
-
-## Doporučený technologický směr
-
-Preferované řešení:
-
-- Python,
-- Robot Framework,
-- Robot Framework Browser Library,
-- Playwright,
-- Gherkin / BDD styl testů,
-- výstupy ve formátu JSON / XML / JUnit XML / vlastní API payload,
-- přístup do izolované testovací Oracle databáze,
-- jednoduchý dashboard výsledků v Oracle APEX.
-
-Robot Framework je vhodný proto, že umožňuje psát testy pomocí klíčových slov a podporuje BDD styl zápisu. Browser Library je nadstavba pro automatizaci prohlížeče založená na Playwrightu.
-
-Alternativně lze pro proof of concept použít přímo **Playwright for Python**, ale výhodou Robot Frameworku je jednodušší tvorba vlastních doménových klíčových slov typu `Vidím interactive grid`, `Otevřu stránku`, `Uživatel může upravovat záznamy`.
-
----
-
-# Rozsah práce
-
-## 1. Analýza APEX aplikace
-
-Nejprve zjistěte, jak vypadá testovaná APEX aplikace z pohledu uživatele.
-
-Zaměřte se na:
-
-- jak funguje přihlášení,
-- jak se pozná úspěšné přihlášení,
-- jak se přechází na konkrétní stránku,
-- jak v HTML vypadají APEX regiony,
-- jak identifikovat interactive grid,
-- jak najít sloupce interactive gridu,
-- jak poznat, zda je grid editovatelný,
-- jak najít boční menu,
-- jak ověřit statický text na stránce.
-
-Výstupem této části bude krátký technický dokument `analysis.md`, který popíše zjištění a doporučení pro selektory.
-
----
-
-## 2. Návrh architektury testů
-
-Navrhněte strukturu projektu tak, aby bylo možné testy dlouhodobě rozšiřovat.
-
-Doporučená struktura:
-
-```text
-apex-test-flow/
-├── README.md
-├── requirements.txt
-├── package.json                 # pokud bude potřeba pro Browser/Playwright
-├── .env.example
-├── tests/
-│   ├── prihlaseni.robot
-│   ├── navigace.robot
-│   ├── interactive_grid.robot
-│   ├── menu.robot
-│   └── formulare_prihlasky.robot
-├── resources/
-│   ├── apex_klicova_slova.resource
-│   ├── prihlaseni_klicova_slova.resource
-│   ├── grid_klicova_slova.resource
-│   ├── menu_klicova_slova.resource
-│   ├── formular_klicova_slova.resource
-│   ├── databaze_klicova_slova.resource
-│   └── spolecne.resource
-├── variables/
-│   ├── uzivatele.example.yaml
-│   ├── stranky.yaml
-│   ├── aplikace.yaml
-│   └── test_data.yaml
-├── db/
-│   ├── setup/
-│   │   ├── kurz_pred_deadlinem.sql
-│   │   ├── kurz_po_deadlinu.sql
-│   │   └── kurz_plny.sql
-│   ├── teardown/
-│   │   └── uklid_testovacich_dat.sql
-│   └── README.md
-├── results/
-│   └── .gitkeep
-├── reporting/
-│   ├── parse_results.py
-│   ├── send_results_to_apex.py
-│   └── result_schema.md
-└── docs/
-    ├── analysis.md
-    ├── architecture.md
-    ├── selectors.md
-    ├── how_to_write_tests.md
-    ├── system_overview.md
-    ├── typical_workflow.md
-    ├── worklog.md
-    └── adr/
-        └── 0001-volba-testovaciho-stacku.md
-```
-
-Architektura musí oddělit:
-
-- testovací scénáře,
-- vlastní klíčová slova,
-- konfiguraci aplikace,
-- konfiguraci uživatelů,
-- reporting výsledků,
-- databázovou přípravu a úklid testovacích dat,
-- dokumentaci systému,
-- deník práce a záznamy technických rozhodnutí.
-
----
-
-## 3. Návrh českých Gherkin / BDD klíčových slov
-
-Vytvořte sadu klíčových slov, která umožní psát testy co nejblíže běžnému jazyku.
-
-Používejte český BDD styl:
-
-- `Scénář`,
-- `Pokud`,
-- `Když`,
-- `Pak`,
-- `A zároveň`,
-- `Ale`.
-
-Robot Framework interně běžně pracuje s anglickými prefixy `Given / When / Then / And`, ale pro čitelnost zadání a testovacích scénářů v rámci tohoto proof of conceptu navrhněte českou vrstvu klíčových slov. Prakticky to znamená, že samotné názvy klíčových slov budou v češtině, například `jsem přihlášen jako`, `otevřu stránku`, `vidím interactive grid`.
-
-### Přihlášení
-
-```gherkin
-Scénář: Uživatel se úspěšně přihlásí
-  Pokud jsem odhlášen
-  Když se přihlásím jako "uzivatel_x"
-  Pak vidím, že jsem přihlášen jako "uzivatel_x"
-```
-
-```gherkin
-Scénář: Test začíná s přihlášeným uživatelem
-  Pokud jsem přihlášen jako "uzivatel_x"
-  Pak vidím úvodní stránku aplikace
-```
-
-Minimální sada klíčových slov:
-
-```text
-jsem přihlášen jako "uzivatel_x"
-jsem odhlášen
-se přihlásím jako "uzivatel_x"
-vidím, že jsem přihlášen jako "uzivatel_x"
+  # Zadání praxe: Testovací framework pro Oracle APEX aplikace
+  
+  ## Kontext
+  
+  Cílem praxe je navrhnout a vytvořit **proof of concept testovacího frameworku pro automatizované testování Oracle APEX aplikací**.
+  
+  APEX aplikace jsou webové aplikace, které obsahují stránky, formuláře, interactive gridy, menu, statický obsah a různé úrovně oprávnění podle přihlášeného uživatele. Ruční kontrola těchto prvků je opakovaná, pracná a náchylná k chybám. Vaším úkolem je připravit technické řešení, které umožní tyto kontroly zapisovat čitelně, spouštět automatizovaně a výsledky přehledně zobrazovat.
+  
+  Testy mají být psané ve stylu **Gherkin / BDD**, tedy tak, aby testovací scénáře byly srozumitelné i člověku, který není autorem automatizačního kódu.
+  
+  Příklad zamýšlené čitelnosti:
+  
+  ```gherkin
+  Scénář: Student vidí přehled přihlášek
+    Pokud jsem přihlášen jako "student_a"
+    Když otevřu stránku "Přihlášky"
+    Pak vidím interactive grid "Přehled přihlášek"
+    A zároveň grid obsahuje sloupce "Jméno", "Příjmení", "Stav"
+    A zároveň nemohu upravovat záznamy
+  ```
+  
+  ---
+  
+  ## Hlavní cíl
+  
+  Navrhněte a vytvořte **testovací flow pro Oracle APEX aplikace**, které umožní:
+  
+  1. zapisovat testy v čitelném českém Gherkin / BDD stylu,
+  2. testovat přihlášení za různé uživatele,
+  3. ověřovat dostupnost konkrétních APEX stránek,
+  4. kontrolovat obsah interactive gridů,
+  5. kontrolovat oprávnění k editaci záznamů,
+  6. kontrolovat statický obsah stránky,
+  7. kontrolovat položky v bočním menu,
+  8. testovat vyplnění formuláře a následné ověření uložených hodnot v interactive gridu,
+  9. připravovat a uklízet testovací data v databázi v izolovaném testovacím prostředí,
+  10. ukládat výsledky testů tak, aby byly monitorovatelné,
+  11. zobrazovat výsledky ideálně v samostatné APEX stránce / dashboardu,
+  12. průběžně dokumentovat odvedenou práci, technická rozhodnutí a typický pracovní flow.
+  
+  ---
+  
+  ## Doporučený technologický směr
+  
+  Preferované řešení:
+  
+  - Python,
+  - Robot Framework,
+  - Robot Framework Browser Library,
+  - Playwright,
+  - Gherkin / BDD styl testů,
+  - výstupy ve formátu JSON / XML / JUnit XML / vlastní API payload,
+  - přístup do izolované testovací Oracle databáze,
+  - jednoduchý dashboard výsledků v Oracle APEX.
+  
+  Robot Framework je vhodný proto, že umožňuje psát testy pomocí klíčových slov a podporuje BDD styl zápisu. Browser Library je nadstavba pro automatizaci prohlížeče založená na Playwrightu.
+  
+  Alternativně lze pro proof of concept použít přímo **Playwright for Python**, ale výhodou Robot Frameworku je jednodušší tvorba vlastních doménových klíčových slov typu `Vidím interactive grid`, `Otevřu stránku`, `Uživatel může upravovat záznamy`.
+  
+  ---
+  
+  # Rozsah práce
+  
+  ## 1. Analýza APEX aplikace
+  
+  Nejprve zjistěte, jak vypadá testovaná APEX aplikace z pohledu uživatele.
+  
+  Zaměřte se na:
+  
+  - jak funguje přihlášení,
+  - jak se pozná úspěšné přihlášení,
+  - jak se přechází na konkrétní stránku,
+  - jak v HTML vypadají APEX regiony,
+  - jak identifikovat interactive grid,
+  - jak najít sloupce interactive gridu,
+  - jak poznat, zda je grid editovatelný,
+  - jak najít boční menu,
+  - jak ověřit statický text na stránce.
+  
+  Výstupem této části bude krátký technický dokument `analysis.md`, který popíše zjištění a doporučení pro selektory.
+  
+  ---
+  
+  ## 2. Návrh architektury testů
+  
+  Navrhněte strukturu projektu tak, aby bylo možné testy dlouhodobě rozšiřovat.
+  
+  Doporučená struktura:
+  
+  ```text
+  apex-test-flow/
+  ├── README.md
+  ├── requirements.txt
+  ├── package.json                 # pokud bude potřeba pro Browser/Playwright
+  ├── .env.example
+  ├── tests/
+  │   ├── prihlaseni.robot
+  │   ├── navigace.robot
+  │   ├── interactive_grid.robot
+  │   ├── menu.robot
+  │   └── formulare_prihlasky.robot
+  ├── resources/
+  │   ├── apex_klicova_slova.resource
+  │   ├── prihlaseni_klicova_slova.resource
+  │   ├── grid_klicova_slova.resource
+  │   ├── menu_klicova_slova.resource
+  │   ├── formular_klicova_slova.resource
+  │   ├── databaze_klicova_slova.resource
+  │   └── spolecne.resource
+  ├── variables/
+  │   ├── uzivatele.example.yaml
+  │   ├── stranky.yaml
+  │   ├── aplikace.yaml
+  │   └── test_data.yaml
+  ├── db/
+  │   ├── setup/
+  │   │   ├── kurz_pred_deadlinem.sql
+  │   │   ├── kurz_po_deadlinu.sql
+  │   │   └── kurz_plny.sql
+  │   ├── teardown/
+  │   │   └── uklid_testovacich_dat.sql
+  │   └── README.md
+  ├── results/
+  │   └── .gitkeep
+  ├── reporting/
+  │   ├── parse_results.py
+  │   ├── send_results_to_apex.py
+  │   └── result_schema.md
+  └── docs/
+      ├── analysis.md
+      ├── architecture.md
+      ├── selectors.md
+      ├── how_to_write_tests.md
+      ├── system_overview.md
+      ├── typical_workflow.md
+      ├── worklog.md
+      └── adr/
+          └── 0001-volba-testovaciho-stacku.md
+  ```
+  
+  Architektura musí oddělit:
+  
+  - testovací scénáře,
+  - vlastní klíčová slova,
+  - konfiguraci aplikace,
+  - konfiguraci uživatelů,
+  - reporting výsledků,
+  - databázovou přípravu a úklid testovacích dat,
+  - dokumentaci systému,
+  - deník práce a záznamy technických rozhodnutí.
+  
+  ---
+  
+  ## 3. Návrh českých Gherkin / BDD klíčových slov
+  
+  Vytvořte sadu klíčových slov, která umožní psát testy co nejblíže běžnému jazyku.
+  
+  Používejte český BDD styl:
+  
+  - `Scénář`,
+  - `Pokud`,
+  - `Když`,
+  - `Pak`,
+  - `A zároveň`,
+  - `Ale`.
+  
+  Robot Framework interně běžně pracuje s anglickými prefixy `Given / When / Then / And`, ale pro čitelnost zadání a testovacích scénářů v rámci tohoto proof of conceptu navrhněte českou vrstvu klíčových slov. Prakticky to znamená, že samotné názvy klíčových slov budou v češtině, například `jsem přihlášen jako`, `otevřu stránku`, `vidím interactive grid`.
+  
+  ### Přihlášení
+  
+  ```gherkin
+  Scénář: Uživatel se úspěšně přihlásí
+    Pokud jsem odhlášen
+    Když se přihlásím jako "uzivatel_x"
+    Pak vidím, že jsem přihlášen jako "uzivatel_x"
+  ```
+  
+  ```gherkin
+  Scénář: Test začíná s přihlášeným uživatelem
+    Pokud jsem přihlášen jako "uzivatel_x"
+    Pak vidím úvodní stránku aplikace
+  ```
+  
+  Minimální sada klíčových slov:
+  
+  ```text
+  jsem přihlášen jako "uzivatel_x"
+  jsem odhlášen
+  se přihlásím jako "uzivatel_x"
+  vidím, že jsem přihlášen jako "uzivatel_x"
 ```
 
 ---

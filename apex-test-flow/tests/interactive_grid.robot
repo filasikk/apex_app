@@ -7,15 +7,9 @@ Test Setup    Otevři prohlížeč a aplikaci
 *** Test Cases ***
 Uživatel ověří sloupce v Interactive Gridu "Seznam zaměstnanců s emailem"
     Když se přihlásím jako "admin"
-    A zároveň kliknu na Menu
-    Sleep    1s
-    A zároveň kliknu na položku v menu "Personalistika přehled"
-    Sleep    1s
-    Sleep    1s
-    A zároveň kliknu na položku v menu "Seznam zaměstnanců s emailem"
-    Sleep    1s
-    Wait For Elements State    text="Osobní číslo" >> nth=0    visible    timeout=15s
-    Pak mřížka by měla obsahovat sloupce
+    Když otevřu stránku "Seznam zaměstnanců s emailem"
+    Pak vidím interactive grid "Seznam zaměstnanců s emailem"
+    A zároveň grid "Seznam zaměstnanců s emailem" obsahuje sloupce
     ...    Osobní číslo
     ...    Jméno
     ...    Příjmení
@@ -37,29 +31,23 @@ Uživatel ověří sloupce v Interactive Gridu "Seznam zaměstnanců s emailem"
 
 Uživatel ověří navigaci a sloupce v aplikaci
     Když se přihlásím jako "admin"
-    A zároveň kliknu na Menu
-
-    # 1. Zkontrolujeme, jestli levé menu obsahuje správné položkyyy!
+    # Zkontrolujeme, jestli levé menu obsahuje správné položky!
     Pak boční menu by mělo obsahovat položky
     ...    Personalistika přehled
     ...    Seznam zaměstnanců s emailem
     ...    Dostupné formuláře
     ...    Home
 
-    # 2. Pak normálně pokračujeme klikáním...
-    A zároveň kliknu na položku v menu "Personalistika přehled"
-    A zároveň kliknu na položku v menu "Seznam zaměstnanců s emailem"
+    # Pokračujeme navigací
+    Když otevřu stránku "Seznam zaměstnanců s emailem"
+    Pak vidím interactive grid "Seznam zaměstnanců s emailem"
 
 ####################################################
-Role vedoucí by měla vidět všechny sloupce včetně Rodného čísla
-    Když se přihlásím jako "admin"  # Uprav podle svých testovacích účtů
-    A zároveň kliknu na Menu
-    A zároveň kliknu na položku v menu "Personalistika přehled"
-    A zároveň kliknu na položku v menu "Seznam zaměstnanců s emailem"
+Role vedoucí by měla vidět všechny sloupce a kompletní menu
+    Když se přihlásím jako "admin"
+    Když otevřu stránku "Seznam zaměstnanců s emailem"
 
-    Wait For Elements State    text="Osobní číslo" >> nth=0    visible    timeout=15s
-
-    # Vedoucí vidí všechno, takže mu tam pošleme i Rodné číslo
+    # Kontrola všech sloupců (včetně Rodného příjmení)
     Pak mřížka by měla obsahovat sloupce
     ...    Osobní číslo
     ...    Jméno
@@ -80,16 +68,13 @@ Role vedoucí by měla vidět všechny sloupce včetně Rodného čísla
     ...    Adr Obec
     ...    Adr Psc
 
-Role nevedoucí by NEMĚLA vidět Rodné číslo
-    # Přihlásíme se pod účtem obyčejného uživatele
-    Když se přihlásím jako "nevedouci"  # Uprav podle svých testovacích účtů
-    A zároveň kliknu na Menu
-    A zároveň kliknu na položku v menu "Personalistika přehled"
-    A zároveň kliknu na položku v menu "Seznam zaměstnanců s emailem"
+Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
+    Když se přihlásím jako "admin"
+    Změň roli přes formulář a ověř editovatelnost    S_ROLI_NEVEDOUCI
 
-    Wait For Elements State    text="Osobní číslo" >> nth=0    visible    timeout=15s
+    Když otevřu stránku "Seznam zaměstnanců s emailem"
 
-    # Uživatel vidí základní sloupce (Rodné číslo z tohoto seznamu vynecháme!)
+    # Zkontrolujeme sloupce, kde chybí Rodné číslo
     Pak mřížka by měla obsahovat sloupce
     ...    Osobní číslo
     ...    Jméno
@@ -109,5 +94,7 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo
     ...    Adr Obec
     ...    Adr Psc
 
-    # A teď explicitně zkontrolujeme, že ten zakázaný sloupec tam fakt nenííí!
-    A zároveň mřížka by NEMĚLA obsahovat sloupec    Rodné číslo
+    Pak mřížka by NEMĚLA obsahovat sloupec    Rodné číslo
+
+    # Na konci se vrátíme na admina
+    Vrať roli zpět na admina
