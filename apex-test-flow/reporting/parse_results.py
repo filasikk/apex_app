@@ -6,18 +6,35 @@ from pathlib import Path
 
 
 def parse_robot_output(xml_path: str, screenshot_dir: str = "results/"):
+    # Hledáme nejvhodnější output.xml - prioritu má složka results/
+    search_paths = [
+        Path("results/output.xml"),
+        Path("../results/output.xml"),
+        Path("output.xml"),
+    ]
+
+    found_path = None
+    for p in search_paths:
+        if p.exists():
+            found_path = p
+            break
+
+    if found_path:
+        xml_path = str(found_path)
+
+    print(f"POUŽÍVÁM SOUBOR: {Path(xml_path).absolute()}")
+    print(f"VELIKOST SOUBORU: {Path(xml_path).stat().st_size} bytes")
+
     tree = ET.parse(xml_path)
     root = tree.getroot()
 
-    # Najdeme <suite> bezpečně
-    suite = root.find(".//suite")
-    if suite is None:
-        raise ValueError("XML neobsahuje <suite> element – parser nemůže pokračovat.")
-
-    # Najdeme status suite pro časy
-    suite_status = suite.find("status")
-    suite_start = suite_status.get("start") if suite_status is not None else None
-    suite_elapsed = suite_status.get("elapsed") if suite_status is not None else None
+    # Najdeme časy celého běhu z hlavního statusu
+    main_status = root.find("status")
+    if main_status is None:
+        suite = root.find(".//suite")
+        main_status = suite.find("status") if suite is not None else None
+    suite_start = main_status.get("start") if main_status is not None else None
+    suite_elapsed = main_status.get("elapsed") if main_status is not None else None
 
     suite_end = None
     if suite_start and suite_elapsed:
@@ -41,8 +58,8 @@ def parse_robot_output(xml_path: str, screenshot_dir: str = "results/"):
         "test_cases": [],
     }
 
-    # Projdeme všechny testy
-    for test in suite.findall("test"):
+    # Projdeme VŠECHNY testy v celém XML souboru (bez ohledu na to, jak hluboko jsou vnořené)
+    for test in root.iter("test"):
         name = test.get("name")
 
         # Najdeme <status> bezpečně

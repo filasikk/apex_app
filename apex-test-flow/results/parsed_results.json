@@ -1,38 +1,92 @@
 {
-  "run_id": "2026-05-26T06:52:15.221111",
+  "run_id": "2026-05-26T08:55:11.069090",
   "app_name": "APEX_TEST_APP",
   "environment": "TEST",
-  "started_at": "2026-05-26T08:41:14.916193",
-  "finished_at": "2026-05-26T08:41:27.018527",
+  "started_at": "2026-05-26T10:54:31.947579",
+  "finished_at": "2026-05-26T10:55:06.503407",
   "status": "PASS",
-  "total_tests": 3,
-  "passed_tests": 3,
+  "total_tests": 9,
+  "passed_tests": 9,
   "failed_tests": 0,
   "test_cases": [
     {
       "test_name": "Student se přihlásí na volný kurz před deadlinem",
       "status": "PASS",
-      "started_at": "2026-05-26T08:41:15.239347",
-      "finished_at": "2026-05-26T08:41:21.166365",
-      "duration_ms": 5927,
+      "started_at": "2026-05-26T10:54:32.280269",
+      "finished_at": "2026-05-26T10:54:37.548621",
+      "duration_ms": 5268,
       "error_message": null,
       "screenshot_blob": null
     },
     {
       "test_name": "Student je po překročení deadlinu přihlášen jako náhradník",
       "status": "PASS",
-      "started_at": "2026-05-26T08:41:21.219819",
-      "finished_at": "2026-05-26T08:41:24.127076",
-      "duration_ms": 2907,
+      "started_at": "2026-05-26T10:54:37.590358",
+      "finished_at": "2026-05-26T10:54:40.508062",
+      "duration_ms": 2917,
       "error_message": null,
       "screenshot_blob": null
     },
     {
       "test_name": "Student je po naplnění kapacity kurzu přihlášen jako náhradník",
       "status": "PASS",
-      "started_at": "2026-05-26T08:41:24.161320",
-      "finished_at": "2026-05-26T08:41:26.969483",
-      "duration_ms": 2808,
+      "started_at": "2026-05-26T10:54:40.537066",
+      "finished_at": "2026-05-26T10:54:43.409666",
+      "duration_ms": 2872,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Uživatel ověří sloupce v Interactive Gridu \"Seznam zaměstnanců s emailem\"",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:54:43.470065",
+      "finished_at": "2026-05-26T10:54:45.542538",
+      "duration_ms": 2072,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Uživatel ověří navigaci a sloupce v aplikaci",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:54:45.563033",
+      "finished_at": "2026-05-26T10:54:47.555410",
+      "duration_ms": 1992,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Role vedoucí by měla vidět všechny sloupce a kompletní menu",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:54:47.577432",
+      "finished_at": "2026-05-26T10:54:49.600186",
+      "duration_ms": 2022,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:54:49.621284",
+      "finished_at": "2026-05-26T10:55:02.895733",
+      "duration_ms": 13274,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Uživatel přejde na stránku Rozcestník",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:55:02.940922",
+      "finished_at": "2026-05-26T10:55:05.433026",
+      "duration_ms": 2492,
+      "error_message": null,
+      "screenshot_blob": null
+    },
+    {
+      "test_name": "Uživatel se úspěšně přihlásí",
+      "status": "PASS",
+      "started_at": "2026-05-26T10:55:05.490555",
+      "finished_at": "2026-05-26T10:55:06.477891",
+      "duration_ms": 987,
       "error_message": null,
       "screenshot_blob": null
     }
