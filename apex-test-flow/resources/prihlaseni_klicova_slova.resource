@@ -14,6 +14,8 @@ vidím, že jsem přihlášen
 
 Když se přihlásím jako "${role}"
     se přihlásím jako "${role}"
+    vidím, že jsem přihlášen
+
 
 Pak vidím, že jsem přihlášen
     vidím, že jsem přihlášen
