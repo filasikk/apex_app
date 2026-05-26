@@ -1,3 +1,9 @@
+# APEX Test Flow Framework 🚀
+
+Proof of concept (PoC) testovacího frameworku pro automatizované testování Oracle APEX aplikací.
+
+Tento projekt vznikl v rámci praxe s cílem ukázat, jak lze efektivně, stabilně a čitelně testovat komplexní APEX aplikace pomocí moderních open-source nástrojů.
+
 ## 🛠 Hlavní technologie
 
 - **Robot Framework** (BDD testovací jádro)
@@ -50,3 +56,4 @@ Podrobné informace najdete v adresáři `apex-test-flow/docs/`:
 - [ADR - Rozhodnutí o architektuře](apex-test-flow/docs/adr/)
 
 ---
+*Vytvořeno jako výsledek odborné praxe 2026.*

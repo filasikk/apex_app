@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-26T08:54:50.221506" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.11.9 on win32)" generated="2026-05-26T10:13:58.121991" rpa="false" schemaversion="5">
 <suite id="s1" name="Interactive Grid" source="D:\USERS\iotkurz1\Documents\apex_app\apex-test-flow\tests\interactive_grid.robot">
 <test id="s1-t1" name="Uživatel ověří sloupce v Interactive Gridu &quot;Seznam zaměstnanců s emailem&quot;" line="8">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-26T08:54:50.539189" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\results\\browser\\traces\\temp\\fd648f4c-a7df-402b-a968-dcb739a8bd38"}</msg>
-<msg time="2026-05-26T08:54:50.571145" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59490</msg>
-<msg time="2026-05-26T08:54:52.100767" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\results\\browser\\traces\\temp\\fd648f4c-a7df-402b-a968-dcb739a8bd38"}</msg>
+<msg time="2026-05-26T10:13:58.440726" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\USERS\\iotkurz1\\Documents\\apex_app\\results\\browser\\traces\\temp\\128ad28b-8c41-4938-ae0b-83b70a31c3a9"}</msg>
+<msg time="2026-05-26T10:13:58.472574" level="INFO">Starting Browser process C:\Program Files\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53115</msg>
+<msg time="2026-05-26T10:13:59.486088" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\USERS\\iotkurz1\\Documents\\apex_app\\results\\browser\\traces\\temp\\128ad28b-8c41-4938-ae0b-83b70a31c3a9"}</msg>
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:50.539189" elapsed="1.561578"/>
+<status status="PASS" start="2026-05-26T10:13:58.440726" elapsed="1.045362"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-26T08:54:52.100767" level="INFO">{
+<msg time="2026-05-26T10:13:59.486088" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -29,105 +29,105 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-26T08:54:52.198397" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-26T08:54:52.198397" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2026-05-26T10:13:59.593910" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-26T10:13:59.593910" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:52.100767" elapsed="0.097630"/>
+<status status="PASS" start="2026-05-26T10:13:59.486088" elapsed="0.107822"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-26T08:54:53.194899" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:00.602831" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-26T08:54:52.198397" elapsed="0.996502"/>
+<status status="PASS" start="2026-05-26T10:13:59.593910" elapsed="1.008921"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:50.539189" elapsed="2.655710"/>
+<status status="PASS" start="2026-05-26T10:13:58.440726" elapsed="2.162105"/>
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:53.194899" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<msg time="2026-05-26T10:14:00.605855" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.194899" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:00.604848" elapsed="0.001007"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:53.202142" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-26T10:14:00.606862" level="INFO">Fills the text 'datprx' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.194899" elapsed="0.078742"/>
+<status status="PASS" start="2026-05-26T10:14:00.605855" elapsed="0.080298"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:53.273641" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-26T10:14:00.687160" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.273641" elapsed="0.023373"/>
+<status status="PASS" start="2026-05-26T10:14:00.686153" elapsed="0.014052"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:53.297014" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-26T10:14:00.702211" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.297014" elapsed="0.548484"/>
+<status status="PASS" start="2026-05-26T10:14:00.702211" elapsed="0.507106"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:53.194899" elapsed="0.650599"/>
+<status status="PASS" start="2026-05-26T10:14:00.603829" elapsed="0.605488"/>
 </kw>
 <kw name="vidím, že jsem přihlášen" owner="prihlaseni_klicova_slova">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:53.989855" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
+<msg time="2026-05-26T10:14:01.367020" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
 <arg>id=t_PageBody</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.845498" elapsed="0.145357"/>
+<status status="PASS" start="2026-05-26T10:14:01.209317" elapsed="0.158706"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:53.845498" elapsed="0.145357"/>
+<status status="PASS" start="2026-05-26T10:14:01.209317" elapsed="0.158706"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:53.194899" elapsed="0.795956"/>
+<status status="PASS" start="2026-05-26T10:14:00.603829" elapsed="0.764194"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:53.991857" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<msg time="2026-05-26T10:14:01.370020" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.991857" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:01.369024" elapsed="0.000996"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:54:54.027765" level="INFO">${card_count} = 1</msg>
+<msg time="2026-05-26T10:14:01.403125" level="INFO">${card_count} = 1</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:53.991857" elapsed="0.035908"/>
+<status status="PASS" start="2026-05-26T10:14:01.370020" elapsed="0.033105"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:54.028763" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
+<msg time="2026-05-26T10:14:01.404126" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
 <arg>${card}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.027765" elapsed="0.182960"/>
+<status status="PASS" start="2026-05-26T10:14:01.404126" elapsed="0.165761"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:54.027765" elapsed="0.183957"/>
+<status status="PASS" start="2026-05-26T10:14:01.403125" elapsed="0.166762"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -135,311 +135,296 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:54:54.211722" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:01.570897" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:54.211722" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:01.569887" elapsed="0.001010"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:54:54.211722" elapsed="0.001000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:01.570897" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:54.211722" elapsed="0.001000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:01.570897" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:54.027765" elapsed="0.184957"/>
+<status status="PASS" start="2026-05-26T10:14:01.403125" elapsed="0.167772"/>
 </if>
-<status status="PASS" start="2026-05-26T08:54:53.990855" elapsed="0.221867"/>
+<status status="PASS" start="2026-05-26T10:14:01.369024" elapsed="0.201873"/>
 </kw>
 <kw name="Pak vidím interactive grid &quot;Seznam zaměstnanců s emailem&quot;" owner="grid_klicova_slova" source_name="Pak vidím interactive grid &quot;${nazev_gridu}&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.311274" level="INFO">Waited for Element with selector text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.664470" level="INFO">Waited for Element with selector text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${nazev_gridu}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=15s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.213722" elapsed="0.097552"/>
+<status status="PASS" start="2026-05-26T10:14:01.571922" elapsed="0.092548"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.352828" level="INFO">Waited for Element with selector css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0 at state visible</msg>
+<msg time="2026-05-26T10:14:01.702501" level="INFO">Waited for Element with selector css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0 at state visible</msg>
 <arg>css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0</arg>
 <arg>visible</arg>
 <arg>timeout=15s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.311274" elapsed="0.041554"/>
+<status status="PASS" start="2026-05-26T10:14:01.665478" elapsed="0.037023"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:54.212722" elapsed="0.140106"/>
+<status status="PASS" start="2026-05-26T10:14:01.571922" elapsed="0.130579"/>
 </kw>
 <kw name="A zároveň grid &quot;Seznam zaměstnanců s emailem&quot; obsahuje sloupce" owner="grid_klicova_slova" source_name="A zároveň grid &quot;${nazev_gridu}&quot; obsahuje sloupce">
 <for flavor="IN">
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.388752" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.734563" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.354020" elapsed="0.034732"/>
+<status status="PASS" start="2026-05-26T10:14:01.704007" elapsed="0.031567"/>
 </kw>
 <var name="${sloupec}">Osobní číslo</var>
-<status status="PASS" start="2026-05-26T08:54:54.354020" elapsed="0.034732"/>
+<status status="PASS" start="2026-05-26T10:14:01.702501" elapsed="0.033073"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.421500" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.764097" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.388752" elapsed="0.032748"/>
+<status status="PASS" start="2026-05-26T10:14:01.735574" elapsed="0.028523"/>
 </kw>
 <var name="${sloupec}">Jméno</var>
-<status status="PASS" start="2026-05-26T08:54:54.388752" elapsed="0.032748"/>
+<status status="PASS" start="2026-05-26T10:14:01.735574" elapsed="0.028523"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.475456" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.797538" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.423007" elapsed="0.052449"/>
+<status status="PASS" start="2026-05-26T10:14:01.765405" elapsed="0.033132"/>
 </kw>
 <var name="${sloupec}">Příjmení</var>
-<status status="PASS" start="2026-05-26T08:54:54.423007" elapsed="0.052449"/>
+<status status="PASS" start="2026-05-26T10:14:01.764097" elapsed="0.034440"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.547182" level="INFO">Waited for Element with selector text="Titul před" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.892367" level="INFO">Waited for Element with selector text="Titul před" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.476486" elapsed="0.070696"/>
+<status status="PASS" start="2026-05-26T10:14:01.799539" elapsed="0.092828"/>
 </kw>
 <var name="${sloupec}">Titul před</var>
-<status status="PASS" start="2026-05-26T08:54:54.475456" elapsed="0.071726"/>
+<status status="PASS" start="2026-05-26T10:14:01.798537" elapsed="0.093830"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.582733" level="INFO">Waited for Element with selector text="Titul za" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.926422" level="INFO">Waited for Element with selector text="Titul za" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.547182" elapsed="0.035551"/>
+<status status="PASS" start="2026-05-26T10:14:01.893371" elapsed="0.033051"/>
 </kw>
 <var name="${sloupec}">Titul za</var>
-<status status="PASS" start="2026-05-26T08:54:54.547182" elapsed="0.035551"/>
+<status status="PASS" start="2026-05-26T10:14:01.892367" elapsed="0.034055"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.621302" level="INFO">Waited for Element with selector text="Rodné číslo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.963964" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.583733" elapsed="0.037569"/>
-</kw>
-<var name="${sloupec}">Rodné číslo</var>
-<status status="PASS" start="2026-05-26T08:54:54.583733" elapsed="0.037569"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.655360" level="INFO">Waited for Element with selector text="Státní příslušnost" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.622304" elapsed="0.033056"/>
-</kw>
-<var name="${sloupec}">Státní příslušnost</var>
-<status status="PASS" start="2026-05-26T08:54:54.621302" elapsed="0.034058"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.697458" level="INFO">Waited for Element with selector text="Místo narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.656329" elapsed="0.041129"/>
-</kw>
-<var name="${sloupec}">Místo narození</var>
-<status status="PASS" start="2026-05-26T08:54:54.655360" elapsed="0.042098"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.729020" level="INFO">Waited for Element with selector text="Stát narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.698490" elapsed="0.030530"/>
-</kw>
-<var name="${sloupec}">Stát narození</var>
-<status status="PASS" start="2026-05-26T08:54:54.697458" elapsed="0.031562"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.759575" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.729020" elapsed="0.031555"/>
+<status status="PASS" start="2026-05-26T10:14:01.927424" elapsed="0.036540"/>
 </kw>
 <var name="${sloupec}">Rodné příjmení</var>
-<status status="PASS" start="2026-05-26T08:54:54.729020" elapsed="0.031555"/>
+<status status="PASS" start="2026-05-26T10:14:01.926422" elapsed="0.037542"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.789582" level="INFO">Waited for Element with selector text="Pracovní e-mail" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:01.998490" level="INFO">Waited for Element with selector text="Státní příslušnost" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.760575" elapsed="0.030009"/>
+<status status="PASS" start="2026-05-26T10:14:01.964965" elapsed="0.033525"/>
+</kw>
+<var name="${sloupec}">Státní příslušnost</var>
+<status status="PASS" start="2026-05-26T10:14:01.963964" elapsed="0.034526"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:02.038537" level="INFO">Waited for Element with selector text="Místo narození" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:01.999492" elapsed="0.039045"/>
+</kw>
+<var name="${sloupec}">Místo narození</var>
+<status status="PASS" start="2026-05-26T10:14:01.998490" elapsed="0.040047"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:02.063702" level="INFO">Waited for Element with selector text="Stát narození" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:02.038537" elapsed="0.025165"/>
+</kw>
+<var name="${sloupec}">Stát narození</var>
+<status status="PASS" start="2026-05-26T10:14:02.038537" elapsed="0.025165"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:02.097252" level="INFO">Waited for Element with selector text="Pracovní e-mail" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:02.063702" elapsed="0.033550"/>
 </kw>
 <var name="${sloupec}">Pracovní e-mail</var>
-<status status="PASS" start="2026-05-26T08:54:54.760575" elapsed="0.030009"/>
+<status status="PASS" start="2026-05-26T10:14:02.063702" elapsed="0.033550"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.820714" level="INFO">Waited for Element with selector text="Nastup" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.117162" level="INFO">Waited for Element with selector text="Nastup" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.790584" elapsed="0.030130"/>
+<status status="PASS" start="2026-05-26T10:14:02.097252" elapsed="0.019910"/>
 </kw>
 <var name="${sloupec}">Nastup</var>
-<status status="PASS" start="2026-05-26T08:54:54.790584" elapsed="0.030130"/>
+<status status="PASS" start="2026-05-26T10:14:02.097252" elapsed="0.019910"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.850748" level="INFO">Waited for Element with selector text="Pojistny Pomer Od" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.157928" level="INFO">Waited for Element with selector text="Pojistny Pomer Od" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.820714" elapsed="0.031034"/>
+<status status="PASS" start="2026-05-26T10:14:02.117162" elapsed="0.040766"/>
 </kw>
 <var name="${sloupec}">Pojistny Pomer Od</var>
-<status status="PASS" start="2026-05-26T08:54:54.820714" elapsed="0.031034"/>
+<status status="PASS" start="2026-05-26T10:14:02.117162" elapsed="0.040766"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.881886" level="INFO">Waited for Element with selector text="Konec doby určité" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.183069" level="INFO">Waited for Element with selector text="Konec doby určité" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.851748" elapsed="0.030138"/>
+<status status="PASS" start="2026-05-26T10:14:02.157928" elapsed="0.025141"/>
 </kw>
 <var name="${sloupec}">Konec doby určité</var>
-<status status="PASS" start="2026-05-26T08:54:54.851748" elapsed="0.030138"/>
+<status status="PASS" start="2026-05-26T10:14:02.157928" elapsed="0.025141"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.911461" level="INFO">Waited for Element with selector text="Adr Ulice" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.209509" level="INFO">Waited for Element with selector text="Adr Ulice" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.881886" elapsed="0.029575"/>
+<status status="PASS" start="2026-05-26T10:14:02.183069" elapsed="0.026440"/>
 </kw>
 <var name="${sloupec}">Adr Ulice</var>
-<status status="PASS" start="2026-05-26T08:54:54.881886" elapsed="0.029575"/>
+<status status="PASS" start="2026-05-26T10:14:02.183069" elapsed="0.026440"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.941068" level="INFO">Waited for Element with selector text="Adr Cislo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.236457" level="INFO">Waited for Element with selector text="Adr Cislo" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.911461" elapsed="0.029607"/>
+<status status="PASS" start="2026-05-26T10:14:02.209509" elapsed="0.026948"/>
 </kw>
 <var name="${sloupec}">Adr Cislo</var>
-<status status="PASS" start="2026-05-26T08:54:54.911461" elapsed="0.029607"/>
+<status status="PASS" start="2026-05-26T10:14:02.209509" elapsed="0.026948"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:54.971685" level="INFO">Waited for Element with selector text="Adr Obec" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.273045" level="INFO">Waited for Element with selector text="Adr Obec" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.942098" elapsed="0.029587"/>
+<status status="PASS" start="2026-05-26T10:14:02.236457" elapsed="0.036588"/>
 </kw>
 <var name="${sloupec}">Adr Obec</var>
-<status status="PASS" start="2026-05-26T08:54:54.942098" elapsed="0.029587"/>
+<status status="PASS" start="2026-05-26T10:14:02.236457" elapsed="0.036588"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:55.000709" level="INFO">Waited for Element with selector text="Adr Psc" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:02.291969" level="INFO">Waited for Element with selector text="Adr Psc" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:54.971685" elapsed="0.030032"/>
+<status status="PASS" start="2026-05-26T10:14:02.273045" elapsed="0.018924"/>
 </kw>
 <var name="${sloupec}">Adr Psc</var>
-<status status="PASS" start="2026-05-26T08:54:54.971685" elapsed="0.030032"/>
+<status status="PASS" start="2026-05-26T10:14:02.273045" elapsed="0.018924"/>
 </iter>
 <var>${sloupec}</var>
 <value>@{ocekavane_sloupce}</value>
-<status status="PASS" start="2026-05-26T08:54:54.354020" elapsed="0.647697"/>
+<status status="PASS" start="2026-05-26T10:14:01.702501" elapsed="0.589468"/>
 </for>
 <arg>Osobní číslo</arg>
 <arg>Jméno</arg>
 <arg>Příjmení</arg>
 <arg>Titul před</arg>
 <arg>Titul za</arg>
-<arg>Rodné číslo</arg>
+<arg>Rodné příjmení</arg>
 <arg>Státní příslušnost</arg>
 <arg>Místo narození</arg>
 <arg>Stát narození</arg>
-<arg>Rodné příjmení</arg>
 <arg>Pracovní e-mail</arg>
 <arg>Nastup</arg>
 <arg>Pojistny Pomer Od</arg>
@@ -448,28 +433,28 @@
 <arg>Adr Cislo</arg>
 <arg>Adr Obec</arg>
 <arg>Adr Psc</arg>
-<status status="PASS" start="2026-05-26T08:54:54.354020" elapsed="0.647697"/>
+<status status="PASS" start="2026-05-26T10:14:01.702501" elapsed="0.589468"/>
 </kw>
-<msg time="2026-05-26T08:54:55.011729" level="INFO">Switching context to context=14d271f9-faa3-45eb-bd9a-ef8559e50143 in CURRENT</msg>
-<msg time="2026-05-26T08:54:55.015758" level="INFO">Successfully changed active context: context=14d271f9-faa3-45eb-bd9a-ef8559e50143</msg>
-<msg time="2026-05-26T08:54:55.025302" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-26T08:54:50.539189" elapsed="4.462528"/>
+<msg time="2026-05-26T10:14:02.303058" level="INFO">Switching context to context=5654e380-7bdb-4ed0-b402-03bb013029b3 in CURRENT</msg>
+<msg time="2026-05-26T10:14:02.316095" level="INFO">Successfully changed active context: context=5654e380-7bdb-4ed0-b402-03bb013029b3</msg>
+<msg time="2026-05-26T10:14:02.321729" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-26T10:13:58.440726" elapsed="3.851243"/>
 </test>
-<test id="s1-t2" name="Uživatel ověří navigaci a sloupce v aplikaci" line="32">
+<test id="s1-t2" name="Uživatel ověří navigaci a sloupce v aplikaci" line="31">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-26T08:54:55.031297" level="INFO">Switching browser to browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:55.033298" level="INFO">Successfully changed active browser: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:55.033298" level="INFO">Reusing existing browser with id: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
+<msg time="2026-05-26T10:14:02.329301" level="INFO">Switching browser to browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:02.329301" level="INFO">Successfully changed active browser: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:02.329301" level="INFO">Reusing existing browser with id: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.030298" elapsed="0.003000"/>
+<status status="PASS" start="2026-05-26T10:14:02.329301" elapsed="0.000000"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-26T08:54:55.034300" level="INFO">{
+<msg time="2026-05-26T10:14:02.334640" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -483,75 +468,75 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-26T08:54:55.048343" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-26T08:54:55.048343" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2026-05-26T10:14:02.342726" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-26T10:14:02.342726" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.033298" elapsed="0.015045"/>
+<status status="PASS" start="2026-05-26T10:14:02.329301" elapsed="0.013425"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-26T08:54:55.484793" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:02.784480" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.048343" elapsed="0.436450"/>
+<status status="PASS" start="2026-05-26T10:14:02.342726" elapsed="0.441754"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:55.029298" elapsed="0.456530"/>
+<status status="PASS" start="2026-05-26T10:14:02.329301" elapsed="0.455179"/>
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:55.486827" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<msg time="2026-05-26T10:14:02.792252" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.486827" elapsed="0.000997"/>
+<status status="PASS" start="2026-05-26T10:14:02.792252" elapsed="0.000000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:55.487824" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-26T10:14:02.792252" level="INFO">Fills the text 'datprx' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.487824" elapsed="0.035820"/>
+<status status="PASS" start="2026-05-26T10:14:02.792252" elapsed="0.030603"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:55.525650" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-26T10:14:02.822855" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.524679" elapsed="0.012023"/>
+<status status="PASS" start="2026-05-26T10:14:02.822855" elapsed="0.009425"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:55.537735" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-26T10:14:02.832280" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.536702" elapsed="0.390766"/>
+<status status="PASS" start="2026-05-26T10:14:02.832280" elapsed="0.401472"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:55.485828" elapsed="0.441640"/>
+<status status="PASS" start="2026-05-26T10:14:02.784480" elapsed="0.449272"/>
 </kw>
 <kw name="vidím, že jsem přihlášen" owner="prihlaseni_klicova_slova">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:55.990446" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
+<msg time="2026-05-26T10:14:03.299723" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
 <arg>id=t_PageBody</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.927468" elapsed="0.062978"/>
+<status status="PASS" start="2026-05-26T10:14:03.233752" elapsed="0.065971"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:55.927468" elapsed="0.063987"/>
+<status status="PASS" start="2026-05-26T10:14:03.233752" elapsed="0.065971"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:55.485828" elapsed="0.505627"/>
+<status status="PASS" start="2026-05-26T10:14:02.784480" elapsed="0.515243"/>
 </kw>
 <kw name="Pak boční menu by mělo obsahovat položky" owner="spolecne">
 <for flavor="IN">
@@ -559,61 +544,61 @@
 <if>
 <branch type="IF" condition="&quot;${polozka}&quot; != &quot;Home&quot; and &quot;${polozka}&quot; != &quot;Domů&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:56.006608" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:03.314795" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Personalistika přehled" &gt;&gt; nth=0 at state attached</msg>
 <arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:55.993454" elapsed="0.013154"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.015072"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:55.992453" elapsed="0.014155"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.015072"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:55.992453" elapsed="0.014155"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.015072"/>
 </if>
 <var name="${polozka}">Personalistika přehled</var>
-<status status="PASS" start="2026-05-26T08:54:55.992453" elapsed="0.014155"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.015072"/>
 </iter>
 <iter>
 <if>
 <branch type="IF" condition="&quot;${polozka}&quot; != &quot;Home&quot; and &quot;${polozka}&quot; != &quot;Domů&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:56.018616" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:03.325489" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
 <arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.007610" elapsed="0.011006"/>
+<status status="PASS" start="2026-05-26T10:14:03.314795" elapsed="0.010694"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.007610" elapsed="0.011006"/>
+<status status="PASS" start="2026-05-26T10:14:03.314795" elapsed="0.010694"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:56.007610" elapsed="0.011006"/>
+<status status="PASS" start="2026-05-26T10:14:03.314795" elapsed="0.010694"/>
 </if>
 <var name="${polozka}">Seznam zaměstnanců s emailem</var>
-<status status="PASS" start="2026-05-26T08:54:56.007610" elapsed="0.011006"/>
+<status status="PASS" start="2026-05-26T10:14:03.314795" elapsed="0.010694"/>
 </iter>
 <iter>
 <if>
 <branch type="IF" condition="&quot;${polozka}&quot; != &quot;Home&quot; and &quot;${polozka}&quot; != &quot;Domů&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:56.027616" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Dostupné formuláře" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:03.338516" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Dostupné formuláře" &gt;&gt; nth=0 at state attached</msg>
 <arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.019620" elapsed="0.007996"/>
+<status status="PASS" start="2026-05-26T10:14:03.325489" elapsed="0.013027"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.018616" elapsed="0.010032"/>
+<status status="PASS" start="2026-05-26T10:14:03.325489" elapsed="0.013027"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:56.018616" elapsed="0.010032"/>
+<status status="PASS" start="2026-05-26T10:14:03.325489" elapsed="0.013027"/>
 </if>
 <var name="${polozka}">Dostupné formuláře</var>
-<status status="PASS" start="2026-05-26T08:54:56.018616" elapsed="0.010032"/>
+<status status="PASS" start="2026-05-26T10:14:03.325489" elapsed="0.013027"/>
 </iter>
 <iter>
 <if>
@@ -625,54 +610,54 @@
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2026-05-26T08:54:56.028648" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:56.028648" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:56.028648" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </if>
 <var name="${polozka}">Home</var>
-<status status="PASS" start="2026-05-26T08:54:56.028648" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </iter>
 <var>${polozka}</var>
 <value>@{ocekavane_polozky}</value>
-<status status="PASS" start="2026-05-26T08:54:55.992453" elapsed="0.036195"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.038793"/>
 </for>
 <arg>Personalistika přehled</arg>
 <arg>Seznam zaměstnanců s emailem</arg>
 <arg>Dostupné formuláře</arg>
 <arg>Home</arg>
-<status status="PASS" start="2026-05-26T08:54:55.991455" elapsed="0.037193"/>
+<status status="PASS" start="2026-05-26T10:14:03.299723" elapsed="0.038793"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:56.030156" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<msg time="2026-05-26T10:14:03.338516" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.030156" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:54:56.035176" level="INFO">${card_count} = 1</msg>
+<msg time="2026-05-26T10:14:03.338516" level="INFO">${card_count} = 1</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.031196" elapsed="0.003980"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:56.036208" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
+<msg time="2026-05-26T10:14:03.338516" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
 <arg>${card}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.036208" elapsed="0.198270"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.203442"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.036208" elapsed="0.198270"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.203442"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -680,63 +665,63 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:54:56.235479" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.541958" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:56.234478" elapsed="0.001001"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.541958" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:54:56.235479" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.541958" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:56.235479" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:03.541958" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:56.036208" elapsed="0.199271"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.203442"/>
 </if>
-<status status="PASS" start="2026-05-26T08:54:56.030156" elapsed="0.205323"/>
+<status status="PASS" start="2026-05-26T10:14:03.338516" elapsed="0.203442"/>
 </kw>
 <kw name="Pak vidím interactive grid &quot;Seznam zaměstnanců s emailem&quot;" owner="grid_klicova_slova" source_name="Pak vidím interactive grid &quot;${nazev_gridu}&quot;">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:56.325351" level="INFO">Waited for Element with selector text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:03.603627" level="INFO">Waited for Element with selector text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${nazev_gridu}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=15s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.236479" elapsed="0.088872"/>
+<status status="PASS" start="2026-05-26T10:14:03.541958" elapsed="0.061669"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:56.352858" level="INFO">Waited for Element with selector css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0 at state visible</msg>
+<msg time="2026-05-26T10:14:03.656613" level="INFO">Waited for Element with selector css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0 at state visible</msg>
 <arg>css=.a-GV, .a-IRR-container, .t-Report, table &gt;&gt; nth=0</arg>
 <arg>visible</arg>
 <arg>timeout=15s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.326349" elapsed="0.026509"/>
+<status status="PASS" start="2026-05-26T10:14:03.603627" elapsed="0.052986"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.236479" elapsed="0.116379"/>
+<status status="PASS" start="2026-05-26T10:14:03.541958" elapsed="0.114655"/>
 </kw>
-<msg time="2026-05-26T08:54:56.361385" level="INFO">Switching context to context=1e43ce20-eb29-429b-8281-5a51b651d190 in CURRENT</msg>
-<msg time="2026-05-26T08:54:56.365389" level="INFO">Successfully changed active context: context=1e43ce20-eb29-429b-8281-5a51b651d190</msg>
-<msg time="2026-05-26T08:54:56.372142" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-26T08:54:55.026298" elapsed="1.326560"/>
+<msg time="2026-05-26T10:14:03.672824" level="INFO">Switching context to context=524da428-a3a5-4553-b300-a956b303311e in CURRENT</msg>
+<msg time="2026-05-26T10:14:03.672824" level="INFO">Successfully changed active context: context=524da428-a3a5-4553-b300-a956b303311e</msg>
+<msg time="2026-05-26T10:14:03.682816" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-26T10:14:02.321729" elapsed="1.334884"/>
 </test>
-<test id="s1-t3" name="Role vedoucí by měla vidět všechny sloupce a kompletní menu" line="46">
+<test id="s1-t3" name="Role vedoucí by měla vidět všechny sloupce a kompletní menu" line="45">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-26T08:54:56.378718" level="INFO">Switching browser to browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:56.380731" level="INFO">Successfully changed active browser: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:56.380731" level="INFO">Reusing existing browser with id: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
+<msg time="2026-05-26T10:14:03.686802" level="INFO">Switching browser to browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:03.690019" level="INFO">Successfully changed active browser: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:03.690019" level="INFO">Reusing existing browser with id: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.378176" elapsed="0.002555"/>
+<status status="PASS" start="2026-05-26T10:14:03.686802" elapsed="0.003217"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-26T08:54:56.382729" level="INFO">{
+<msg time="2026-05-26T10:14:03.690019" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -750,105 +735,105 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-26T08:54:56.391756" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-26T08:54:56.391756" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2026-05-26T10:14:03.709134" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-26T10:14:03.709134" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.381729" elapsed="0.010027"/>
+<status status="PASS" start="2026-05-26T10:14:03.690019" elapsed="0.019115"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-26T08:54:56.827823" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:04.168299" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.392756" elapsed="0.435067"/>
+<status status="PASS" start="2026-05-26T10:14:03.709134" elapsed="0.459165"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.377140" elapsed="0.450683"/>
+<status status="PASS" start="2026-05-26T10:14:03.686802" elapsed="0.481497"/>
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:56.829822" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<msg time="2026-05-26T10:14:04.173362" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.828822" elapsed="0.001000"/>
+<status status="PASS" start="2026-05-26T10:14:04.173362" elapsed="0.000000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:56.830824" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-26T10:14:04.173362" level="INFO">Fills the text 'datprx' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.829822" elapsed="0.036209"/>
+<status status="PASS" start="2026-05-26T10:14:04.173362" elapsed="0.035923"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:56.867057" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-26T10:14:04.209285" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.866031" elapsed="0.012758"/>
+<status status="PASS" start="2026-05-26T10:14:04.209285" elapsed="0.012113"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:56.878789" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-26T10:14:04.221398" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:56.878789" elapsed="0.399646"/>
+<status status="PASS" start="2026-05-26T10:14:04.221398" elapsed="0.421135"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.828822" elapsed="0.449613"/>
+<status status="PASS" start="2026-05-26T10:14:04.173362" elapsed="0.469171"/>
 </kw>
 <kw name="vidím, že jsem přihlášen" owner="prihlaseni_klicova_slova">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.353688" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
+<msg time="2026-05-26T10:14:04.711767" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
 <arg>id=t_PageBody</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.279435" elapsed="0.074253"/>
+<status status="PASS" start="2026-05-26T10:14:04.642533" elapsed="0.069234"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:57.278435" elapsed="0.075253"/>
+<status status="PASS" start="2026-05-26T10:14:04.642533" elapsed="0.069234"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:56.827823" elapsed="0.525865"/>
+<status status="PASS" start="2026-05-26T10:14:04.173362" elapsed="0.538405"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:57.354684" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<msg time="2026-05-26T10:14:04.717636" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.354684" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:04.711767" elapsed="0.005869"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:54:57.360229" level="INFO">${card_count} = 1</msg>
+<msg time="2026-05-26T10:14:04.721789" level="INFO">${card_count} = 1</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.354684" elapsed="0.005545"/>
+<status status="PASS" start="2026-05-26T10:14:04.717636" elapsed="0.004153"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:57.361259" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
+<msg time="2026-05-26T10:14:04.721789" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"'.</msg>
 <arg>${card}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.361259" elapsed="0.243143"/>
+<status status="PASS" start="2026-05-26T10:14:04.721789" elapsed="0.238003"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:57.360229" elapsed="0.244173"/>
+<status status="PASS" start="2026-05-26T10:14:04.721789" elapsed="0.238003"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -856,269 +841,284 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:54:57.604402" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:04.968240" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:57.604402" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:04.968240" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:54:57.605431" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:04.968240" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:57.604402" elapsed="0.001029"/>
+<status status="NOT RUN" start="2026-05-26T10:14:04.968240" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:57.360229" elapsed="0.245202"/>
+<status status="PASS" start="2026-05-26T10:14:04.721789" elapsed="0.246451"/>
 </if>
-<status status="PASS" start="2026-05-26T08:54:57.353688" elapsed="0.251743"/>
+<status status="PASS" start="2026-05-26T10:14:04.711767" elapsed="0.256473"/>
 </kw>
 <kw name="Pak mřížka by měla obsahovat sloupce" owner="grid_klicova_slova">
 <for flavor="IN">
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.671615" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.025691" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.607402" elapsed="0.064213"/>
+<status status="PASS" start="2026-05-26T10:14:04.968240" elapsed="0.067058"/>
 </kw>
 <var name="${sloupec}">Osobní číslo</var>
-<status status="PASS" start="2026-05-26T08:54:57.606396" elapsed="0.066221"/>
+<status status="PASS" start="2026-05-26T10:14:04.968240" elapsed="0.067058"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.720224" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.097629" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.672617" elapsed="0.047607"/>
+<status status="PASS" start="2026-05-26T10:14:05.035298" elapsed="0.062331"/>
 </kw>
 <var name="${sloupec}">Jméno</var>
-<status status="PASS" start="2026-05-26T08:54:57.672617" elapsed="0.047607"/>
+<status status="PASS" start="2026-05-26T10:14:05.035298" elapsed="0.062331"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.771299" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.144420" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.720735" elapsed="0.050564"/>
+<status status="PASS" start="2026-05-26T10:14:05.097629" elapsed="0.046791"/>
 </kw>
 <var name="${sloupec}">Příjmení</var>
-<status status="PASS" start="2026-05-26T08:54:57.720735" elapsed="0.051600"/>
+<status status="PASS" start="2026-05-26T10:14:05.097629" elapsed="0.046791"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.803960" level="INFO">Waited for Element with selector text="Titul před" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.171124" level="INFO">Waited for Element with selector text="Titul před" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.772335" elapsed="0.031625"/>
+<status status="PASS" start="2026-05-26T10:14:05.144420" elapsed="0.026704"/>
 </kw>
 <var name="${sloupec}">Titul před</var>
-<status status="PASS" start="2026-05-26T08:54:57.772335" elapsed="0.031625"/>
+<status status="PASS" start="2026-05-26T10:14:05.144420" elapsed="0.026704"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.840094" level="INFO">Waited for Element with selector text="Titul za" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.210592" level="INFO">Waited for Element with selector text="Titul za" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.803960" elapsed="0.036134"/>
+<status status="PASS" start="2026-05-26T10:14:05.171124" elapsed="0.039468"/>
 </kw>
 <var name="${sloupec}">Titul za</var>
-<status status="PASS" start="2026-05-26T08:54:57.803960" elapsed="0.036134"/>
+<status status="PASS" start="2026-05-26T10:14:05.171124" elapsed="0.039468"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.931828" level="INFO">Waited for Element with selector text="Státní příslušnost" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.303605" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.841087" elapsed="0.090741"/>
-</kw>
-<var name="${sloupec}">Státní příslušnost</var>
-<status status="PASS" start="2026-05-26T08:54:57.840094" elapsed="0.091734"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:57.970574" level="INFO">Waited for Element with selector text="Místo narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.933334" elapsed="0.037240"/>
-</kw>
-<var name="${sloupec}">Místo narození</var>
-<status status="PASS" start="2026-05-26T08:54:57.931828" elapsed="0.038746"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.006153" level="INFO">Waited for Element with selector text="Stát narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:57.970574" elapsed="0.035579"/>
-</kw>
-<var name="${sloupec}">Stát narození</var>
-<status status="PASS" start="2026-05-26T08:54:57.970574" elapsed="0.035579"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.039810" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.007191" elapsed="0.032619"/>
+<status status="PASS" start="2026-05-26T10:14:05.210592" elapsed="0.093013"/>
 </kw>
 <var name="${sloupec}">Rodné příjmení</var>
-<status status="PASS" start="2026-05-26T08:54:58.006153" elapsed="0.033657"/>
+<status status="PASS" start="2026-05-26T10:14:05.210592" elapsed="0.093013"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.082352" level="INFO">Waited for Element with selector text="Pracovní e-mail" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.339497" level="INFO">Waited for Element with selector text="Státní příslušnost" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.039810" elapsed="0.042542"/>
+<status status="PASS" start="2026-05-26T10:14:05.303605" elapsed="0.035892"/>
+</kw>
+<var name="${sloupec}">Státní příslušnost</var>
+<status status="PASS" start="2026-05-26T10:14:05.303605" elapsed="0.035892"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:05.378864" level="INFO">Waited for Element with selector text="Místo narození" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:05.339497" elapsed="0.039367"/>
+</kw>
+<var name="${sloupec}">Místo narození</var>
+<status status="PASS" start="2026-05-26T10:14:05.339497" elapsed="0.039367"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:05.408288" level="INFO">Waited for Element with selector text="Stát narození" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:05.378864" elapsed="0.029424"/>
+</kw>
+<var name="${sloupec}">Stát narození</var>
+<status status="PASS" start="2026-05-26T10:14:05.378864" elapsed="0.029424"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:05.448074" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:05.408288" elapsed="0.039786"/>
+</kw>
+<var name="${sloupec}">Rodné příjmení</var>
+<status status="PASS" start="2026-05-26T10:14:05.408288" elapsed="0.039786"/>
+</iter>
+<iter>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:05.474625" level="INFO">Waited for Element with selector text="Pracovní e-mail" &gt;&gt; nth=0 at state attached</msg>
+<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:05.448074" elapsed="0.026551"/>
 </kw>
 <var name="${sloupec}">Pracovní e-mail</var>
-<status status="PASS" start="2026-05-26T08:54:58.039810" elapsed="0.042542"/>
+<status status="PASS" start="2026-05-26T10:14:05.448074" elapsed="0.026551"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.113314" level="INFO">Waited for Element with selector text="Nastup" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.507645" level="INFO">Waited for Element with selector text="Nastup" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.082352" elapsed="0.030962"/>
+<status status="PASS" start="2026-05-26T10:14:05.474625" elapsed="0.033020"/>
 </kw>
 <var name="${sloupec}">Nastup</var>
-<status status="PASS" start="2026-05-26T08:54:58.082352" elapsed="0.030962"/>
+<status status="PASS" start="2026-05-26T10:14:05.474625" elapsed="0.033020"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.143276" level="INFO">Waited for Element with selector text="Pojistny Pomer Od" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.538374" level="INFO">Waited for Element with selector text="Pojistny Pomer Od" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.114321" elapsed="0.029956"/>
+<status status="PASS" start="2026-05-26T10:14:05.507645" elapsed="0.030729"/>
 </kw>
 <var name="${sloupec}">Pojistny Pomer Od</var>
-<status status="PASS" start="2026-05-26T08:54:58.114321" elapsed="0.029956"/>
+<status status="PASS" start="2026-05-26T10:14:05.507645" elapsed="0.030729"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.174530" level="INFO">Waited for Element with selector text="Konec doby určité" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.566822" level="INFO">Waited for Element with selector text="Konec doby určité" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.144277" elapsed="0.030253"/>
+<status status="PASS" start="2026-05-26T10:14:05.540628" elapsed="0.026194"/>
 </kw>
 <var name="${sloupec}">Konec doby určité</var>
-<status status="PASS" start="2026-05-26T08:54:58.144277" elapsed="0.030253"/>
+<status status="PASS" start="2026-05-26T10:14:05.538374" elapsed="0.028448"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.204373" level="INFO">Waited for Element with selector text="Adr Ulice" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.596823" level="INFO">Waited for Element with selector text="Adr Ulice" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.175561" elapsed="0.028812"/>
+<status status="PASS" start="2026-05-26T10:14:05.569333" elapsed="0.027490"/>
 </kw>
 <var name="${sloupec}">Adr Ulice</var>
-<status status="PASS" start="2026-05-26T08:54:58.175561" elapsed="0.028812"/>
+<status status="PASS" start="2026-05-26T10:14:05.569333" elapsed="0.027490"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.233619" level="INFO">Waited for Element with selector text="Adr Cislo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.625090" level="INFO">Waited for Element with selector text="Adr Cislo" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.205408" elapsed="0.028211"/>
+<status status="PASS" start="2026-05-26T10:14:05.596823" elapsed="0.028267"/>
 </kw>
 <var name="${sloupec}">Adr Cislo</var>
-<status status="PASS" start="2026-05-26T08:54:58.204373" elapsed="0.029246"/>
+<status status="PASS" start="2026-05-26T10:14:05.596823" elapsed="0.028267"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.263236" level="INFO">Waited for Element with selector text="Adr Obec" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.653828" level="INFO">Waited for Element with selector text="Adr Obec" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.234655" elapsed="0.028581"/>
+<status status="PASS" start="2026-05-26T10:14:05.625090" elapsed="0.028738"/>
 </kw>
 <var name="${sloupec}">Adr Obec</var>
-<status status="PASS" start="2026-05-26T08:54:58.233619" elapsed="0.029617"/>
+<status status="PASS" start="2026-05-26T10:14:05.625090" elapsed="0.028738"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:58.295780" level="INFO">Waited for Element with selector text="Adr Psc" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:05.681925" level="INFO">Waited for Element with selector text="Adr Psc" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.264236" elapsed="0.031544"/>
+<status status="PASS" start="2026-05-26T10:14:05.653828" elapsed="0.028097"/>
 </kw>
 <var name="${sloupec}">Adr Psc</var>
-<status status="PASS" start="2026-05-26T08:54:58.263236" elapsed="0.032544"/>
+<status status="PASS" start="2026-05-26T10:14:05.653828" elapsed="0.028097"/>
 </iter>
 <var>${sloupec}</var>
 <value>@{ocekavane_sloupce}</value>
-<status status="PASS" start="2026-05-26T08:54:57.606396" elapsed="0.689384"/>
+<status status="PASS" start="2026-05-26T10:14:04.968240" elapsed="0.713685"/>
 </for>
 <arg>Osobní číslo</arg>
 <arg>Jméno</arg>
 <arg>Příjmení</arg>
 <arg>Titul před</arg>
 <arg>Titul za</arg>
+<arg>Rodné příjmení</arg>
 <arg>Státní příslušnost</arg>
 <arg>Místo narození</arg>
 <arg>Stát narození</arg>
@@ -1131,28 +1131,28 @@
 <arg>Adr Cislo</arg>
 <arg>Adr Obec</arg>
 <arg>Adr Psc</arg>
-<status status="PASS" start="2026-05-26T08:54:57.606396" elapsed="0.689384"/>
+<status status="PASS" start="2026-05-26T10:14:04.968240" elapsed="0.713685"/>
 </kw>
-<msg time="2026-05-26T08:54:58.307559" level="INFO">Switching context to context=1f58572d-076f-4a97-aad0-11fc6119d90e in CURRENT</msg>
-<msg time="2026-05-26T08:54:58.310373" level="INFO">Successfully changed active context: context=1f58572d-076f-4a97-aad0-11fc6119d90e</msg>
-<msg time="2026-05-26T08:54:58.315143" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-26T08:54:56.372142" elapsed="1.924637"/>
+<msg time="2026-05-26T10:14:05.685528" level="INFO">Switching context to context=18a11795-8a4a-40ee-a690-994e7436d8b5 in CURRENT</msg>
+<msg time="2026-05-26T10:14:05.685528" level="INFO">Successfully changed active context: context=18a11795-8a4a-40ee-a690-994e7436d8b5</msg>
+<msg time="2026-05-26T10:14:05.699443" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-26T10:14:03.682816" elapsed="1.999109"/>
 </test>
 <test id="s1-t4" name="Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu" line="70">
 <kw name="Otevři prohlížeč a aplikaci" owner="spolecne" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-26T08:54:58.321157" level="INFO">Switching browser to browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:58.323157" level="INFO">Successfully changed active browser: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
-<msg time="2026-05-26T08:54:58.323157" level="INFO">Reusing existing browser with id: browser=eb7e57e8-5d12-4a14-b437-71d1e27ab76e</msg>
+<msg time="2026-05-26T10:14:05.701981" level="INFO">Switching browser to browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:05.701981" level="INFO">Successfully changed active browser: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
+<msg time="2026-05-26T10:14:05.701981" level="INFO">Reusing existing browser with id: browser=7908a915-1fa7-4b91-904b-9d7cdb3a3927</msg>
 <arg>browser=${PROHLIZEC}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.321157" elapsed="0.002000"/>
+<status status="PASS" start="2026-05-26T10:14:05.701981" elapsed="0.000000"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-05-26T08:54:58.325188" level="INFO">{
+<msg time="2026-05-26T10:14:05.701981" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -1166,94 +1166,94 @@
     "height": 1080
   }
 }</msg>
-<msg time="2026-05-26T08:54:58.335668" level="INFO">Successfully created context. </msg>
-<msg time="2026-05-26T08:54:58.336669" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<msg time="2026-05-26T10:14:05.717947" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-26T10:14:05.717947" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
 <arg>viewport={'width': 1920, 'height': 1080}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.324158" elapsed="0.012511"/>
+<status status="PASS" start="2026-05-26T10:14:05.701981" elapsed="0.015966"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-26T08:54:58.788845" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:06.176841" level="INFO">Successfully initialized new page object and opened url: https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>url=${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.336669" elapsed="0.452176"/>
+<status status="PASS" start="2026-05-26T10:14:05.717947" elapsed="0.458894"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:58.320158" elapsed="0.468687"/>
+<status status="PASS" start="2026-05-26T10:14:05.701981" elapsed="0.474860"/>
 </kw>
 <kw name="Když se přihlásím jako &quot;admin&quot;" owner="prihlaseni_klicova_slova" source_name="Když se přihlásím jako &quot;${role}&quot;">
 <kw name="se přihlásím jako &quot;${role}&quot;" owner="prihlaseni_klicova_slova" source_name="se přihlásím jako &quot;${role}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:58.790846" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
+<msg time="2026-05-26T10:14:06.176841" level="INFO">${uzivatel} = {'jmeno': 'datprx', 'heslo': 'datprx_012026'}</msg>
 <var>${uzivatel}</var>
 <arg>${UZIVATELE['${role}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.790846" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:06.176841" elapsed="0.000000"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:58.791845" level="INFO">Fills the text 'datprx' in the given field.</msg>
+<msg time="2026-05-26T10:14:06.176841" level="INFO">Fills the text 'datprx' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${uzivatel['jmeno']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.791845" elapsed="0.035082"/>
+<status status="PASS" start="2026-05-26T10:14:06.176841" elapsed="0.039422"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:54:58.827924" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
+<msg time="2026-05-26T10:14:06.216263" level="INFO">Fills the text 'datprx_012026' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${uzivatel['heslo']}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.826927" elapsed="0.010767"/>
+<status status="PASS" start="2026-05-26T10:14:06.216263" elapsed="0.014268"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:58.839199" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
+<msg time="2026-05-26T10:14:06.230531" level="INFO">Clicks the element '[name="_eventId_proceed"]'.</msg>
 <arg>[name="_eventId_proceed"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:58.839199" elapsed="0.412269"/>
+<status status="PASS" start="2026-05-26T10:14:06.230531" elapsed="0.411060"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:58.789862" elapsed="0.461606"/>
+<status status="PASS" start="2026-05-26T10:14:06.176841" elapsed="0.464750"/>
 </kw>
 <kw name="vidím, že jsem přihlášen" owner="prihlaseni_klicova_slova">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:54:59.318944" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
+<msg time="2026-05-26T10:14:06.701120" level="INFO">Waited for Element with selector id=t_PageBody at state visible</msg>
 <arg>id=t_PageBody</arg>
 <arg>visible</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.252500" elapsed="0.066444"/>
+<status status="PASS" start="2026-05-26T10:14:06.641591" elapsed="0.059529"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:59.252500" elapsed="0.066444"/>
+<status status="PASS" start="2026-05-26T10:14:06.641591" elapsed="0.059529"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:58.789862" elapsed="0.530082"/>
+<status status="PASS" start="2026-05-26T10:14:06.176841" elapsed="0.524279"/>
 </kw>
 <kw name="Změň roli přes formulář a ověř editovatelnost" owner="spolecne">
 <kw name="Když otevřu stránku &quot;Domů&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:59.321944" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Domů"</msg>
+<msg time="2026-05-26T10:14:06.706503" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Domů"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.320943" elapsed="0.001001"/>
+<status status="PASS" start="2026-05-26T10:14:06.706503" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:54:59.329948" level="INFO">${card_count} = 0</msg>
+<msg time="2026-05-26T10:14:06.709423" level="INFO">${card_count} = 0</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.321944" elapsed="0.008004"/>
+<status status="PASS" start="2026-05-26T10:14:06.706503" elapsed="0.002920"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
@@ -1262,60 +1262,60 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:54:59.330944" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:06.709423" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:59.329948" elapsed="0.000996"/>
+<status status="NOT RUN" start="2026-05-26T10:14:06.709423" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
-<msg time="2026-05-26T08:54:59.829584" level="INFO">Successfully opened URL https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:07.245207" level="INFO">Successfully opened URL https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.330944" elapsed="0.498640"/>
+<status status="PASS" start="2026-05-26T10:14:06.709423" elapsed="0.535784"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:59.330944" elapsed="0.498640"/>
+<status status="PASS" start="2026-05-26T10:14:06.709423" elapsed="0.535784"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:54:59.830589" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.245207" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:54:59.829584" elapsed="0.001005"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.245207" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:59.329948" elapsed="0.500641"/>
+<status status="PASS" start="2026-05-26T10:14:06.709423" elapsed="0.535784"/>
 </if>
-<status status="PASS" start="2026-05-26T08:54:59.320943" elapsed="0.509646"/>
+<status status="PASS" start="2026-05-26T10:14:06.701120" elapsed="0.544087"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Přihlásit za uživatele&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:54:59.832590" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"</msg>
+<msg time="2026-05-26T10:14:07.248225" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.831591" elapsed="0.000999"/>
+<status status="PASS" start="2026-05-26T10:14:07.247217" elapsed="0.001008"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:54:59.882664" level="INFO">${card_count} = 1</msg>
+<msg time="2026-05-26T10:14:07.294029" level="INFO">${card_count} = 1</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.832590" elapsed="0.050074"/>
+<status status="PASS" start="2026-05-26T10:14:07.248225" elapsed="0.045804"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:54:59.883666" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"'.</msg>
+<msg time="2026-05-26T10:14:07.294029" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"'.</msg>
 <arg>${card}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:54:59.883666" elapsed="0.122649"/>
+<status status="PASS" start="2026-05-26T10:14:07.294029" elapsed="0.135202"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:54:59.882664" elapsed="0.123651"/>
+<status status="PASS" start="2026-05-26T10:14:07.294029" elapsed="0.135202"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -1323,22 +1323,73 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:00.007341" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.429231" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:00.006315" elapsed="0.001026"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.429231" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:55:00.007341" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.432316" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:00.007341" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:07.429231" elapsed="0.003085"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:54:59.882664" elapsed="0.124677"/>
+<status status="PASS" start="2026-05-26T10:14:07.294029" elapsed="0.138287"/>
 </if>
-<status status="PASS" start="2026-05-26T08:54:59.831591" elapsed="0.175750"/>
+<status status="PASS" start="2026-05-26T10:14:07.247217" elapsed="0.185099"/>
 </kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:07.504810" level="INFO">Waited for Element with selector id=P4_LOGIN at state visible</msg>
+<arg>id=P4_LOGIN</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.432316" elapsed="0.072494"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-26T10:14:07.504810" level="INFO">${reset_btn} = css=button:has-text("Vrátit admina")</msg>
+<var>${reset_btn}</var>
+<arg>css=button:has-text("Vrátit admina")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.504810" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-05-26T10:14:07.504810" level="INFO">${is_switched} = 1</msg>
+<var>${is_switched}</var>
+<arg>${reset_btn}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.504810" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_switched} &gt; 0">
+<kw name="Click" owner="Browser">
+<msg time="2026-05-26T10:14:07.504810" level="INFO">Clicks the element 'css=button:has-text("Vrátit admina")'.</msg>
+<arg>${reset_btn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.504810" elapsed="0.089818"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:07.594628" level="INFO">Waited for Element with selector id=P4_LOGIN at state visible</msg>
+<arg>id=P4_LOGIN</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.594628" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-05-26T10:14:07.504810" elapsed="0.089818"/>
+</branch>
+<status status="PASS" start="2026-05-26T10:14:07.504810" elapsed="0.089818"/>
+</if>
 <kw name="Get Element States" owner="Browser">
-<msg time="2026-05-26T08:55:00.112647" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused']</msg>
+<msg time="2026-05-26T10:14:07.739798" level="INFO">States are: ['attached', 'visible', 'enabled', 'editable', 'defocused']</msg>
 <arg>css=#P4_LOGIN</arg>
 <arg>contains</arg>
 <arg>editable</arg>
@@ -1346,10 +1397,10 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:00.008315" elapsed="0.104332"/>
+<status status="PASS" start="2026-05-26T10:14:07.594628" elapsed="0.145170"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2026-05-26T08:55:00.165244" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
+<msg time="2026-05-26T10:14:07.832193" level="INFO">States are: ['attached', 'visible', 'enabled', 'defocused']</msg>
 <arg>css=#P4_ROLE_LIST</arg>
 <arg>not contains</arg>
 <arg>editable</arg>
@@ -1357,16 +1408,16 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:00.113647" elapsed="0.051597"/>
+<status status="PASS" start="2026-05-26T10:14:07.739798" elapsed="0.092395"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-26T08:55:00.166244" level="INFO">Fills the text 'S_ROLI_NEVEDOUCI' in the given field.</msg>
+<msg time="2026-05-26T10:14:07.832193" level="INFO">Fills the text 'S_ROLI_NEVEDOUCI' in the given field.</msg>
 <arg>css=#P4_LOGIN</arg>
 <arg>${login_uzivatele}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:00.165244" elapsed="0.019508"/>
+<status status="PASS" start="2026-05-26T10:14:07.832193" elapsed="0.012642"/>
 </kw>
 <kw name="Press Keys" owner="Browser">
 <arg>css=#P4_LOGIN</arg>
@@ -1374,48 +1425,114 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:00.184752" elapsed="0.017182"/>
+<status status="PASS" start="2026-05-26T10:14:07.844835" elapsed="0.021498"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:07.898752" level="INFO">Waited for Element with selector css=#P4_ROLE_LIST:not(:empty) at state visible</msg>
+<arg>css=#P4_ROLE_LIST:not(:empty)</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:07.866333" elapsed="0.032419"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-26T08:55:01.202240" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2026-05-26T10:14:09.899190" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-26T08:55:00.201934" elapsed="1.000306"/>
+<status status="PASS" start="2026-05-26T10:14:07.898752" elapsed="2.000438"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-26T10:14:09.901214" level="INFO">${login_btn} = css=button:has-text("Přihlásit za uživatele")</msg>
+<var>${login_btn}</var>
+<arg>css=button:has-text("Přihlásit za uživatele")</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-26T10:14:09.899190" elapsed="0.002024"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:09.909252" level="INFO">Waited for Element with selector css=button:has-text("Přihlásit za uživatele") at state visible</msg>
+<arg>${login_btn}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:09.901214" elapsed="0.008038"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:55:01.205318" level="INFO">Clicks the element 'css=button:has-text("Přihlásit za uživatele")'.</msg>
-<arg>css=button:has-text("Přihlásit za uživatele")</arg>
+<msg time="2026-05-26T10:14:09.909252" level="INFO">Clicks the element 'css=button:has-text("Přihlásit za uživatele")'.</msg>
+<arg>${login_btn}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:01.203329" elapsed="0.051570"/>
+<status status="PASS" start="2026-05-26T10:14:09.909252" elapsed="0.043379"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-26T08:55:04.256352" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-05-26T10:14:12.952820" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-26T08:55:01.254899" elapsed="3.001453"/>
+<status status="PASS" start="2026-05-26T10:14:09.952631" elapsed="3.000189"/>
 </kw>
 <arg>S_ROLI_NEVEDOUCI</arg>
-<status status="PASS" start="2026-05-26T08:54:59.319944" elapsed="4.936408"/>
+<status status="PASS" start="2026-05-26T10:14:06.701120" elapsed="6.251700"/>
+</kw>
+<kw name="Pak boční menu by mělo obsahovat položky" owner="spolecne">
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="&quot;${polozka}&quot; != &quot;Home&quot; and &quot;${polozka}&quot; != &quot;Domů&quot;">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:12.997968" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" &gt;&gt; nth=0 at state attached</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="${polozka}" &gt;&gt; nth=0</arg>
+<arg>attached</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:12.954825" elapsed="0.043143"/>
+</kw>
+<status status="PASS" start="2026-05-26T10:14:12.952820" elapsed="0.045148"/>
+</branch>
+<status status="PASS" start="2026-05-26T10:14:12.952820" elapsed="0.045148"/>
+</if>
+<var name="${polozka}">Seznam zaměstnanců s emailem</var>
+<status status="PASS" start="2026-05-26T10:14:12.952820" elapsed="0.045148"/>
+</iter>
+<var>${polozka}</var>
+<value>@{ocekavane_polozky}</value>
+<status status="PASS" start="2026-05-26T10:14:12.952820" elapsed="0.045148"/>
+</for>
+<arg>Seznam zaměstnanců s emailem</arg>
+<status status="PASS" start="2026-05-26T10:14:12.952820" elapsed="0.045148"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-26T10:14:13.002778" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Přihlásit za uživatele" at state hidden</msg>
+<arg>css=#t_TreeNav &gt;&gt; text="Přihlásit za uživatele"</arg>
+<arg>hidden</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-26T10:14:12.997968" elapsed="0.004810"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Seznam zaměstnanců s emailem&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:55:04.257697" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<msg time="2026-05-26T10:14:13.002778" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.256352" elapsed="0.001345"/>
+<status status="PASS" start="2026-05-26T10:14:13.002778" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:55:04.283706" level="INFO">${card_count} = 0</msg>
+<msg time="2026-05-26T10:14:13.011204" level="INFO">${card_count} = 0</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.257697" elapsed="0.026009"/>
+<status status="PASS" start="2026-05-26T10:14:13.002778" elapsed="0.008426"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
@@ -1424,9 +1541,9 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:04.284706" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.011204" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:04.283706" elapsed="0.001000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.011204" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -1434,79 +1551,79 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:04.284706" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.011204" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:04.284706" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.011204" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
 <kw name="Zajisti rozbalené menu" owner="spolecne">
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:55:04.291706" level="INFO">${is_collapsed} = 1</msg>
+<msg time="2026-05-26T10:14:13.015753" level="INFO">${is_collapsed} = 1</msg>
 <var>${is_collapsed}</var>
 <arg>css=body.t-PageBody--hideLeft</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.286705" elapsed="0.005001"/>
+<status status="PASS" start="2026-05-26T10:14:13.013212" elapsed="0.002541"/>
 </kw>
 <if>
 <branch type="IF" condition="${is_collapsed} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:55:04.292705" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
+<msg time="2026-05-26T10:14:13.015753" level="INFO">Clicks the element 'id=t_Button_navControl'.</msg>
 <arg>id=t_Button_navControl</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.291706" elapsed="0.052953"/>
+<status status="PASS" start="2026-05-26T10:14:13.015753" elapsed="0.075268"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-26T08:55:04.845523" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2026-05-26T10:14:13.591759" level="INFO">Slept 500 milliseconds.</msg>
 <arg>0.5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.344659" elapsed="0.500864"/>
+<status status="PASS" start="2026-05-26T10:14:13.091021" elapsed="0.500738"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:04.291706" elapsed="0.553817"/>
+<status status="PASS" start="2026-05-26T10:14:13.015753" elapsed="0.576006"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:55:04.291706" elapsed="0.553817"/>
+<status status="PASS" start="2026-05-26T10:14:13.015753" elapsed="0.576006"/>
 </if>
-<status status="PASS" start="2026-05-26T08:55:04.285705" elapsed="0.559818"/>
+<status status="PASS" start="2026-05-26T10:14:13.013212" elapsed="0.578547"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:55:04.847279" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
+<msg time="2026-05-26T10:14:13.593783" level="INFO">${selector} = css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem"</msg>
 <var>${selector}</var>
 <arg>css=#t_TreeNav &gt;&gt; text="${nazev_polozky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.845523" elapsed="0.001756"/>
+<status status="PASS" start="2026-05-26T10:14:13.591759" elapsed="0.004049"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:04.856453" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
+<msg time="2026-05-26T10:14:13.601299" level="INFO">Waited for Element with selector css=#t_TreeNav &gt;&gt; text="Seznam zaměstnanců s emailem" at state attached</msg>
 <arg>${selector}</arg>
 <arg>attached</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.847279" elapsed="0.009174"/>
+<status status="PASS" start="2026-05-26T10:14:13.595808" elapsed="0.005491"/>
 </kw>
 <kw name="Get Element States" owner="Browser">
-<msg time="2026-05-26T08:55:04.907839" level="INFO">States are: ['attached', 'hidden', 'enabled', 'defocused', 'unchecked']</msg>
-<msg time="2026-05-26T08:55:04.907839" level="INFO">${states} = ['attached', 'hidden', 'enabled', 'defocused', 'unchecked']</msg>
+<msg time="2026-05-26T10:14:13.648389" level="INFO">States are: ['attached', 'hidden', 'enabled', 'defocused', 'unchecked']</msg>
+<msg time="2026-05-26T10:14:13.648389" level="INFO">${states} = ['attached', 'hidden', 'enabled', 'defocused', 'unchecked']</msg>
 <var>${states}</var>
 <arg>${selector}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Get the active states from the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.856453" elapsed="0.051386"/>
+<status status="PASS" start="2026-05-26T10:14:13.601299" elapsed="0.047090"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-26T08:55:04.914135" level="INFO">${is_visible} = False</msg>
+<msg time="2026-05-26T10:14:13.648389" level="INFO">${is_visible} = False</msg>
 <var>${is_visible}</var>
 <arg>"visible" in $states</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.907839" elapsed="0.006296"/>
+<status status="PASS" start="2026-05-26T10:14:13.648389" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${is_visible}">
@@ -1515,328 +1632,118 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:04.914135" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.648389" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:04.914135" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.648389" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-05-26T08:55:04.935200" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-26T10:14:13.667906" level="INFO">JavaScript executed successfully.</msg>
 <arg>${selector}</arg>
 <arg>(elem) =&gt; elem.click()</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.914135" elapsed="0.021065"/>
+<status status="PASS" start="2026-05-26T10:14:13.648389" elapsed="0.019517"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:04.914135" elapsed="0.021065"/>
+<status status="PASS" start="2026-05-26T10:14:13.648389" elapsed="0.019517"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:55:04.914135" elapsed="0.021065"/>
+<status status="PASS" start="2026-05-26T10:14:13.648389" elapsed="0.019517"/>
 </if>
-<status status="PASS" start="2026-05-26T08:55:04.285705" elapsed="0.649495"/>
+<status status="PASS" start="2026-05-26T10:14:13.011204" elapsed="0.656702"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:04.284706" elapsed="0.650494"/>
+<status status="PASS" start="2026-05-26T10:14:13.011204" elapsed="0.656702"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:55:04.283706" elapsed="0.651494"/>
+<status status="PASS" start="2026-05-26T10:14:13.011204" elapsed="0.656702"/>
 </if>
-<status status="PASS" start="2026-05-26T08:55:04.256352" elapsed="0.678848"/>
+<status status="PASS" start="2026-05-26T10:14:13.002778" elapsed="0.665128"/>
 </kw>
 <kw name="Pak mřížka by měla obsahovat sloupce" owner="grid_klicova_slova">
 <for flavor="IN">
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.131023" level="INFO">Waited for Element with selector text="Osobní číslo" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:13.830908" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:04.935200" elapsed="0.195823"/>
-</kw>
-<var name="${sloupec}">Osobní číslo</var>
-<status status="PASS" start="2026-05-26T08:55:04.935200" elapsed="0.195823"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.184173" level="INFO">Waited for Element with selector text="Jméno" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.132024" elapsed="0.052149"/>
+<status status="PASS" start="2026-05-26T10:14:13.667906" elapsed="0.163002"/>
 </kw>
 <var name="${sloupec}">Jméno</var>
-<status status="PASS" start="2026-05-26T08:55:05.132024" elapsed="0.052149"/>
+<status status="PASS" start="2026-05-26T10:14:13.667906" elapsed="0.163002"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.212679" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:13.909943" level="INFO">Waited for Element with selector text="Příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.185173" elapsed="0.027506"/>
+<status status="PASS" start="2026-05-26T10:14:13.830908" elapsed="0.079035"/>
 </kw>
 <var name="${sloupec}">Příjmení</var>
-<status status="PASS" start="2026-05-26T08:55:05.185173" elapsed="0.027506"/>
+<status status="PASS" start="2026-05-26T10:14:13.830908" elapsed="0.079035"/>
 </iter>
 <iter>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.244244" level="INFO">Waited for Element with selector text="Titul před" &gt;&gt; nth=0 at state attached</msg>
+<msg time="2026-05-26T10:14:13.936488" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
 <arg>text="${sloupec}" &gt;&gt; nth=0</arg>
 <arg>attached</arg>
 <arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.213679" elapsed="0.030565"/>
-</kw>
-<var name="${sloupec}">Titul před</var>
-<status status="PASS" start="2026-05-26T08:55:05.212679" elapsed="0.031565"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.331878" level="INFO">Waited for Element with selector text="Titul za" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.245283" elapsed="0.086595"/>
-</kw>
-<var name="${sloupec}">Titul za</var>
-<status status="PASS" start="2026-05-26T08:55:05.244244" elapsed="0.087634"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.371147" level="INFO">Waited for Element with selector text="Státní příslušnost" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.331878" elapsed="0.039269"/>
-</kw>
-<var name="${sloupec}">Státní příslušnost</var>
-<status status="PASS" start="2026-05-26T08:55:05.331878" elapsed="0.039269"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.405341" level="INFO">Waited for Element with selector text="Místo narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.371147" elapsed="0.034194"/>
-</kw>
-<var name="${sloupec}">Místo narození</var>
-<status status="PASS" start="2026-05-26T08:55:05.371147" elapsed="0.034194"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.441358" level="INFO">Waited for Element with selector text="Stát narození" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.406369" elapsed="0.034989"/>
-</kw>
-<var name="${sloupec}">Stát narození</var>
-<status status="PASS" start="2026-05-26T08:55:05.405341" elapsed="0.036017"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.480681" level="INFO">Waited for Element with selector text="Rodné příjmení" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.442378" elapsed="0.038303"/>
+<status status="PASS" start="2026-05-26T10:14:13.909943" elapsed="0.026545"/>
 </kw>
 <var name="${sloupec}">Rodné příjmení</var>
-<status status="PASS" start="2026-05-26T08:55:05.441358" elapsed="0.039323"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.513263" level="INFO">Waited for Element with selector text="Pracovní e-mail" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.480681" elapsed="0.032582"/>
-</kw>
-<var name="${sloupec}">Pracovní e-mail</var>
-<status status="PASS" start="2026-05-26T08:55:05.480681" elapsed="0.032582"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.545710" level="INFO">Waited for Element with selector text="Nastup" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.513263" elapsed="0.032447"/>
-</kw>
-<var name="${sloupec}">Nastup</var>
-<status status="PASS" start="2026-05-26T08:55:05.513263" elapsed="0.032447"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.580480" level="INFO">Waited for Element with selector text="Pojistny Pomer Od" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.545710" elapsed="0.034770"/>
-</kw>
-<var name="${sloupec}">Pojistny Pomer Od</var>
-<status status="PASS" start="2026-05-26T08:55:05.545710" elapsed="0.034770"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.610694" level="INFO">Waited for Element with selector text="Konec doby určité" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.580480" elapsed="0.030214"/>
-</kw>
-<var name="${sloupec}">Konec doby určité</var>
-<status status="PASS" start="2026-05-26T08:55:05.580480" elapsed="0.030214"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.640150" level="INFO">Waited for Element with selector text="Adr Ulice" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.611694" elapsed="0.028456"/>
-</kw>
-<var name="${sloupec}">Adr Ulice</var>
-<status status="PASS" start="2026-05-26T08:55:05.610694" elapsed="0.029456"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.669141" level="INFO">Waited for Element with selector text="Adr Cislo" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.640150" elapsed="0.028991"/>
-</kw>
-<var name="${sloupec}">Adr Cislo</var>
-<status status="PASS" start="2026-05-26T08:55:05.640150" elapsed="0.028991"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.698436" level="INFO">Waited for Element with selector text="Adr Obec" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.670111" elapsed="0.028325"/>
-</kw>
-<var name="${sloupec}">Adr Obec</var>
-<status status="PASS" start="2026-05-26T08:55:05.670111" elapsed="0.028325"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.727384" level="INFO">Waited for Element with selector text="Adr Psc" &gt;&gt; nth=0 at state attached</msg>
-<arg>text="${sloupec}" &gt;&gt; nth=0</arg>
-<arg>attached</arg>
-<arg>timeout=5s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.699473" elapsed="0.027911"/>
-</kw>
-<var name="${sloupec}">Adr Psc</var>
-<status status="PASS" start="2026-05-26T08:55:05.698436" elapsed="0.028948"/>
+<status status="PASS" start="2026-05-26T10:14:13.909943" elapsed="0.026545"/>
 </iter>
 <var>${sloupec}</var>
 <value>@{ocekavane_sloupce}</value>
-<status status="PASS" start="2026-05-26T08:55:04.935200" elapsed="0.792184"/>
+<status status="PASS" start="2026-05-26T10:14:13.667906" elapsed="0.268582"/>
 </for>
-<arg>Osobní číslo</arg>
 <arg>Jméno</arg>
 <arg>Příjmení</arg>
-<arg>Titul před</arg>
-<arg>Titul za</arg>
-<arg>Státní příslušnost</arg>
-<arg>Místo narození</arg>
-<arg>Stát narození</arg>
 <arg>Rodné příjmení</arg>
-<arg>Pracovní e-mail</arg>
-<arg>Nastup</arg>
-<arg>Pojistny Pomer Od</arg>
-<arg>Konec doby určité</arg>
-<arg>Adr Ulice</arg>
-<arg>Adr Cislo</arg>
-<arg>Adr Obec</arg>
-<arg>Adr Psc</arg>
-<status status="PASS" start="2026-05-26T08:55:04.935200" elapsed="0.793183"/>
+<status status="PASS" start="2026-05-26T10:14:13.667906" elapsed="0.268582"/>
 </kw>
 <kw name="Pak mřížka by NEMĚLA obsahovat sloupec" owner="grid_klicova_slova">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:05.734609" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné číslo")] | //span[contains(normalize-space(.), "Rodné číslo")])[1] at state hidden</msg>
+<msg time="2026-05-26T10:14:13.936488" level="INFO">Waited for Element with selector xpath=(//th[contains(normalize-space(.), "Rodné číslo")] | //span[contains(normalize-space(.), "Rodné číslo")])[1] at state hidden</msg>
 <arg>xpath=(//th[contains(normalize-space(.), "${sloupec}")] | //span[contains(normalize-space(.), "${sloupec}")])[1]</arg>
 <arg>hidden</arg>
 <arg>timeout=3s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.728600" elapsed="0.006009"/>
+<status status="PASS" start="2026-05-26T10:14:13.936488" elapsed="0.000000"/>
 </kw>
 <arg>Rodné číslo</arg>
-<status status="PASS" start="2026-05-26T08:55:05.728600" elapsed="0.006009"/>
+<status status="PASS" start="2026-05-26T10:14:13.936488" elapsed="0.000000"/>
 </kw>
 <kw name="Vrať roli zpět na admina" owner="spolecne">
 <kw name="Když otevřu stránku &quot;Domů&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:55:05.736612" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Domů"</msg>
+<msg time="2026-05-26T10:14:13.949544" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Domů"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.736612" elapsed="0.000000"/>
+<status status="PASS" start="2026-05-26T10:14:13.949544" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:55:05.742617" level="INFO">${card_count} = 0</msg>
+<msg time="2026-05-26T10:14:13.955116" level="INFO">${card_count} = 0</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.736612" elapsed="0.006005"/>
+<status status="PASS" start="2026-05-26T10:14:13.949544" elapsed="0.005572"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
@@ -1845,60 +1752,60 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:05.742617" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.955116" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:05.742617" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:13.955116" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
-<msg time="2026-05-26T08:55:06.241100" level="INFO">Successfully opened URL https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
+<msg time="2026-05-26T10:14:14.459747" level="INFO">Successfully opened URL https://apex-test.civ.zcu.cz/ords/f?p=100000:1</msg>
 <arg>${URL_APLIKACE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="PASS" start="2026-05-26T08:55:05.743617" elapsed="0.497483"/>
+<status status="PASS" start="2026-05-26T10:14:13.955116" elapsed="0.504631"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:05.742617" elapsed="0.499485"/>
+<status status="PASS" start="2026-05-26T10:14:13.955116" elapsed="0.504631"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:55:06.242102" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.459747" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:06.242102" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.459747" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:55:05.742617" elapsed="0.499485"/>
+<status status="PASS" start="2026-05-26T10:14:13.955116" elapsed="0.504631"/>
 </if>
-<status status="PASS" start="2026-05-26T08:55:05.735615" elapsed="0.506487"/>
+<status status="PASS" start="2026-05-26T10:14:13.949544" elapsed="0.512211"/>
 </kw>
 <kw name="Když otevřu stránku &quot;Přihlásit za uživatele&quot;" owner="spolecne" source_name="Když otevřu stránku &quot;${nazev_stranky}&quot;">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-26T08:55:06.243102" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"</msg>
+<msg time="2026-05-26T10:14:14.461755" level="INFO">${card} = css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"</msg>
 <var>${card}</var>
 <arg>css=.t-MediaList-title &gt;&gt; text="${nazev_stranky}"</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.243102" elapsed="0.001001"/>
+<status status="PASS" start="2026-05-26T10:14:14.461755" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="Browser">
-<msg time="2026-05-26T08:55:06.285818" level="INFO">${card_count} = 1</msg>
+<msg time="2026-05-26T10:14:14.500880" level="INFO">${card_count} = 1</msg>
 <var>${card_count}</var>
 <arg>${card}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the count of elements found with ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.244103" elapsed="0.041715"/>
+<status status="PASS" start="2026-05-26T10:14:14.461755" elapsed="0.039125"/>
 </kw>
 <if>
 <branch type="IF" condition="${card_count} &gt; 0">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:55:06.286825" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"'.</msg>
+<msg time="2026-05-26T10:14:14.500880" level="INFO">Clicks the element 'css=.t-MediaList-title &gt;&gt; text="Přihlásit za uživatele"'.</msg>
 <arg>${card}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.285818" elapsed="0.113207"/>
+<status status="PASS" start="2026-05-26T10:14:14.500880" elapsed="0.150506"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:06.285818" elapsed="0.113207"/>
+<status status="PASS" start="2026-05-26T10:14:14.500880" elapsed="0.150506"/>
 </branch>
 <branch type="ELSE IF" condition="&quot;${nazev_stranky}&quot; == &quot;Domů&quot; or &quot;${nazev_stranky}&quot; == &quot;Home&quot; or &quot;${nazev_stranky}&quot; == &quot;Rozcestník&quot;">
 <kw name="Go To" owner="Browser">
@@ -1906,52 +1813,52 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<status status="NOT RUN" start="2026-05-26T08:55:06.399025" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.651386" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:06.399025" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.651386" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Když kliknu na položku v menu &quot;${nazev_stranky}&quot;" owner="spolecne" source_name="Když kliknu na položku v menu &quot;${nazev_polozky}&quot;">
-<status status="NOT RUN" start="2026-05-26T08:55:06.400347" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.651386" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-05-26T08:55:06.399025" elapsed="0.001322"/>
+<status status="NOT RUN" start="2026-05-26T10:14:14.651386" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2026-05-26T08:55:06.285818" elapsed="0.114529"/>
+<status status="PASS" start="2026-05-26T10:14:14.500880" elapsed="0.150506"/>
 </if>
-<status status="PASS" start="2026-05-26T08:55:06.243102" elapsed="0.157245"/>
+<status status="PASS" start="2026-05-26T10:14:14.461755" elapsed="0.189631"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-26T08:55:06.459693" level="INFO">Waited for Element with selector css=.ui-widget-overlay at state hidden</msg>
+<msg time="2026-05-26T10:14:14.733235" level="INFO">Waited for Element with selector css=.ui-widget-overlay at state hidden</msg>
 <arg>css=.ui-widget-overlay</arg>
 <arg>hidden</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.400347" elapsed="0.059346"/>
+<status status="PASS" start="2026-05-26T10:14:14.651386" elapsed="0.081849"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-05-26T08:55:06.460691" level="INFO">Clicks the element 'css=button:has-text("Vrátit admina")'.</msg>
+<msg time="2026-05-26T10:14:14.733235" level="INFO">Clicks the element 'css=button:has-text("Vrátit admina")'.</msg>
 <arg>css=button:has-text("Vrátit admina")</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.459693" elapsed="0.096165"/>
+<status status="PASS" start="2026-05-26T10:14:14.733235" elapsed="0.071121"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-26T08:55:09.557590" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-05-26T10:14:17.805961" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-26T08:55:06.555858" elapsed="3.001732"/>
+<status status="PASS" start="2026-05-26T10:14:14.804356" elapsed="3.001605"/>
 </kw>
-<status status="PASS" start="2026-05-26T08:55:05.735615" elapsed="3.821975"/>
+<status status="PASS" start="2026-05-26T10:14:13.936488" elapsed="3.869473"/>
 </kw>
-<msg time="2026-05-26T08:55:09.577666" level="INFO">Switching context to context=4572b3b3-fcd0-49f1-854f-7a3793766767 in CURRENT</msg>
-<msg time="2026-05-26T08:55:09.580682" level="INFO">Successfully changed active context: context=4572b3b3-fcd0-49f1-854f-7a3793766767</msg>
-<msg time="2026-05-26T08:55:09.587267" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-05-26T08:54:58.316151" elapsed="11.242626"/>
+<msg time="2026-05-26T10:14:17.818964" level="INFO">Switching context to context=d7d17725-8a9b-47ca-aaad-6e5c35a20cd4 in CURRENT</msg>
+<msg time="2026-05-26T10:14:17.822964" level="INFO">Successfully changed active context: context=d7d17725-8a9b-47ca-aaad-6e5c35a20cd4</msg>
+<msg time="2026-05-26T10:14:17.830947" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-26T10:14:05.699443" elapsed="12.107527"/>
 </test>
-<status status="PASS" start="2026-05-26T08:54:50.223511" elapsed="19.364751"/>
+<status status="PASS" start="2026-05-26T10:13:58.121991" elapsed="19.709956"/>
 </suite>
 <statistics>
 <total>
