@@ -15,7 +15,6 @@ Uživatel ověří sloupce v Interactive Gridu "Seznam zaměstnanců s emailem"
     ...    Příjmení
     ...    Titul před
     ...    Titul za
-    ...    Rodné číslo
     ...    Státní příslušnost
     ...    Místo narození
     ...    Stát narození

@@ -29,12 +29,13 @@ apex-test-flow/
 │   ├── parse_results.py
 │   └──  send_results_to_apex.py
 └── docs/
-    ├── analysis.md
-    ├── architecture.md
-    ├── selectors.md
-    ├── how_to_write_tests.md
-    ├── system_overview.md
-    ├── typical_workflow.md
-    ├── worklog.md
-    └── adr/
-        └── 0001-volba-testovaciho-stacku.md
+│    ├── analysis.md
+│    ├── architecture.md
+│    ├── selectors.md
+│    ├── how_to_write_tests.md
+│    ├── system_overview.md
+│    ├── typical_workflow.md
+│    ├── worklog.md
+│    └── adr/
+│        └── 0001-volba-testovaciho-stacku.md
+└── README.md

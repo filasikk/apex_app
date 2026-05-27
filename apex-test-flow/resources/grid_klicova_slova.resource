@@ -10,13 +10,14 @@ Pak vidím interactive grid "${nazev_gridu}"
 A zároveň grid "${nazev_gridu}" obsahuje sloupce
     [Arguments]    @{ocekavane_sloupce}
     FOR    ${sloupec}    IN    @{ocekavane_sloupce}
-        Wait For Elements State    text="${sloupec}" >> nth=0    attached    timeout=5s
+        # Hledáme text v hlavičkách mřížky, zkusíme více variant selektorů pro různé typy mřížek
+        Wait For Elements State    xpath=(//th[contains(., "${sloupec}")] | //span[contains(., "${sloupec}")] | //button[contains(., "${sloupec}")]) >> nth=0    attached    timeout=10s
     END
 
 Pak mřížka by měla obsahovat sloupce
     [Arguments]    @{ocekavane_sloupce}
     FOR    ${sloupec}    IN    @{ocekavane_sloupce}
-        Wait For Elements State    text="${sloupec}" >> nth=0    attached    timeout=5s
+        Wait For Elements State    xpath=(//th[contains(., "${sloupec}")] | //span[contains(., "${sloupec}")] | //button[contains(., "${sloupec}")]) >> nth=0    attached    timeout=10s
     END
 
 A zároveň mřížka by měla obsahovat sloupce

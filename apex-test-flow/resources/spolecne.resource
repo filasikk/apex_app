@@ -10,12 +10,10 @@ Otevři prohlížeč a aplikaci
     New Page       url=${URL_APLIKACE}
 
 Zajisti rozbalené menu
-    # V APEXu se rozbalení pozná podle třídy na body. Pokud tam je t-PageBody--hideLeft, je menu zavřené.
-    ${is_collapsed}=    Get Element Count    css=body.t-PageBody--hideLeft
-    IF    ${is_collapsed} > 0
+    ${is_visible}=    Get Element Count    css=#t_TreeNav:visible
+    IF    ${is_visible} == 0
         Click    id=t_Button_navControl
-        # Počkáme na animaci
-        Sleep    0.5s
+        Wait For Elements State    id=t_TreeNav    visible    timeout=5s
     END
 
 Když kliknu na Menu
@@ -28,7 +26,6 @@ Když kliknu na položku v menu "${nazev_polozky}"
     Zajisti rozbalené menu
     ${selector}=    Set Variable    css=#t_TreeNav >> text="${nazev_polozky}"
     Wait For Elements State    ${selector}    attached    timeout=10s
-    # Získáme stavy a zkontrolujeme viditelnost bez vyhození chyby
     ${states}=    Get Element States    ${selector}
     ${is_visible}=    Evaluate    "visible" in $states
     IF    ${is_visible}
@@ -42,7 +39,6 @@ A zároveň kliknu na položku v menu "${nazev_polozky}"
 
 
 Když otevřu stránku "${nazev_stranky}"
-    # Zkusíme jestli nejsme na Rozcestníku a tam není karta (Media List)
     ${card}=    Set Variable    css=.t-MediaList-title >> text="${nazev_stranky}"
     ${card_count}=    Get Element Count    ${card}
     IF    ${card_count} > 0
@@ -50,7 +46,6 @@ Když otevřu stránku "${nazev_stranky}"
     ELSE IF    "${nazev_stranky}" == "Domů" or "${nazev_stranky}" == "Home" or "${nazev_stranky}" == "Rozcestník"
         Go To    ${URL_APLIKACE}
     ELSE
-        # Pokud nemáme kartu, zkusíme menu
         Když kliknu na položku v menu "${nazev_stranky}"
     END
 
@@ -64,7 +59,6 @@ Pak URL adresa obsahuje "${text}"
 
 Pak vidím text
     [Arguments]    ${text}
-    # Počkáme, až se text kdekoliv na stránce objeví a bude viditelný
     Wait For Elements State    text="${text}"    visible    timeout=5s
 
 Pak vidím hlavní nadpis "${text}"
@@ -108,13 +102,11 @@ Změň roli přes formulář a ověř editovatelnost
     Press Keys   css=#P4_LOGIN    Tab
 
     Wait For Elements State    css=#P4_ROLE_LIST:not(:empty)    visible    timeout=10s
-    Sleep    2s
 
     ${login_btn}=    Set Variable    css=button:has-text("Přihlásit za uživatele")
     Wait For Elements State    ${login_btn}    visible    timeout=10s
     Click    ${login_btn}
-
-    Sleep    3s
+    Wait For Elements State    id=t_Body_content    visible    timeout=10s
 
 
 Pak boční menu by mělo obsahovat položky
@@ -134,7 +126,6 @@ Pak boční menu by mělo obsahovat položky
                 ${is_expanded}=    Get Element States    ${toggle}    contains    expanded
                 Click    ${toggle}
             END
-            Sleep    0.5s
         END
 
         Wait For Elements State    ${selector}    attached    timeout=5s
@@ -147,5 +138,4 @@ Vrať roli zpět na admina
     Wait For Elements State    css=.ui-widget-overlay    hidden    timeout=10s
 
     Click    css=button:has-text("Vrátit admina")
-
-    Sleep    3s
+    Wait For Elements State    id=t_Body_content    visible    timeout=10s
