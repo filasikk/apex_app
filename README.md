@@ -1,59 +1,55 @@
-# APEX Test Flow Framework 🚀
+# APEX Test Flow Framework 
 
-Proof of concept (PoC) testovacího frameworku pro automatizované testování Oracle APEX aplikací.
+Moderní a robustní framework pro automatizované testování Oracle APEX aplikací, vyvinutý s důrazem na stabilitu, rychlost a přehledný monitoring.
 
-Tento projekt vznikl v rámci praxe s cílem ukázat, jak lze efektivně, stabilně a čitelně testovat komplexní APEX aplikace pomocí moderních open-source nástrojů.
+Tento projekt vznikl jako výsledek odborné praxe (2026). Ukazuje integraci BDD přístupu (Robot Framework) s moderním ovládáním prohlížeče (Playwright) a přímým napojením na Oracle DB a APEX dashboard.
 
-## 🛠 Hlavní technologie
+##  Hlavní technologie
 
-- **Robot Framework** (BDD testovací jádro)
-- **Playwright (Browser Library)** (ovládání prohlížeče)
-- **Python** (reporting a pomocné skripty)
-- **DatabaseLibrary** (přímá integrace s Oracle DB)
+- **Robot Framework** (jádro testů v lidsky čitelné formě)
+- **Playwright (Browser Library)** (bleskové a stabilní ovládání prohlížeče)
+- **Python** (automatizovaný processing výsledků a DB integrace)
+- **Oracle Database / APEX** (přímá validace dat a real-time monitoring)
 
-## 📋 Požadavky
+##  Klíčové vlastnosti
 
-- Python 3.10+
-- Node.js 18+ (pro Playwright)
-- Přístup k Oracle DB (pro databázové testy)
+- **Zero-Sleep Architecture:** Žádné fixní čekání. Framework využívá dynamické `Wait For Elements State`, což zkracuje dobu běhu testů na minimum.
+- **Direct DB Integration:** Testy si samy připravují a uklízejí testovací data přímo v Oracle DB.
+- **APEX Monitoring Dashboard:** Výsledky jsou po každém běhu automaticky odeslány do APEX aplikace, kde jsou vizualizovány na dashboardu.
 
-## 🚀 Rychlý start
+##  Rychlý start
 
-1. **Instalace závislostí:**
+1. **Příprava prostředí:**
    ```bash
-   pip install -r apex-test-flow/requirements.txt
+   cd apex-test-flow
+   pip install -r requirements.txt
    rfbrowser init
    ```
 
-2. **Spuštění demo testů (Interactive Grid & Menu):**
+2. **Spuštění kompletní sady testů:**
    ```bash
-   robot --outputdir results apex-test-flow/tests/interactive_grid.robot
+   # 1. Spuštění testů (vygeneruje XML výstup)
+   robot -d results tests/
+
+   # 2. Zpracování výsledků do JSON (včetně screenshotů chyb)
+   python reporting/parse_results.py
+
+   # 3. Odeslání výsledků do APEX monitoringu
+   python reporting/send_results_to_apex.py
    ```
 
-3. **Spuštění komplexního flow s databází:**
-   ```bash
-   robot --outputdir results apex-test-flow/tests/formulare_prihlasky.robot
-   ```
+##  Monitoring a Výsledky
 
-## 📊 Výsledky a Reporting
+- **Lokální reporty:** Detailní HTML logy najdete vždy v `apex-test-flow/results/`.
+- **APEX Dashboard:** Real-time přehled o stavu aplikace (včetně error logů a historie) je dostupný přímo v monitorovací APEX stránce (napojené na tabulku `UTS_VYSLEDKY`).
 
-Po každém spuštění najdete v adresáři `results/`:
-- `report.html`: Přehledný grafický report.
-- `log.html`: Detailní technický log každého kroku.
-- `browser/screenshot/`: Snímky obrazovky v případě chyby.
-
-Pro vygenerování JSON souhrnu pro další integraci spusťte:
-```bash
-python apex-test-flow/reporting/parse_results.py
-```
-
-## 📖 Dokumentace
+##  Dokumentace
 
 Podrobné informace najdete v adresáři `apex-test-flow/docs/`:
-- [Přehled systému](apex-test-flow/docs/system_overview.md)
-- [Pracovní postup pro testery](apex-test-flow/docs/typical_workflow.md)
-- [Deník práce](apex-test-flow/docs/worklog.md)
-- [ADR - Rozhodnutí o architektuře](apex-test-flow/docs/adr/)
+- [Přehled systému](apex-test-flow/docs/system_overview.md) - Architektura a principy.
+- [Pracovní postup](apex-test-flow/docs/typical_workflow.md) - Jak psát a spouštět nové testy.
+- [Deník práce](apex-test-flow/docs/worklog.md) - Průběh vývoje v rámci praxe.
+- [Zadání praxe](apex-test-flow/docs/zadani_praxe_apex_testovani.md) - Původní požadavky projektu.
 
 ---
-*Vytvořeno jako výsledek odborné praxe 2026.*
+*Finální výstup odborné praxe 2026.*
