@@ -4,10 +4,6 @@ import oracledb
 
 
 def send_results_to_db():
-    """
-    Načte vygenerovaný JSON a uloží ho přímo do databázové tabulky UTS_VYSLEDKY.
-    """
-    # 1. Cesta k souboru (změněno na results/parsed_results.json dle předchozích úprav)
     results_path = Path("results/parsed_results.json")
 
     if not results_path.exists():
@@ -24,7 +20,6 @@ def send_results_to_db():
         print(f"Chyba při čtení souboru: {e}")
         return
 
-    # 3. Připojení k DB (údaje z databaze_klicova_slova.resource)
     print("Připojuji se k databázi...")
     try:
         conn = oracledb.connect(
@@ -32,7 +27,6 @@ def send_results_to_db():
         )
         cursor = conn.cursor()
 
-        # 4. Aktualizace dat (předpokládáme ID = 1)
         print("Aktualizuji tabulku UTS_VYSLEDKY...")
         sql = """
             UPDATE UTS_VYSLEDKY
@@ -42,7 +36,6 @@ def send_results_to_db():
         """
         cursor.execute(sql, [json_string])
 
-        # Ověření, zda se řádek skutečně zaktualizoval
         if cursor.rowcount == 0:
             print("Upozornění: Řádek s ID=1 nebyl nalezen. Zkouším INSERT...")
             sql_insert = "INSERT INTO UTS_VYSLEDKY (id, json_data) VALUES (1, :1)"
@@ -60,5 +53,4 @@ def send_results_to_db():
 
 
 if __name__ == "__main__":
-    # Spouštíme z rootu projektu: python reporting/send_results_to_apex.py
     send_results_to_db()

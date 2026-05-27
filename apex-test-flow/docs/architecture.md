@@ -1,18 +1,12 @@
 apex-test-flow/
-├── README.md
-├── requirements.txt               
-├── .env.example
 ├── tests/
 │   ├── prihlaseni.robot
 │   ├── navigace.robot
 │   ├── interactive_grid.robot
-│   ├── menu.robot
 │   └── formulare_prihlasky.robot
 ├── resources/
-│   ├── apex_klicova_slova.resource
 │   ├── prihlaseni_klicova_slova.resource
 │   ├── grid_klicova_slova.resource
-│   ├── menu_klicova_slova.resource
 │   ├── formular_klicova_slova.resource
 │   ├── databaze_klicova_slova.resource
 │   └── spolecne.resource
@@ -20,19 +14,20 @@ apex-test-flow/
 │   ├── uzivatele.example.yaml
 │   ├── stranky.yaml
 │   ├── aplikace.yaml
-│   └── test_data.yaml
 ├── db/
 │   ├── setup/
-│   │        
+│   │   ├── kurz_pred_deadlinem.sql
+│   │   ├── kurz_plny.sql
+│   │   └── kurz_po_deadlinu.sql
 │   ├── teardown/
-│   │  
+│   │   └── uklid_testovacich_dat.sql
 │   └── README.md
 ├── results/
+│   ├── parsed_results.json
 │   └── .gitkeep
 ├── reporting/
 │   ├── parse_results.py
-│   ├── send_results_to_apex.py
-│   └── result_schema.md
+│   └──  send_results_to_apex.py
 └── docs/
     ├── analysis.md
     ├── architecture.md

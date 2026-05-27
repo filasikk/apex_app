@@ -31,23 +31,19 @@ Uživatel ověří sloupce v Interactive Gridu "Seznam zaměstnanců s emailem"
 
 Uživatel ověří navigaci a sloupce v aplikaci
     Když se přihlásím jako "admin"
-    # Zkontrolujeme, jestli levé menu obsahuje správné položky!
     Pak boční menu by mělo obsahovat položky
     ...    Personalistika přehled
     ...    Seznam zaměstnanců s emailem
     ...    Dostupné formuláře
     ...    Home
 
-    # Pokračujeme navigací
     Když otevřu stránku "Seznam zaměstnanců s emailem"
     Pak vidím interactive grid "Seznam zaměstnanců s emailem"
 
-####################################################
 Role vedoucí by měla vidět všechny sloupce a kompletní menu
     Když se přihlásím jako "admin"
     Když otevřu stránku "Seznam zaměstnanců s emailem"
 
-    # Kontrola všech sloupců (včetně Rodného příjmení)
     Pak mřížka by měla obsahovat sloupce
     ...    Osobní číslo
     ...    Jméno
@@ -71,16 +67,13 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
     Když se přihlásím jako "admin"
     Změň roli přes formulář a ověř editovatelnost    S_ROLI_NEVEDOUCI
 
-    # Zkontrolujeme menší menu (nevedoucí nevidí citlivé položky)
     Pak boční menu by mělo obsahovat položky
     ...    Seznam zaměstnanců s emailem
 
-    # Ověříme, že nevidí citlivou administraci rolí
     Wait For Elements State    css=#t_TreeNav >> text="Přihlásit za uživatele"    hidden    timeout=3s
 
     Když otevřu stránku "Seznam zaměstnanců s emailem"
 
-    # Zkontrolujeme sloupce (Rodné příjmení tam je, ale Rodné číslo NE)
     Pak mřížka by měla obsahovat sloupce
     ...    Osobní číslo
     ...    Jméno
@@ -100,8 +93,6 @@ Role nevedoucí by NEMĚLA vidět Rodné číslo a mít menší menu
     ...    Adr Obec
     ...    Adr Psc
 
-    # Tento sloupec je citlivý a nevedoucí ho nesmí vidět (v této aplikaci ho nevidí nikdo)
     Pak mřížka by NEMĚLA obsahovat sloupec    Rodné číslo
 
-    # Na konci se vrátíme na admina
     Vrať roli zpět na admina
