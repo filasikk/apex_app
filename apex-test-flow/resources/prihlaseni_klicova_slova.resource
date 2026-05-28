@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    spolecne.resource
-Variables   ../variables/uzivatele.example.yaml
+Variables   ../variables/env_loader.py    uzivatele.yaml
 
 *** Keywords ***
 se přihlásím jako "${role}"

@@ -1,19 +1,22 @@
 *** Settings ***
 Library      Browser
-Variables    ../variables/aplikace.yaml
+Variables    ../variables/env_loader.py    aplikace.yaml
 Variables    ../variables/stranky.yaml
+
 
 *** Keywords ***
 Otevři prohlížeč a aplikaci
     New Browser    browser=${PROHLIZEC}    headless=${HEADLESS}
     New Context    viewport={'width': 1920, 'height': 1080}
     New Page       url=${URL_APLIKACE}
+    Wait For Load State    networkidle    timeout=10s
 
 Zajisti rozbalené menu
     ${is_visible}=    Get Element Count    css=#t_TreeNav:visible
     IF    ${is_visible} == 0
+        Wait For Elements State    id=t_Button_navControl    visible    timeout=5s
         Click    id=t_Button_navControl
-        Wait For Elements State    id=t_TreeNav    visible    timeout=5s
+        Wait For Elements State    id=t_TreeNav    visible    timeout=10s
     END
 
 Když kliknu na Menu

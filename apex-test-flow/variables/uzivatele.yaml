@@ -1,0 +1,8 @@
+UZIVATELE:
+  admin:
+    jmeno: "${APEX_USER_ADMIN}"
+    heslo: "${APEX_PASSWORD_ADMIN}"
+
+  nevedouci:
+    jmeno: "${APEX_USER_NEVEDOUCI}"
+    heslo: "${APEX_PASSWORD_NEVEDOUCI}"

@@ -1,27 +1,53 @@
-# Přehled testovacího frameworku (System Overview)
+# Přehled systému (System Overview)
 
-Dokument popisuje architekturu a fungování frameworku pro automatizované testování aplikací v Oracle APEX.
+Tento dokument vysvětluje, jak framework funguje jako celek, popisuje jeho hlavní části a vztahy mezi nimi.
 
-## Architektura
+## 1. Testovací scénáře
+Testy jsou uloženy v adresáři `tests/` a jsou psány v českém jazyce pomocí BDD syntaxe (Když..., Pak...). Jsou rozděleny do logických celků:
+- **Přihlašování**: Ověření přístupu pro různé uživatelské role.
+- **Formuláře**: Testování business logiky (přihlášky na kurzy, validace).
+- **Interactive Grids**: Kontrola zobrazení dat a oprávnění na úrovni sloupců.
+- **Navigace**: Ověření struktury menu a dostupnosti stránek.
 
-Framework je postaven na kombinaci moderních open-source nástrojů, které zajišťují stabilitu, rychlost a snadnou rozšiřitelnost.
+## 2. Vlastní Robot Framework klíčová slova
+Framework využívá vrstvenou architekturu klíčových slov uložených v `resources/`:
+- **Business Level**: Lidsky čitelná slova (např. `Když se přihlásím jako "admin"`).
+- **Technical Level**: Skrývají technické detaily APEXu (např. `Zajisti rozbalené menu`, `Klikni na media list title`).
+- Tato separace umožňuje snadnou údržbu – při změně UI v APEXu stačí upravit klíčové slovo na jednom místě.
 
-### Hlavní komponenty
-1. **Robot Framework:** Jádro celého systému, které umožňuje psát testy v lidsky čitelné formě (BDD - Behavior Driven Development) v češtině.
-2. **Browser Library:** Moderní nástroj pro ovládání prohlížeče, který je výrazně rychlý a stabilní. Automaticky řeší čekání na prvky.
-3. **Database Library:** Umožňuje přímé propojení s Oracle databází pro přípravu testovacích dat (Setup) a jejich následné smazání (Teardown).
-4. **Python Reporting:** Vlastní skripty pro zpracování výsledků a jejich transformaci do formátu JSON pro další integraci.
+## 3. Konfigurace aplikace a uživatelů
+Konfigurace je navržena tak, aby citlivé údaje nebyly součástí kódu:
+- **.env.example**: Centrální místo pro veškerá hesla, URL a DSN.
+- **YAML soubory** (`variables/`): Definují strukturu dat (např. role uživatelů), ale reálné hodnoty si berou z prostředí pomocí placeholderů `${VAR}`.
+- **env_loader.py**: Python most, který dynamicky vstřikuje hodnoty z prostředí do YAML souborů při startu testů.
 
-## Struktura projektu 
+## 4. Browser automatizace
+Pro ovládání prohlížeče je použita **Browser Library (Playwright)**.
+- **Zero-Sleep Architecture**: Framework nečeká fixní čas, ale využívá `Wait For Elements State` (dynamické čekání).
+- **Headless Mode**: Možnost spouštění testů bez viditelného okna (vhodné pro CI/CD).
+- **Automatické screenshoty**: Při každém selhání testu je automaticky pořízen snímek obrazovky.
 
-- `tests/`: Obsahuje testovací scénáře rozdělené podle modulů (přihlášení, gridy, formuláře).
-- `resources/`: Obsahuje nízkoúrovňová klíčová slova, která schovávají technické detaily APEXu (selektory, klikání).
-- `db/`: SQL skripty pro manipulaci s testovacími daty v databázi.
-- `variables/`: Konfigurační soubory.
-- `reporting/`: Skripty pro analýzu výsledků.
+## 5. Databázový setup a teardown
+Framework zajišťuje plnou kontrolu nad testovacími daty:
+- **Setup**: Před spuštěním testu se pomocí SQL skriptů (`db/setup/`) připraví potřebná data v Oracle DB.
+- **Teardown**: Po skončení testu (i v případě chyby) se data uklidí pomocí skriptů v `db/teardown/`.
+- Pro komunikaci s DB se využívá `DatabaseLibrary` a ovladač `python-oracledb`.
 
-## Hlavní principy
+## 6. Zpracování výsledků
+Po doběhnutí testovací sady (vygenerování `output.xml`) nastupuje post-processing:
+- Skript `reporting/parse_results.py` analyzuje výsledky.
+- Extrahuje klíčové informace (stav, čas, chybové hlášky, cesty k screenshotům).
+- Výstupem je standardizovaný soubor `parsed_results.json`.
 
-- **BDD (Behavior Driven Development):** Testy jsou psány jako příběhy (Když..., Pak...), což umožňuje jejich snadnou kontrolu i neprogramátorům.
-- **Surgical Selection:** Selektory jsou navrženy tak, aby byly odolné proti změnám v APEXu (využívají texty, role a stabilní CSS třídy).
-- **Data Isolation:** Každý test si připravuje svá vlastní data v databázi a po sobě je uklízí, čímž se předchází ovlivňování výsledků.
+## 7. Odesílání výsledků do APEX
+Vlastní integrace s monitorovacím systémem:
+- Skript `reporting/send_results_to_apex.py` načte JSON s výsledky.
+- Pomocí `python-oracledb` se připojí k cílové databázi.
+- Data uloží do tabulky `UTS_VYSLEDKY` (CLOB sloupec pro JSON).
+
+## 8. Monitorovací dashboard
+Výsledky jsou vizualizovány přímo v APEX aplikaci:
+- **Dashboard**: Real-time přehled o úspěšnosti testů.
+- **Error Log**: Detailní výpis chyb včetně screenshotů převedených na Base64.
+- **Historie**: Sledování trendu stability aplikace v čase.
+

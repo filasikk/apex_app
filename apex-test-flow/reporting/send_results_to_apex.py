@@ -1,9 +1,15 @@
+import os
 from pathlib import Path
 
 import oracledb
+from dotenv import load_dotenv
 
 
 def send_results_to_db():
+    # Načtení proměnných prostředí z .env.example
+    env_path = Path(__file__).parent.parent / ".env.example"
+    load_dotenv(dotenv_path=env_path)
+
     results_path = Path("results/parsed_results.json")
 
     if not results_path.exists():
@@ -22,9 +28,17 @@ def send_results_to_db():
 
     print("Připojuji se k databázi...")
     try:
-        conn = oracledb.connect(
-            user="test_ws", password="test_ws", dsn="147.228.51.30:6521/FREEPDB1"
-        )
+        user = os.getenv("TEST_DB_USER")
+        password = os.getenv("TEST_DB_PASSWORD")
+        dsn = os.getenv("TEST_DB_DSN")
+
+        if not all([user, password, dsn]):
+            print(
+                "Chyba: Chybějící konfigurační údaje v .env.example (TEST_DB_USER, TEST_DB_PASSWORD, TEST_DB_DSN)."
+            )
+            return
+
+        conn = oracledb.connect(user=user, password=password, dsn=dsn)
         cursor = conn.cursor()
 
         print("Aktualizuji tabulku UTS_VYSLEDKY...")

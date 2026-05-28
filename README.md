@@ -1,55 +1,89 @@
-# APEX Test Flow Framework 
+# APEX Test Flow Framework
 
 Moderní a robustní framework pro automatizované testování Oracle APEX aplikací, vyvinutý s důrazem na stabilitu, rychlost a přehledný monitoring.
 
-Tento projekt vznikl jako výsledek odborné praxe (2026). Ukazuje integraci BDD přístupu (Robot Framework) s moderním ovládáním prohlížeče (Playwright) a přímým napojením na Oracle DB a APEX dashboard.
+---
 
-##  Hlavní technologie
+## 1. Co projekt dělá
+Framework umožňuje automatizované testování webových aplikací v prostředí Oracle APEX. Pokrývá celý životní cyklus testu:
+- Automatickou přípravu testovacích dat přímo v databázi.
+- Simulaci akcí uživatele v prohlížeči (přihlašování, práce s gridy, formuláři).
+- Verifikaci výsledků v UI i v databázi.
+- Automatické zpracování výsledků a jejich odeslání do monitorovacího dashboardu v APEXu.
 
-- **Robot Framework** (jádro testů v lidsky čitelné formě)
-- **Playwright (Browser Library)** (bleskové a stabilní ovládání prohlížeče)
-- **Python** (automatizovaný processing výsledků a DB integrace)
-- **Oracle Database / APEX** (přímá validace dat a real-time monitoring)
+## 2. Jaké technologie používá
+- **Robot Framework**: Jádro testů v lidsky čitelné formě (BDD).
+- **Playwright (Browser Library)**: Stabilní a rychlé ovládání prohlížeče.
+- **Python**: Zpracování výsledků a integrace s Oracle DB.
+- **Oracle Database / APEX**: Ukládání testovacích dat a vizualizace výsledků.
+- **python-dotenv**: Správa citlivých údajů přes prostředí.
 
-##  Klíčové vlastnosti
-
-- **Zero-Sleep Architecture:** Žádné fixní čekání. Framework využívá dynamické `Wait For Elements State`, což zkracuje dobu běhu testů na minimum.
-- **Direct DB Integration:** Testy si samy připravují a uklízejí testovací data přímo v Oracle DB.
-- **APEX Monitoring Dashboard:** Výsledky jsou po každém běhu automaticky odeslány do APEX aplikace, kde jsou vizualizovány na dashboardu.
-
-##  Rychlý start
-
-1. **Příprava prostředí:**
+## 3. Jak nainstalovat závislosti
+1. Přejděte do složky projektu:
    ```bash
    cd apex-test-flow
+   ```
+2. Vytvořte a aktivujte virtuální prostředí (volitelné):
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/macOS
+   .venv\Scripts\activate     # Windows
+   ```
+3. Nainstalujte balíčky:
+   ```bash
    pip install -r requirements.txt
+   ```
+4. Inicializujte prohlížeče:
+   ```bash
    rfbrowser init
    ```
 
-2. **Spuštění kompletní sady testů:**
-   ```bash
-   # 1. Spuštění testů (vygeneruje XML výstup)
-   robot -d results tests/
+## 4. Jak nastavit .env
+Projekt využívá oddělenou konfiguraci od kódu.
+1. Zkopírujte šablonu: `cp .env.example .env` (nebo ručně v adresáři `apex-test-flow`).
+2. Vyplňte reálné údaje v `.env`:
+   - `APEX_BASE_URL`: Základní URL testované aplikace.
+   - `APEX_USER_*`: Přihlašovací údaje pro různé role.
+   - `TEST_DB_*`: Připojení k Oracle DB (DSN, uživatel, heslo).
+3. Framework automaticky interpoluje tyto hodnoty do YAML souborů v `variables/`.
 
-   # 2. Zpracování výsledků do JSON (včetně screenshotů chyb)
-   python reporting/parse_results.py
+## 5. Jak spustit testy
+Testy se spouštějí z kořenové složky `apex-test-flow`:
+```bash
+# Spuštění všech testů
+robot -d results tests/
 
-   # 3. Odeslání výsledků do APEX monitoringu
-   python reporting/send_results_to_apex.py
-   ```
+# Spuštění konkrétního testu
+robot -d results tests/prihlaseni.robot
 
-##  Monitoring a Výsledky
+# Spuštění s viditelným prohlížečem (v .env nastavte HEADLESS=false)
+```
 
-- **Lokální reporty:** Detailní HTML logy najdete vždy v `apex-test-flow/results/`.
-- **APEX Dashboard:** Real-time přehled o stavu aplikace (včetně error logů a historie) je dostupný přímo v monitorovací APEX stránce (napojené na tabulku `UTS_VYSLEDKY`).
+## 6. Jak zobrazit výsledky
+- **HTML Log/Report**: Po každém běhu vzniknou v `results/` soubory `log.html` a `report.html`.
+- **Screenshots**: Snímky obrazovky při chybách najdete v `results/browser/screenshot/`.
+- **JSON Summary**: Technický přehled vygenerujete pomocí `python reporting/parse_results.py`.
 
-##  Dokumentace
+## 7. Jak přidat nový test
+1. Vytvořte nový `.robot` soubor v `tests/`.
+2. Využívejte existující klíčová slova z `resources/` (např. `spolecne.resource`).
+3. Pokud potřebujete nová data, přidejte je do `.env` a případně do `variables/uzivatele.yaml` pomocí placeholderu `${VAR}`.
+4. Podrobný návod najdete v [docs/typical_workflow.md](apex-test-flow/docs/typical_workflow.md).
 
-Podrobné informace najdete v adresáři `apex-test-flow/docs/`:
-- [Přehled systému](apex-test-flow/docs/system_overview.md) - Architektura a principy.
-- [Pracovní postup](apex-test-flow/docs/typical_workflow.md) - Jak psát a spouštět nové testy.
-- [Deník práce](apex-test-flow/docs/worklog.md) - Průběh vývoje v rámci praxe.
-- [Zadání praxe](apex-test-flow/docs/zadani_praxe_apex_testovani.md) - Původní požadavky projektu.
+## 8. Jak funguje databázový setup a teardown
+- Skripty pro přípravu dat jsou v `db/setup/` a pro úklid v `db/teardown/`.
+- Testy využívají `DatabaseLibrary` pro spouštění těchto skriptů před/po testovacím scénáři.
+- Tím je zajištěna izolace testů a čistota prostředí.
+
+## 9. Jak je navržen monitoring výsledků
+1. Po doběhnutí testů se spustí parser: `python reporting/parse_results.py`.
+2. Výsledný JSON je odeslán do APEXu: `python reporting/send_results_to_apex.py`.
+3. V APEX aplikaci (tabulka `UTS_VYSLEDKY`) jsou data vizualizována na real-time dashboardu.
+
+## 10. Známá omezení
+- **VPN**: Pro přístup k Oracle DB v síti ZČU je vyžadováno aktivní VPN připojení.
+- **Oracle Client**: Pro Python skripty je nutné mít nainstalovaný a nakonfigurovaný Oracle Instant Client (nebo použít `python-oracledb` v thin módu).
+- **Headless mode**: Některé interakce (např. SSO přihlášení) se mohou v headless módu chovat odlišně.
 
 ---
 *Finální výstup odborné praxe 2026.*
